@@ -13,7 +13,16 @@ export default function Home() {
         width={1275}
         height={691}
       />
-      <h1 style={{ color: '#fff' }}>Em breve</h1>
+      <h1 style={{ color: '#fff', marginBottom: 0 }}>Em breve</h1>
+
+      <a
+        style={{ color: '#fff' }}
+        href='https://forms.gle/MKvpXUKVkCMdSzhh6'
+        target='_blank'
+      >
+        Call for Papers
+      </a>
+
       <div className={styles.icons}>
         <a href='https://www.instagram.com/frontendce/' target='_blank'>
           <Image src='/instagram.svg' alt='Instagram' width={24} height={24} />
