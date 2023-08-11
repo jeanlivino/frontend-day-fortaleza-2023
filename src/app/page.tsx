@@ -22,6 +22,13 @@ export default function Home() {
       >
         Call for Papers
       </a>
+      <a
+        style={{ color: '#fff' }}
+        href='https://drive.google.com/file/d/1pJQyoUdeZ3DbVgsuMc5_7ec5tcR4X6bh/view?usp=sharing'
+        target='_blank'
+      >
+        Mídia Kit
+      </a>
 
       <div className={styles.icons}>
         <a href='https://www.instagram.com/frontendce/' target='_blank'>
