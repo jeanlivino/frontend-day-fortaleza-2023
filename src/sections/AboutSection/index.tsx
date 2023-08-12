@@ -33,7 +33,7 @@ const eventData = [
 const AboutSection: React.FC = () => {
   return (
     <Container>
-      <Grid gridTemplateColumns={['1fr', '1fr 1fr']} gridGap='4' pb='10'>
+      <Grid gridTemplateColumns={['1fr', '1fr 1fr']} gridGap='4'>
         {eventData.map((event) => (
           <Box key={event.title}>
             <styled.h3
