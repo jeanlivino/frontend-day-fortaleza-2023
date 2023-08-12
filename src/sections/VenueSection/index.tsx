@@ -54,7 +54,7 @@ const VenueSection: React.FC = () => {
             py='2'
             px='4'
             rounded='50px'
-            href='https://goo.gl/maps/6Z1Z7Z2Z2Z2Z2Z2Z2'
+            href='https://goo.gl/maps/WDxYX4NBWvn8JRub6'
             target='_blank'
             _hover={{ bg: 'secondary.100' }}
           >

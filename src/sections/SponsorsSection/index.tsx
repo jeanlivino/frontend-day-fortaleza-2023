@@ -3,8 +3,13 @@ import React from 'react';
 import Container from '@/components/Container';
 import { Grid, styled } from '@/styled-system/jsx';
 import NextImage from 'next/image';
+import { Sponsor } from '@/types';
 
-const SponsorsSection: React.FC = () => {
+type Props = {
+  sponsors: Sponsor[];
+};
+
+const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
   return (
     <Container>
       <styled.h3
@@ -22,14 +27,16 @@ const SponsorsSection: React.FC = () => {
         gap={4}
         mb='10'
       >
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
-        <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
+        {sponsors.map((sponsor) => (
+          <styled.a href={sponsor.link} key={sponsor.name}>
+            <NextImage
+              src={sponsor.image}
+              width={200}
+              height={200}
+              alt={sponsor.name}
+            />
+          </styled.a>
+        ))}
       </Grid>
     </Container>
   );

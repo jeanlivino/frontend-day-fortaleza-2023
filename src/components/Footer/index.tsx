@@ -19,8 +19,11 @@ const Footer: React.FC = () => {
             width={150}
             height={50}
           />
-          <Flex gap='2'>
-            <styled.a>
+          <Flex gap='4'>
+            <styled.a
+              href='https://chat.whatsapp.com/KjuHQ55RV6FBERixk5eg6g'
+              target='_blank'
+            >
               <NextImage
                 src='/images/whatsapp.svg'
                 alt='Whatsapp'
@@ -28,7 +31,10 @@ const Footer: React.FC = () => {
                 height={20}
               />
             </styled.a>
-            <styled.a>
+            <styled.a
+              href='https://www.linkedin.com/company/front-end-ce/'
+              target='_blank'
+            >
               <NextImage
                 src='/images/linkedin.svg'
                 alt='Linkedin'
@@ -36,7 +42,10 @@ const Footer: React.FC = () => {
                 height={20}
               />
             </styled.a>
-            <styled.a>
+            <styled.a
+              href='https://www.instagram.com/frontendce/'
+              target='_blank'
+            >
               <NextImage
                 src='/images/instagram.svg'
                 alt='Instagram'

@@ -3,8 +3,13 @@ import React from 'react';
 
 import { Grid, styled } from '@/styled-system/jsx';
 import SpeakerCard from '@/components/SpeakerCard';
+import { Speaker } from '@/types';
 
-const SpeakersSection: React.FC = () => {
+type Props = {
+  speakers: Speaker[];
+};
+
+const SpeakersSection: React.FC<Props> = ({ speakers }) => {
   return (
     <Container>
       <styled.h2
@@ -21,36 +26,15 @@ const SpeakersSection: React.FC = () => {
         gridGap='4'
         pb='20'
       >
-        <SpeakerCard
-          image='/images/speaker.png'
-          name='Ingryd Oliva'
-          role='Cargo do Palestrante'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi eget nunc ultricies aliquam.'
-        />
-        <SpeakerCard
-          image='/images/speaker.png'
-          name='Nome Palestrantewasda'
-          role='Cargo do Palestrante'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi eget nunc ultricies aliquam.'
-        />
-        <SpeakerCard
-          image='/images/speaker.png'
-          name='Nome Palestrantewasda'
-          role='Cargo do Palestrante'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi eget nunc ultricies aliquam.'
-        />
-        <SpeakerCard
-          image='/images/speaker.png'
-          name='Nome Palestrantewasda'
-          role='Cargo do Palestrante'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi eget nunc ultricies aliquam.'
-        />
-        <SpeakerCard
-          image='/images/speaker.png'
-          name='Nome Palestrantewasda'
-          role='Cargo do Palestrante'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi eget nunc ultricies aliquam.'
-        />
+        {speakers.map((speaker) => (
+          <SpeakerCard
+            key={speaker.id}
+            image={speaker.image}
+            name={speaker.title}
+            role={speaker.role}
+            description={speaker.bio}
+          />
+        ))}
       </Grid>
     </Container>
   );

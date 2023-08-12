@@ -4,6 +4,25 @@ import Container from '../Container';
 import NextImage from 'next/image';
 import { css } from '@/styled-system/css';
 
+const links = [
+  {
+    label: 'Mídia Kit',
+    href: 'https://drive.google.com/file/d/1pJQyoUdeZ3DbVgsuMc5_7ec5tcR4X6bh/view?usp=sharing',
+  },
+  {
+    label: 'Seja palestrante',
+    href: 'https://forms.gle/MKvpXUKVkCMdSzhh6',
+  },
+  {
+    label: 'Palestrantes',
+    href: '#',
+  },
+  {
+    label: 'Comunidades',
+    href: '#',
+  },
+];
+
 const Header: React.FC = () => {
   return (
     <styled.header
@@ -31,24 +50,22 @@ const Header: React.FC = () => {
               },
             })}
           />
-          <Flex
-            gap='5'
-            justifyContent={['center', 'center', 'space-between']}
-            width='100%'
-            flexWrap='wrap'
-          >
-            <styled.a alignSelf='center' color='white' href='#'>
-              Home
-            </styled.a>
-            <styled.a alignSelf='center' color='white' href='#'>
-              About
-            </styled.a>
-            <styled.a alignSelf='center' color='white' href='#'>
-              Contact
-            </styled.a>
-            <styled.a alignSelf='center' color='white' href='#'>
-              Contact
-            </styled.a>
+          <Flex gap='6' justifyContent={'center'} width='100%' flexWrap='wrap'>
+            {links.map((link) => (
+              <styled.a
+                href={link.href}
+                key={link.label}
+                alignSelf='center'
+                color='white'
+                target='_blank'
+                textTransform='uppercase'
+                _hover={{
+                  color: 'secondary',
+                }}
+              >
+                {link.label}
+              </styled.a>
+            ))}
           </Flex>
           <styled.button
             color='primary'

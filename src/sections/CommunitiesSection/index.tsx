@@ -5,11 +5,17 @@ import { useKeenSlider } from 'keen-slider/react';
 import Container from '@/components/Container';
 import { Box, styled } from '@/styled-system/jsx';
 import NextImage from 'next/image';
+import { Community } from '@/types';
 
-const ComunitysSection: React.FC = () => {
+type Props = {
+  communities: Community[];
+};
+
+const CommunitiesSection: React.FC<Props> = ({ communities }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
       perView: 2,
+      origin: 'center',
       spacing: 30,
     },
     breakpoints: {
@@ -34,70 +40,18 @@ const ComunitysSection: React.FC = () => {
       </styled.h3>
       <Box position='relative' px='5px' mb='10'>
         <div ref={sliderRef} className='keen-slider'>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
-          <div className='keen-slider__slide'>
-            <NextImage
-              src='/images/logo.png'
-              width={200}
-              height={200}
-              alt='logo'
-            />
-          </div>
+          {communities.map((community) => (
+            <div className='keen-slider__slide' key={community.id}>
+              <styled.a href={community.link} target='_blank'>
+                <NextImage
+                  src={community.image}
+                  width={200}
+                  height={200}
+                  alt={community.title}
+                />
+              </styled.a>
+            </div>
+          ))}
         </div>
         <Arrow
           left
@@ -116,7 +70,7 @@ const ComunitysSection: React.FC = () => {
   );
 };
 
-export default ComunitysSection;
+export default CommunitiesSection;
 
 function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
   const positionProps = props.left ? { left: '-25px' } : { right: '-25px' };

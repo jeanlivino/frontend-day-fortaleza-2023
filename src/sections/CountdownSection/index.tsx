@@ -7,7 +7,7 @@ import useCountdown from '@/hooks/useCountdown';
 
 const CountdownSection: React.FC = () => {
   const { days, hours, minutes, seconds } = useCountdown(
-    new Date('2023-10-14T08:00:00.000Z')
+    new Date('2023-10-14T08:00:00-03:00')
   );
 
   return (

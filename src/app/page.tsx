@@ -2,16 +2,18 @@ import AboutSection from '@/sections/AboutSection';
 import CountdownSection from '@/sections/CountdownSection';
 import HeroSection from '@/sections/HeroSection';
 import SpeakersSection from '@/sections/SpeakersSection';
-import ComunitysSection from '@/sections/ComunitysSection';
+import CommunitiesSection from '@/sections/CommunitiesSection';
 import VenueSection from '@/sections/VenueSection';
 import { Box, styled } from '@/styled-system/jsx';
 import SponsorsSection from '@/sections/SponsorsSection';
-import Contaier from '@/components/Container';
-import TicketSection from '@/sections/TicketSection';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
-export default function Home() {
+import TicketSection from '@/sections/TicketSection';
+
+import Footer from '@/components/Footer';
+import { getSiteData } from '@/services/site';
+
+export default async function Home() {
+  const data = await getSiteData();
   return (
     <main>
       <HeroSection />
@@ -28,9 +30,9 @@ export default function Home() {
         pt='24'
         zIndex={1}
       >
-        <SpeakersSection />
+        <SpeakersSection speakers={data.speakers} />
       </Box>
-      <SponsorsSection />
+      {data.sponsors.length > 0 && <SponsorsSection sponsors={data.sponsors} />}
       <TicketSection />
       <Box
         bgImage="url('/images/banner_bg.png')"
@@ -61,7 +63,7 @@ export default function Home() {
           Em breve
         </styled.h4>
       </Box>
-      <ComunitysSection />
+      <CommunitiesSection communities={data.communities} />
       <Footer />
     </main>
   );

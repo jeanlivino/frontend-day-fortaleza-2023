@@ -16,7 +16,7 @@ const TimeCard: React.FC<Props> = ({ number, text }) => {
       textTransform='uppercase'
     >
       <styled.p color='secondary' fontWeight='700' fontSize='4xl'>
-        {number}
+        {number < 0 ? '00' : number}
       </styled.p>
       <styled.p color='white' fontSize='12px'>
         {text}
