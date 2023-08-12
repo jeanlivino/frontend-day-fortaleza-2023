@@ -6,6 +6,7 @@ import Container from '@/components/Container';
 import { Box, styled } from '@/styled-system/jsx';
 import NextImage from 'next/image';
 import { Community } from '@/types';
+import { css } from '@/styled-system/css';
 
 type Props = {
   communities: Community[];
@@ -14,14 +15,8 @@ type Props = {
 const CommunitiesSection: React.FC<Props> = ({ communities }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
-      perView: 2,
-      origin: 'center',
-      spacing: 30,
-    },
-    breakpoints: {
-      '(min-width: 400px)': {
-        slides: { perView: 5, spacing: 30 },
-      },
+      perView: 'auto',
+      spacing: 20,
     },
     loop: true,
   });
@@ -41,13 +36,27 @@ const CommunitiesSection: React.FC<Props> = ({ communities }) => {
       <Box position='relative' px='5px' mb='10'>
         <div ref={sliderRef} className='keen-slider'>
           {communities.map((community) => (
-            <div className='keen-slider__slide' key={community.id}>
-              <styled.a href={community.link} target='_blank'>
+            <div
+              className='keen-slider__slide'
+              key={community.id}
+              style={{ maxWidth: '150px' }}
+            >
+              <styled.a
+                href={community.link}
+                target='_blank'
+                h='80px'
+                aspectRatio='4/3'
+              >
                 <NextImage
                   src={community.image}
                   width={200}
                   height={200}
                   alt={community.title}
+                  className={css({
+                    height: '80px',
+                    aspectRatio: '4/3',
+                    objectFit: 'contain',
+                  })}
                 />
               </styled.a>
             </div>

@@ -1,6 +1,7 @@
 import { Box, styled } from '@/styled-system/jsx';
 import React from 'react';
 import NextImage from 'next/image';
+import SpeakerThumb from '../SpeakerThumb';
 
 interface Props {
   image: string;
@@ -14,28 +15,7 @@ const SpeakerCard: React.FC<Props> = ({ image, name, role, description }) => {
 
   return (
     <Box textAlign='center'>
-      <Box
-        bgImage="url('/images/image-effect.png')"
-        bgPosition='0 6px'
-        bgRepeat='no-repeat'
-        bgSize='100% 100%'
-        p='10'
-        mb='-45px'
-        maxWidth='200px'
-        mx='auto'
-      >
-        <NextImage
-          src={image}
-          width={200}
-          height={200}
-          alt={name}
-          style={{
-            borderRadius: '50%',
-            aspectRatio: '1/1',
-            objectFit: 'cover',
-          }}
-        />
-      </Box>
+      <SpeakerThumb mb='-45px' image={image} name={name} />
       <styled.h4
         fontSize='sm'
         fontWeight='bold'

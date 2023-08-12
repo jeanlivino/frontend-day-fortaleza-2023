@@ -10,7 +10,6 @@ const HeroSection: React.FC = () => {
       bgImage="url('/images/banner_bg.png')"
       bgSize='cover'
       bgPosition='center'
-      minHeight='80vh'
       px='10'
       pt={['5', '5', '24']}
       pb='28'

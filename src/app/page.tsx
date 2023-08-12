@@ -1,5 +1,4 @@
 import AboutSection from '@/sections/AboutSection';
-import CountdownSection from '@/sections/CountdownSection';
 import HeroSection from '@/sections/HeroSection';
 import SpeakersSection from '@/sections/SpeakersSection';
 import CommunitiesSection from '@/sections/CommunitiesSection';
@@ -9,8 +8,14 @@ import SponsorsSection from '@/sections/SponsorsSection';
 
 import TicketSection from '@/sections/TicketSection';
 
-import Footer from '@/components/Footer';
 import { getSiteData } from '@/services/site';
+
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+
+const CountdownSection = dynamic(() => import('@/sections/CountdownSection'), {
+  ssr: false,
+});
 
 export default async function Home() {
   const data = await getSiteData();
@@ -64,7 +69,6 @@ export default async function Home() {
         </styled.h4>
       </Box>
       <CommunitiesSection communities={data.communities} />
-      <Footer />
     </main>
   );
 }
