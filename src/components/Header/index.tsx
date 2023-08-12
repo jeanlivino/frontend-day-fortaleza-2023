@@ -20,10 +20,10 @@ const links = [
     label: 'Palestrantes',
     href: '/palestrantes',
   },
-  {
-    label: 'Comunidades',
-    href: '#',
-  },
+  // {
+  //   label: 'Comunidades',
+  //   href: '#',
+  // },
 ];
 
 const Header: React.FC = () => {
@@ -89,7 +89,8 @@ const Header: React.FC = () => {
             px='9'
             py='2'
           >
-            Ingressos
+            {/* Ingressos */}
+            Em breve
           </styled.button>
         </Grid>
       </Container>

@@ -36,7 +36,7 @@ export default async function Home() {
       {data.sponsors?.length > 0 && (
         <SponsorsSection sponsors={data.sponsors} />
       )}
-      <TicketSection />
+      {/* <TicketSection /> */}
       <AgendaSection
         talks={data.talks}
         isActive={Boolean(data.activate_agenda)}

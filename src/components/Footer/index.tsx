@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
             px='9'
             py='2'
           >
-            Comprar Ingresso
+            Em breve
           </styled.button>
         </Flex>
       </Container>
