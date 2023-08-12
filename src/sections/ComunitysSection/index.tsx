@@ -30,7 +30,7 @@ const ComunitysSection: React.FC = () => {
         py='10'
         textTransform='uppercase'
       >
-        Comunidades
+        Comunidades Parceiras
       </styled.h3>
       <Box position='relative' px='5px'>
         <div ref={sliderRef} className='keen-slider'>
