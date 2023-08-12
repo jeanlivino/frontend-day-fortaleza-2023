@@ -11,15 +11,16 @@ const TicketSection: React.FC = () => {
         <div id='eventbrite-widget-container-695305255737'></div>
 
         <Script
-          strategy='afterInteractive'
+          strategy='beforeInteractive'
           src='https://www.eventbrite.com.br/static/widgets/eb_widgets.js'
         ></Script>
 
         <Script
           type='text/javascript'
           id='eventbrite-widget-js'
-          strategy='afterInteractive'
-          dangerouslySetInnerHTML={`
+          strategy='lazyOnload'
+          dangerouslySetInnerHTML={{
+            __html: `
     var exampleCallback = function() {
         console.log('Encomenda finalizada!');
     };
@@ -33,7 +34,8 @@ const TicketSection: React.FC = () => {
         iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
         onOrderComplete: exampleCallback  // Method called when an order has successfully completed
     });
-    `}
+    `,
+          }}
         ></Script>
       </Container>
     </Box>
