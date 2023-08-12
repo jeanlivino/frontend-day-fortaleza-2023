@@ -32,7 +32,7 @@ const ComunitysSection: React.FC = () => {
       >
         Comunidades Parceiras
       </styled.h3>
-      <Box position='relative' px='5px'>
+      <Box position='relative' px='5px' mb='10'>
         <div ref={sliderRef} className='keen-slider'>
           <div className='keen-slider__slide'>
             <NextImage

@@ -9,6 +9,7 @@ import SponsorsSection from '@/sections/SponsorsSection';
 import Contaier from '@/components/Container';
 import TicketSection from '@/sections/TicketSection';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
         </styled.h4>
       </Box>
       <ComunitysSection />
+      <Footer />
     </main>
   );
 }
