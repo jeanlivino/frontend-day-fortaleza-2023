@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "panda codegen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -20,5 +21,8 @@
     "react-dom": "18.2.0",
     "sass": "^1.64.2",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.11.0"
   }
 }
