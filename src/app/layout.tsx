@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import 'normalize.css';
+// import 'normalize.css';
 import './global.css';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
