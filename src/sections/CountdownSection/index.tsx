@@ -15,11 +15,12 @@ const CountdownSection: React.FC = () => {
       maxW='800px'
       p='8'
       bg='secondary'
-      mx='auto'
+      mx={['5', 'auto']}
       rounded='20px'
-      mt='-70px'
+      top='-70px'
       position='relative'
       zIndex='1'
+      boxShadow='0px 18px 35px -8px rgba(0,0,0,0.5)'
     >
       <styled.h3
         fontWeight='700'
