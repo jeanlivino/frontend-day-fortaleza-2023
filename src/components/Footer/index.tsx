@@ -6,6 +6,7 @@ import NextImage from 'next/image';
 const Footer: React.FC = () => {
   return (
     <Box
+      bgColor='primary'
       bgImage="url('/images/banner_bg.png')"
       bgSize='cover'
       bgPosition='center'

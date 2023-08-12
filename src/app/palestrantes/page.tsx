@@ -18,6 +18,7 @@ export default async function Palestrantes() {
         </Container>
       </Box>
       <Box
+        bgColor='primary'
         bgImage="url('/images/banner_bg.png')"
         bgSize='cover'
         bgPosition='center'

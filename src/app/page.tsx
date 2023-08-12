@@ -22,6 +22,7 @@ export default async function Home() {
         <VenueSection />
       </Box>
       <Box
+        bgColor='primary'
         bgImage="url('/images/banner_bg.png')"
         bgSize='cover'
         bgPosition='center'
@@ -34,6 +35,7 @@ export default async function Home() {
       {data.sponsors.length > 0 && <SponsorsSection sponsors={data.sponsors} />}
       <TicketSection />
       <Box
+        bgColor='primary'
         bgImage="url('/images/banner_bg.png')"
         bgSize='cover'
         bgPosition='center'

@@ -7,6 +7,7 @@ import { css } from '@/styled-system/css';
 const HeroSection: React.FC = () => {
   return (
     <Box
+      bgColor='primary'
       bgImage="url('/images/banner_bg.png')"
       bgSize='cover'
       bgPosition='center'
