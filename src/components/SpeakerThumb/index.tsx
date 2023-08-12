@@ -21,6 +21,11 @@ const SpeakerThumb: React.FC<Props> = ({ image, name, mb }) => {
         maxWidth='200px'
         mx='auto'
         aspectRatio='1/1'
+        transition='all .3s ease-in-out'
+        _hover={{
+          transform: 'scale(1.03)',
+          opacity: '.8',
+        }}
       >
         <NextImage
           src={image}

@@ -22,6 +22,7 @@ export default async function Palestrantes() {
         bgSize='cover'
         bgPosition='center'
         position='relative'
+        pb='10'
       >
         <Container>
           <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr']} gap='4'>
@@ -67,9 +68,9 @@ const SpeakerInfo: React.FC<Speaker> = ({
           Rede social
         </styled.a>
       </Box>
-      <Box ml='-30px'>
+      <Box ml={['0', '-30px']} textAlign={['center', 'left']}>
         <styled.h4
-          mt='12'
+          mt={['2', '12']}
           fontSize='sm'
           fontWeight='bold'
           textTransform='uppercase'

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Container from '@/components/Container';
-import { Grid, styled } from '@/styled-system/jsx';
+import { Flex, Grid, styled } from '@/styled-system/jsx';
 import NextImage from 'next/image';
 import { Sponsor } from '@/types';
 
@@ -22,11 +22,7 @@ const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
       >
         Patrocinadores
       </styled.h3>
-      <Grid
-        gridTemplateColumns={['repeat(2, 1fr)', 'repeat(5, 1fr)']}
-        gap={4}
-        mb='10'
-      >
+      <Flex gap={4} mb='10' justifyContent='center'>
         {sponsors.map((sponsor) => (
           <styled.a href={sponsor.link} key={sponsor.name}>
             <NextImage
@@ -34,10 +30,15 @@ const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
               width={200}
               height={200}
               alt={sponsor.name}
+              style={{
+                width: '150px',
+                objectFit: 'contain',
+                aspectRatio: ' 4/3',
+              }}
             />
           </styled.a>
         ))}
-      </Grid>
+      </Flex>
     </Container>
   );
 };

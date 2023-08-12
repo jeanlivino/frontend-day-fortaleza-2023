@@ -16,13 +16,20 @@ const VenueSection: React.FC = () => {
         bottom='-50px'
         zIndex='2'
       >
-        <NextImage
-          src='/images/sonata.png'
-          width={500}
-          height={200}
-          alt='Sonata'
-          style={{ borderRadius: '10px' }}
-        />
+        <Box
+          transition='all .3s ease-in-out'
+          _hover={{
+            opacity: '.7',
+          }}
+        >
+          <NextImage
+            src='/images/sonata.png'
+            width={500}
+            height={200}
+            alt='Sonata'
+            style={{ borderRadius: '10px' }}
+          />
+        </Box>
         <Box alignSelf='center'>
           <styled.h4
             fontSize='lg'

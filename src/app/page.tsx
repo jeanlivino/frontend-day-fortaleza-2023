@@ -9,13 +9,7 @@ import SponsorsSection from '@/sections/SponsorsSection';
 import TicketSection from '@/sections/TicketSection';
 
 import { getSiteData } from '@/services/site';
-
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
-
-const CountdownSection = dynamic(() => import('@/sections/CountdownSection'), {
-  ssr: false,
-});
+import CountdownSection from '@/sections/CountdownSection';
 
 export default async function Home() {
   const data = await getSiteData();

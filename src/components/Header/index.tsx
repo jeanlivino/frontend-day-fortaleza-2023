@@ -39,7 +39,7 @@ const Header: React.FC = () => {
       <Container px='0'>
         <Grid
           gridTemplateColumns={['1fr', '1fr', '150px auto 200px']}
-          gap={['7', '10']}
+          gap={['4', '10']}
         >
           <Link href='/'>
             <NextImage
@@ -55,7 +55,12 @@ const Header: React.FC = () => {
               })}
             />
           </Link>
-          <Flex gap='6' justifyContent={'center'} width='100%' flexWrap='wrap'>
+          <Flex
+            gap={['3', '6']}
+            justifyContent={'center'}
+            width='100%'
+            flexWrap='wrap'
+          >
             {links.map((link) => (
               <styled.a
                 href={link.href}

@@ -18,6 +18,11 @@ const CommunitiesSection: React.FC<Props> = ({ communities }) => {
       perView: 'auto',
       spacing: 20,
     },
+    breakpoints: {
+      '(max-width: 400px)': {
+        slides: { perView: 2, spacing: 30 },
+      },
+    },
     loop: true,
   });
 
@@ -94,6 +99,7 @@ function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
       p='5px'
       borderRadius='50%'
       fill='white'
+      cursor='pointer'
       {...positionProps}
       onClick={props.onClick}
       xmlns='http://www.w3.org/2000/svg'

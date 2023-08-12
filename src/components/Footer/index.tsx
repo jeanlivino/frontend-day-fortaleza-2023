@@ -12,11 +12,16 @@ const Footer: React.FC = () => {
       p='10'
     >
       <Container>
-        <Flex justifyContent='space-between' alignItems='center'>
+        <Flex
+          justifyContent='space-between'
+          alignItems='center'
+          flexDirection={['column', 'row']}
+          gap='4'
+        >
           <NextImage
             src='/images/logo-fendce.png'
             alt='Logo'
-            width={150}
+            width={130}
             height={50}
           />
           <Flex gap='4'>
@@ -60,11 +65,11 @@ const Footer: React.FC = () => {
             rounded='100px'
             textTransform='uppercase'
             fontWeight='bold'
-            fontSize='sm'
+            fontSize={['12px', 'sm']}
             px='9'
             py='2'
           >
-            Comprar Ingresso Agora
+            Comprar Ingresso
           </styled.button>
         </Flex>
       </Container>
