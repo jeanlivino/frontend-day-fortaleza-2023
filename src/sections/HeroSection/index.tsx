@@ -6,15 +6,21 @@ const HeroSection: React.FC = () => {
   return (
     <Flex
       alignItems='center'
+      justifyContent='center'
       bgImage="url('/images/banner_bg.png')"
       bgSize='cover'
       bgPosition='center'
       minHeight='80vh'
-      p='10'
+      px='10'
       pt='24'
+      pb='28'
     >
-      <Grid gap={['10', '20']} gridTemplateColumns={['1fr', '1.7fr 1fr']}>
-        <Box>
+      <Grid
+        gap={['10', '20']}
+        gridTemplateColumns={['1fr', '1.5fr 1fr']}
+        maxW='1043px'
+      >
+        <Box alignSelf='center'>
           <styled.h1
             fontWeight='700'
             lineHeight='1.2'

@@ -1,11 +1,11 @@
-import HeroSection from '@/components/HeroSection';
-import { Box } from '@/styled-system/jsx';
-import Image from 'next/image';
+import CountdownSection from '@/sections/CountdownSection';
+import HeroSection from '@/sections/HeroSection';
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
+      <CountdownSection />
     </main>
   );
 }
