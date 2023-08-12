@@ -33,7 +33,9 @@ export default async function Home() {
       >
         <SpeakersSection speakers={data.speakers} />
       </Box>
-      {data.sponsors.length > 0 && <SponsorsSection sponsors={data.sponsors} />}
+      {data.sponsors?.length > 0 && (
+        <SponsorsSection sponsors={data.sponsors} />
+      )}
       <TicketSection />
       <AgendaSection
         talks={data.talks}
