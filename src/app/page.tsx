@@ -10,6 +10,7 @@ import TicketSection from '@/sections/TicketSection';
 
 import { getSiteData } from '@/services/site';
 import CountdownSection from '@/sections/CountdownSection';
+import AgendaSection from '@/sections/AgendaSection';
 
 export default async function Home() {
   const data = await getSiteData();
@@ -34,36 +35,7 @@ export default async function Home() {
       </Box>
       {data.sponsors.length > 0 && <SponsorsSection sponsors={data.sponsors} />}
       <TicketSection />
-      <Box
-        bgColor='primary'
-        bgImage="url('/images/banner_bg.png')"
-        bgSize='cover'
-        bgPosition='center'
-        position='relative'
-        pt='10'
-        zIndex={1}
-      >
-        <styled.h3
-          textAlign='center'
-          color='white'
-          fontSize='2xl'
-          fontWeight='bold'
-          textTransform='uppercase'
-        >
-          Programação
-        </styled.h3>
-
-        <styled.h4
-          textAlign='center'
-          color='white'
-          fontSize='xl'
-          textTransform='uppercase'
-          mt='5'
-          pb='10'
-        >
-          Em breve
-        </styled.h4>
-      </Box>
+      <AgendaSection />
       <CommunitiesSection communities={data.communities} />
     </main>
   );

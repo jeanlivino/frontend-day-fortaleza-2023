@@ -12,10 +12,7 @@ const SpeakerThumb: React.FC<Props> = ({ image, name, mb }) => {
   return (
     <Box>
       <Box
-        bgImage="url('/images/image-effect.png')"
-        bgPosition='0 6px'
-        bgRepeat='no-repeat'
-        bgSize='100% 100%'
+        pos='relative'
         p='10'
         mb={mb}
         maxWidth='200px'
@@ -37,6 +34,18 @@ const SpeakerThumb: React.FC<Props> = ({ image, name, mb }) => {
             aspectRatio: '1/1',
             objectFit: 'cover',
           }}
+        />
+        <Box
+          pos='absolute'
+          w='100%'
+          h='100%'
+          left='0'
+          top='0'
+          animation='pulse 2s ease-in-out 0s infinite normal forwards'
+          bgImage="url('/images/image-effect.png')"
+          bgPosition='0 6px'
+          bgRepeat='no-repeat'
+          bgSize='100% 100%'
         />
       </Box>
     </Box>

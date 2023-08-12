@@ -1,0 +1,24 @@
+.neon {
+	position: absolute;
+	top: 47%;
+	display: inline-block;
+	height: 2px;
+	border-radius: 100px;
+	width: 80%;
+	left: 10%;
+	background: #51cafd;
+	animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+	from {
+		opacity: 1;
+		box-shadow: 0 0 10px #51cafd, 0 0 20px #51cafd, 0 0 30px #51cafd,
+			0 0 40px #51cafd;
+	}
+	to {
+		opacity: 0.5;
+		box-shadow: 0 0 20px #51cafd, 0 0 30px #51cafd, 0 0 40px #51cafd,
+			0 0 50px #51cafd;
+	}
+}

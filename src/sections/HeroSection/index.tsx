@@ -4,6 +4,8 @@ import NextImage from 'next/image';
 import Header from '@/components/Header';
 import { css } from '@/styled-system/css';
 
+import styles from './hero.module.css';
+
 const HeroSection: React.FC = () => {
   return (
     <Box
@@ -51,15 +53,23 @@ const HeroSection: React.FC = () => {
               </styled.span>
             </styled.h3>
           </Box>
-          <NextImage
-            src='/logo-vertical-white.svg'
-            alt='logo'
-            width={300}
-            height={500}
-            className={css({
-              mx: 'auto',
-            })}
-          />
+          <Box pos='relative'>
+            <NextImage
+              src='/logo-vertical-white.svg'
+              alt='logo'
+              width={300}
+              height={500}
+              className={css({
+                mx: 'auto',
+                transition: 'all .3s ease-in-out',
+                _hover: {
+                  transform: 'scale(1.03)',
+                  opacity: '.8',
+                },
+              })}
+            />
+            <div className={styles.neon}></div>
+          </Box>
         </Grid>
       </Flex>
     </Box>

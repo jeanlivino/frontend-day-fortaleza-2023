@@ -27,13 +27,7 @@ const SpeakersSection: React.FC<Props> = ({ speakers }) => {
         pb='20'
       >
         {speakers.map((speaker) => (
-          <SpeakerCard
-            key={speaker.id}
-            image={speaker.image}
-            name={speaker.title}
-            role={speaker.role}
-            description={speaker.bio}
-          />
+          <SpeakerCard key={speaker.id} {...speaker} />
         ))}
       </Grid>
     </Container>

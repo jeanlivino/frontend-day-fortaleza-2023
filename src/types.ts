@@ -30,6 +30,7 @@ export interface Talk {
 
 export interface Speaker {
   role: string;
+  company: string;
   bio: string;
   social_link: string;
   id: number;
