@@ -16,7 +16,7 @@ const SpeakersSection: React.FC = () => {
       >
         Palestrantes <styled.span color='white'>Confirmados</styled.span>
       </styled.h2>
-      <Grid gridTemplateColumns='repeat(4, 1fr)' gridGap='4' pb='20'>
+      <Grid gridTemplateColumns={['1fr', 'repeat(4, 1fr)']} gridGap='4' pb='20'>
         <SpeakerCard
           image='/images/speaker.png'
           name='Ingryd Oliva'

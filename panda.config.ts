@@ -58,7 +58,7 @@ export default defineConfig({
           100: { value: ' rgb(235 236 239)' },
           200: { value: ' rgb(220 222 227)' },
           300: { value: ' rgb(203 207 213)' },
-          400: { value: ' rgb(181 186 196)' },
+          400: { value: '#002166' },
           500: { value: ' rgb(154 160 173)' },
           600: { value: ' rgb(124 132 149)' },
           700: { value: ' rgb(98 108 129)' },
