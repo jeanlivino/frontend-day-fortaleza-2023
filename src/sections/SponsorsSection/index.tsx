@@ -12,12 +12,16 @@ const SponsorsSection: React.FC = () => {
         fontWeight='bold'
         fontSize='2xl'
         textAlign='center'
-        py='10'
+        pt='10'
         textTransform='uppercase'
       >
         Patrocinadores
       </styled.h3>
-      <Grid gridTemplateColumns={['repeat(2, 1fr)', 'repeat(5, 1fr)']} gap={4}>
+      <Grid
+        gridTemplateColumns={['repeat(2, 1fr)', 'repeat(5, 1fr)']}
+        gap={4}
+        mb='10'
+      >
         <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
         <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />
         <NextImage src='/images/logo.png' width={200} height={200} alt='logo' />

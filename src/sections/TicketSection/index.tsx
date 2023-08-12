@@ -21,18 +21,11 @@ const TicketSection: React.FC = () => {
           strategy='lazyOnload'
           dangerouslySetInnerHTML={{
             __html: `
-    var exampleCallback = function() {
-        console.log('Encomenda finalizada!');
-    };
-
     window.EBWidgets.createWidget({
         widgetType: 'checkout',
         eventId: '695305255737',
         iframeContainerId: 'eventbrite-widget-container-695305255737',
-
-        // Optional
-        iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+        iframeContainerHeight: 625,
     });
     `,
           }}
