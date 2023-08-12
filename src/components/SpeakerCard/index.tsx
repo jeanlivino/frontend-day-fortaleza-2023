@@ -21,6 +21,8 @@ const SpeakerCard: React.FC<Props> = ({ image, name, role, description }) => {
         bgSize='100% 100%'
         p='10'
         mb='-45px'
+        maxWidth='200px'
+        mx='auto'
       >
         <NextImage
           src={image}
@@ -50,7 +52,7 @@ const SpeakerCard: React.FC<Props> = ({ image, name, role, description }) => {
       <styled.p fontSize='sm' color='secondary' textTransform='uppercase'>
         {role}
       </styled.p>
-      <styled.p color='white' fontSize='12px' mt='2'>
+      <styled.p color='white' fontSize='12px' mt='2' maxWidth='200px' mx='auto'>
         {description}
       </styled.p>
     </Box>
