@@ -1,6 +1,7 @@
 import AboutSection from '@/sections/AboutSection';
 import CountdownSection from '@/sections/CountdownSection';
 import HeroSection from '@/sections/HeroSection';
+import SpeakersSection from '@/sections/SpeakersSection';
 import VenueSection from '@/sections/VenueSection';
 import { Box } from '@/styled-system/jsx';
 
@@ -13,7 +14,16 @@ export default function Home() {
         <AboutSection />
         <VenueSection />
       </Box>
-      <Box bg='primary' position='relative' height='200px' zIndex={1}></Box>
+      <Box
+        bgImage="url('/images/banner_bg.png')"
+        bgSize='cover'
+        bgPosition='center'
+        position='relative'
+        pt='24'
+        zIndex={1}
+      >
+        <SpeakersSection />
+      </Box>
     </main>
   );
 }
