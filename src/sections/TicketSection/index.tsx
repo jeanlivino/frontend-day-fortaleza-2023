@@ -1,6 +1,6 @@
 'use client';
 import Container from '@/components/Container';
-import { Box } from '@/styled-system/jsx';
+import { Box, styled } from '@/styled-system/jsx';
 import Script from 'next/script';
 import React from 'react';
 
@@ -8,7 +8,18 @@ const TicketSection: React.FC = () => {
   return (
     <Box bg='secondary' p='10'>
       <Container>
-        <div id='eventbrite-widget-container-695305255737'></div>
+        <styled.h2
+          color='primary'
+          fontSize='2xl'
+          fontWeight='bold'
+          textAlign='center'
+        >
+          Inscrições
+        </styled.h2>
+        <styled.p color='primary' mt='4' fontSize='md' textAlign='center'>
+          As inscrições irão iniciar em breve!
+        </styled.p>
+        {/* <div id='eventbrite-widget-container-695305255737'></div>
 
         <Script
           strategy='beforeInteractive'
@@ -29,7 +40,7 @@ const TicketSection: React.FC = () => {
     });
     `,
           }}
-        ></Script>
+        ></Script> */}
       </Container>
     </Box>
   );
