@@ -35,7 +35,10 @@ export default async function Home() {
       </Box>
       {data.sponsors.length > 0 && <SponsorsSection sponsors={data.sponsors} />}
       <TicketSection />
-      <AgendaSection />
+      <AgendaSection
+        talks={data.talks}
+        isActive={Boolean(data.activate_agenda)}
+      />
       <CommunitiesSection communities={data.communities} />
     </main>
   );

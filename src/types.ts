@@ -3,6 +3,7 @@ export interface SiteData {
   speakers: Speaker[];
   talks: Talks;
   sponsors: Sponsor[];
+  activate_agenda?: boolean;
 }
 
 export interface Sponsor {
