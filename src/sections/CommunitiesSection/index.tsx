@@ -15,12 +15,12 @@ type Props = {
 const CommunitiesSection: React.FC<Props> = ({ communities }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
-      perView: 'auto',
-      spacing: 20,
+      perView: 2,
+      spacing: 30,
     },
     breakpoints: {
-      '(max-width: 400px)': {
-        slides: { perView: 2, spacing: 30 },
+      '(min-width: 400px)': {
+        slides: { perView: auto, spacing: 20 },
       },
     },
     loop: true,
