@@ -20,7 +20,7 @@ const CommunitiesSection: React.FC<Props> = ({ communities }) => {
     },
     breakpoints: {
       '(min-width: 400px)': {
-        slides: { perView: auto, spacing: 20 },
+        slides: { perView: 'auto', spacing: 20 },
       },
     },
     loop: true,
