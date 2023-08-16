@@ -42,6 +42,7 @@ const SpeakerInfo: React.FC<Speaker> = ({
   title,
   role,
   bio,
+  company,
   id,
   social_link,
 }) => {
@@ -88,7 +89,7 @@ const SpeakerInfo: React.FC<Speaker> = ({
           color='secondary'
           textTransform='uppercase'
         >
-          {role}
+          {role} <b>{company}</b>
         </styled.p>
         <styled.p color='white' fontSize='14px' mt='2'>
           {bio}
