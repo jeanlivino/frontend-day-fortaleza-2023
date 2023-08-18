@@ -12,6 +12,8 @@ import { getSiteData } from '@/services/site';
 import CountdownSection from '@/sections/CountdownSection';
 import AgendaSection from '@/sections/AgendaSection';
 
+export const revalidate = 60;
+
 export default async function Home() {
   const data = await getSiteData();
   return (
