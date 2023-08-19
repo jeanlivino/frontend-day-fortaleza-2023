@@ -32,7 +32,14 @@ const SpeakerCard: React.FC<Speaker> = ({
       <styled.p fontSize='sm' color='secondary' textTransform='uppercase'>
         {role} <styled.span fontWeight='bold'>{company}</styled.span>
       </styled.p>
-      <styled.p color='white' fontSize='12px' mt='2' maxWidth='200px' mx='auto'>
+      <styled.p
+        color='white'
+        fontSize='12px'
+        mt='2'
+        maxWidth='200px'
+        mx='auto'
+        display={['none', 'block']}
+      >
         {bio}
       </styled.p>
     </Box>
