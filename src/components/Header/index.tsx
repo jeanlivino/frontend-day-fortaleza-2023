@@ -12,7 +12,7 @@ const links = [
     target: '_blank',
   },
   {
-    label: 'Seja palestrante',
+    label: 'Call 4 Papers',
     href: 'https://forms.gle/MKvpXUKVkCMdSzhh6',
     target: '_blank',
   },
@@ -77,21 +77,23 @@ const Header: React.FC = () => {
               </styled.a>
             ))}
           </Flex>
-          <styled.button
+          <styled.a
             color='primary'
             bg='tertiary'
             rounded='100px'
             textTransform='uppercase'
+            textAlign='center'
             fontWeight='bold'
             maxWidth='200px'
             width='100%'
             mx='auto'
             px='9'
             py='2'
+            target='_blank'
+            href='https://www.eventbrite.com.br/e/699928714627?aff=site'
           >
-            {/* Ingressos */}
-            Em breve
-          </styled.button>
+            Ingressos
+          </styled.a>
         </Grid>
       </Container>
     </styled.header>

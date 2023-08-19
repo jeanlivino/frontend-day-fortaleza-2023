@@ -16,10 +16,10 @@ const TicketSection: React.FC = () => {
         >
           Inscrições
         </styled.h2>
-        <styled.p color='primary' mt='4' fontSize='md' textAlign='center'>
+        {/* <styled.p color='primary' mt='4' fontSize='md' textAlign='center'>
           As inscrições irão iniciar em breve!
-        </styled.p>
-        {/* <div id='eventbrite-widget-container-695305255737'></div>
+        </styled.p> */}
+        <div id='eventbrite-widget-container-699928714627'></div>
 
         <Script
           strategy='beforeInteractive'
@@ -34,13 +34,13 @@ const TicketSection: React.FC = () => {
             __html: `
     window.EBWidgets.createWidget({
         widgetType: 'checkout',
-        eventId: '695305255737',
-        iframeContainerId: 'eventbrite-widget-container-695305255737',
+        eventId: '699928714627',
+        iframeContainerId: 'eventbrite-widget-container-699928714627',
         iframeContainerHeight: 625,
     });
     `,
           }}
-        ></Script> */}
+        ></Script>
       </Container>
     </Box>
   );
