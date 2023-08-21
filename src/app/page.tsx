@@ -1,46 +1,52 @@
-import Image from 'next/image';
-import styles from './page.module.scss';
-import InstagramIcon from './instagram.svg';
-import WhatsAppIcon from './whatsapp.svg';
+import AboutSection from '@/sections/AboutSection';
+import HeroSection from '@/sections/HeroSection';
+import SpeakersSection from '@/sections/SpeakersSection';
+import CommunitiesSection from '@/sections/CommunitiesSection';
+import VenueSection from '@/sections/VenueSection';
+import { Box, styled } from '@/styled-system/jsx';
+import SponsorsSection from '@/sections/SponsorsSection';
 
-export default function Home() {
+import TicketSection from '@/sections/TicketSection';
+
+import { getSiteData } from '@/services/site';
+import CountdownSection from '@/sections/CountdownSection';
+import AgendaSection from '@/sections/AgendaSection';
+
+export const revalidate = 60;
+
+export default async function Home() {
+  const data = await getSiteData();
   return (
-    <main className={styles.main}>
-      <Image
-        className={styles.logo}
-        src='/logo-white.svg'
-        alt='FrontEnd Day - Fortaleza 2023'
-        width={1275}
-        height={691}
+    <main>
+      <HeroSection />
+      <Box bg='secondary' position='relative' zIndex={2}>
+        <CountdownSection />
+        <AboutSection />
+        <VenueSection />
+      </Box>
+      <Box
+        bgColor='primary'
+        bgImage="url('/images/banner_bg.png')"
+        bgSize='cover'
+        bgPosition='center'
+        position='relative'
+        pt='24'
+        zIndex={1}
+      >
+        <SpeakersSection speakers={data.speakers} />
+      </Box>
+      {data.sponsors?.length > 0 && (
+        <SponsorsSection sponsors={data.sponsors} />
+      )}
+      <TicketSection />
+      <AgendaSection
+        talks={data.talks}
+        isActive={
+          Boolean(data.activate_agenda) ||
+          process.env.NODE_ENV === 'development'
+        }
       />
-      <h1 style={{ color: '#fff', marginBottom: 0 }}>Em breve</h1>
-
-      <a
-        style={{ color: '#fff' }}
-        href='https://forms.gle/MKvpXUKVkCMdSzhh6'
-        target='_blank'
-      >
-        Call for Papers
-      </a>
-      <a
-        style={{ color: '#fff' }}
-        href='https://drive.google.com/file/d/1pJQyoUdeZ3DbVgsuMc5_7ec5tcR4X6bh/view?usp=sharing'
-        target='_blank'
-      >
-        Mídia Kit
-      </a>
-
-      <div className={styles.icons}>
-        <a href='https://www.instagram.com/frontendce/' target='_blank'>
-          <Image src='/instagram.svg' alt='Instagram' width={24} height={24} />
-        </a>
-        <a
-          href='https://chat.whatsapp.com/KjuHQ55RV6FBERixk5eg6g'
-          target='_blank'
-        >
-          <Image src='/whatsapp.svg' alt='WhatsApp' width={24} height={24} />
-        </a>
-      </div>
+      <CommunitiesSection communities={data.communities} />
     </main>
   );
 }

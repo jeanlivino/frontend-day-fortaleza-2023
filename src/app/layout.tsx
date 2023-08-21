@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
+// import 'normalize.css';
+import './global.css';
+import Footer from '@/components/Footer';
 import Script from 'next/script';
-import 'normalize.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata: Metadata = {
   title: 'FrontEnd Day - Fortaleza 2023',
@@ -17,11 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='pt-br'>
-      <Script
-        id='fb-pixel'
-        strategy='afterInteractive'
-        dangerouslySetInnerHTML={{
-          __html: `
+      <body className={poppins.className}>
+        <Script
+          id='fb-pixel'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -33,9 +36,11 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '226302154877929');
 fbq('track', 'PageView');
 `,
-        }}
-      />
-      <body className={inter.className}>{children}</body>
+          }}
+        />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
