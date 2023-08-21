@@ -17,14 +17,7 @@ export default async function Palestrantes() {
           </styled.h1>
         </Container>
       </Box>
-      <Box
-        bgColor='primary'
-        bgImage="url('/images/banner_bg.png')"
-        bgSize='cover'
-        bgPosition='center'
-        position='relative'
-        pb='10'
-      >
+      <Box bgColor='primary' position='relative' pb='10'>
         <Container>
           <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr']} gap='4'>
             {data.speakers.map((speaker) => (
