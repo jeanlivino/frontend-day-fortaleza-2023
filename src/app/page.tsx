@@ -24,15 +24,7 @@ export default async function Home() {
         <AboutSection />
         <VenueSection />
       </Box>
-      <Box
-        bgColor='primary'
-        bgImage="url('/images/banner_bg.png')"
-        bgSize='cover'
-        bgPosition='center'
-        position='relative'
-        pt='24'
-        zIndex={1}
-      >
+      <Box bgColor='primary' position='relative' pt='24' zIndex={1}>
         <SpeakersSection speakers={data.speakers} />
       </Box>
       {data.sponsors?.length > 0 && (

@@ -8,15 +8,7 @@ import styles from './hero.module.css';
 
 const HeroSection: React.FC = () => {
   return (
-    <Box
-      bgColor='primary'
-      bgImage="url('/images/banner_bg.png')"
-      bgSize='cover'
-      bgPosition='center'
-      px='10'
-      pt={['5', '5', '24']}
-      pb='28'
-    >
+    <Box bgColor='primary' px='10' pt={['5', '5', '24']} pb='28'>
       <Header />
       <Flex alignItems='center' justifyContent='center'>
         <Grid

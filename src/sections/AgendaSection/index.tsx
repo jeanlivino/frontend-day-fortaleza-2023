@@ -126,16 +126,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   }
 
   return (
-    <Box
-      bgColor='primary'
-      bgImage="url('/images/banner_bg.png')"
-      bgSize='cover'
-      bgPosition='center'
-      position='relative'
-      pt='10'
-      pb='10'
-      zIndex={1}
-    >
+    <Box bgColor='primary' position='relative' pt='10' pb='10' zIndex={1}>
       <Container>
         <styled.h3
           textAlign='center'
