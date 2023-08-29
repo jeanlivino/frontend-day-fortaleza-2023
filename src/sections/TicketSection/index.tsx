@@ -6,7 +6,7 @@ import React from 'react';
 
 const TicketSection: React.FC = () => {
   return (
-    <Box bg='secondary' p='10'>
+    <Box bg='secondary' py='10' px={['0', '10']}>
       <Container>
         <styled.h2
           color='primary'

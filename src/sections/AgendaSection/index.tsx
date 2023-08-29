@@ -45,7 +45,7 @@ const Hour: React.FC<{ hour: string }> = ({ hour }) => {
       color='secondary'
       fontSize='md'
       fontWeight='bold'
-      textAlign='center'
+      textAlign='left'
     >
       {hour}
     </styled.p>
@@ -180,7 +180,11 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
               .map((talk) => {
                 if (talk.featured) {
                   return (
-                    <Grid gridTemplateColumns='90px auto' key={talk.id} mt='5'>
+                    <Grid
+                      gridTemplateColumns={['50px auto', '60px auto']}
+                      key={talk.id}
+                      mt='5'
+                    >
                       <Hour hour={talk.hour} />
                       <Featured text={talk.title} />
                     </Grid>
@@ -188,7 +192,11 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                 }
 
                 return (
-                  <Grid key={talk.id} gridTemplateColumns='90px auto' mt='5'>
+                  <Grid
+                    key={talk.id}
+                    gridTemplateColumns={['50px auto', '60px auto']}
+                    mt='5'
+                  >
                     <Hour hour={talk.hour} />
                     <TalkDetail
                       {...talk}
