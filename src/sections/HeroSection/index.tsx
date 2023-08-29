@@ -12,8 +12,8 @@ const HeroSection: React.FC = () => {
       <Header />
       <Flex alignItems='center' justifyContent='center'>
         <Grid
-          gap={['10', '20']}
-          gridTemplateColumns={['1fr', '1.5fr 1fr']}
+          gap={['10', '14']}
+          gridTemplateColumns={['1fr', '1.6fr 1fr']}
           maxW='1043px'
         >
           <Box alignSelf='center'>
@@ -25,7 +25,8 @@ const HeroSection: React.FC = () => {
             >
               Um dia de evento com alto volume de{' '}
               <styled.span color='secondary'>
-                conteúdo sobre Front-End, Back-End, carreira, empreendedorismo
+                conteúdo sobre Front-End, UX, Back-End, carreira,
+                empreendedorismo
               </styled.span>{' '}
               e muito mais!
             </styled.h1>

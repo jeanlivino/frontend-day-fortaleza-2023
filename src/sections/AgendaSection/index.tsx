@@ -31,10 +31,10 @@ const featuredTalks = [
     featured: true,
   },
   {
-    id: 'almoco',
+    id: 'intervalo-almoco',
     hour: '12:00',
     featured: true,
-    title: 'Almoço',
+    title: 'Intervalo Almoço',
   },
 ] as const;
 
@@ -178,7 +178,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
             {[...filteredTalks, ...featuredTalks]
               .sort((a, b) => a.hour.localeCompare(b.hour))
               .map((talk) => {
-                if (talk.id === 'cred' || talk.id === 'almoco') {
+                if (talk.featured) {
                   return (
                     <Grid gridTemplateColumns='90px auto' key={talk.id} mt='5'>
                       <Hour hour={talk.hour} />

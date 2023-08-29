@@ -4,6 +4,7 @@ export interface SiteData {
   talks: Talks;
   sponsors: Sponsor[];
   partners: Sponsor[];
+  faq: FAQItem[];
   activate_agenda?: boolean;
 }
 
@@ -28,6 +29,7 @@ export interface Talk {
   id: number;
   title: string;
   image: boolean;
+  featured?: boolean;
 }
 
 export interface Speaker {
@@ -45,4 +47,9 @@ export interface Community {
   id: number;
   title: string;
   image: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
 }

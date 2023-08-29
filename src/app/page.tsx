@@ -12,6 +12,7 @@ import { getSiteData } from '@/services/site';
 import CountdownSection from '@/sections/CountdownSection';
 import AgendaSection from '@/sections/AgendaSection';
 import PartnersSection from '@/sections/PartnersSection';
+import FAQSection from '@/sections/FAQSection';
 
 export const revalidate = 60;
 
@@ -35,6 +36,7 @@ export default async function Home() {
         <SponsorsSection sponsors={data.sponsors} />
       )}
       <TicketSection />
+      <CommunitiesSection communities={data.communities} />
       <AgendaSection
         talks={data.talks}
         isActive={
@@ -42,7 +44,7 @@ export default async function Home() {
           process.env.NODE_ENV === 'development'
         }
       />
-      <CommunitiesSection communities={data.communities} />
+      <FAQSection faq={data.faq} />
     </main>
   );
 }
