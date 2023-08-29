@@ -4,6 +4,7 @@ import SpeakerThumb from '@/components/SpeakerThumb';
 import { getSiteData } from '@/services/site';
 import { Box, Container, Flex, Grid, styled } from '@/styled-system/jsx';
 import { Speaker } from '@/types';
+export const revalidate = 60;
 
 export default async function Palestrantes() {
   const data = await getSiteData();
