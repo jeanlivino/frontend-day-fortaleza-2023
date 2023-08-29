@@ -7,10 +7,10 @@ import { Sponsor } from '@/types';
 import HoverEffect from '@/components/HoverEffect';
 
 type Props = {
-  sponsors: Sponsor[];
+  partners: Sponsor[];
 };
 
-const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
+const PartnersSection: React.FC<Props> = ({ partners }) => {
   return (
     <Container>
       <styled.h3
@@ -21,17 +21,17 @@ const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
         pt='10'
         textTransform='uppercase'
       >
-        Patrocinadores
+        Apoiadores
       </styled.h3>
       <Flex gap={4} my='10' justifyContent='center'>
-        {sponsors.map((sponsor) => (
-          <styled.a href={sponsor.link} key={sponsor.name}>
+        {partners.map((partner) => (
+          <styled.a href={partner.link} key={partner.name}>
             <HoverEffect>
               <NextImage
-                src={sponsor.image}
+                src={partner.image}
                 width={200}
                 height={200}
-                alt={sponsor.name}
+                alt={partner.name}
                 style={{
                   width: '150px',
                   objectFit: 'contain',
@@ -46,4 +46,4 @@ const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
   );
 };
 
-export default SponsorsSection;
+export default PartnersSection;

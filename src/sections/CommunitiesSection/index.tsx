@@ -7,6 +7,7 @@ import { Box, styled } from '@/styled-system/jsx';
 import NextImage from 'next/image';
 import { Community } from '@/types';
 import { css } from '@/styled-system/css';
+import HoverEffect from '@/components/HoverEffect';
 
 type Props = {
   communities: Community[];
@@ -52,17 +53,19 @@ const CommunitiesSection: React.FC<Props> = ({ communities }) => {
                 h='80px'
                 aspectRatio='4/3'
               >
-                <NextImage
-                  src={community.image}
-                  width={200}
-                  height={200}
-                  alt={community.title}
-                  className={css({
-                    height: '80px',
-                    aspectRatio: '4/3',
-                    objectFit: 'contain',
-                  })}
-                />
+                <HoverEffect>
+                  <NextImage
+                    src={community.image}
+                    width={200}
+                    height={200}
+                    alt={community.title}
+                    className={css({
+                      height: '80px',
+                      aspectRatio: '4/3',
+                      objectFit: 'contain',
+                    })}
+                  />
+                </HoverEffect>
               </styled.a>
             </div>
           ))}
