@@ -1,8 +1,8 @@
+import Container from '@/components/Container';
 import Header from '@/components/Header';
-import SpeakerCard from '@/components/SpeakerCard';
 import SpeakerThumb from '@/components/SpeakerThumb';
 import { getSiteData } from '@/services/site';
-import { Box, Container, Flex, Grid, styled } from '@/styled-system/jsx';
+import { Box, Grid, styled } from '@/styled-system/jsx';
 import { Speaker } from '@/types';
 export const revalidate = 60;
 
@@ -43,7 +43,7 @@ const SpeakerInfo: React.FC<Speaker> = ({
   const [firstName, lastName] = title.split(' ');
 
   return (
-    <Grid key={id} gap='2' gridTemplateColumns={['1fr', '1fr', '1.5fr 2fr']}>
+    <Grid key={id} gridTemplateColumns={['1fr', '1fr', '1.5fr 2fr']}>
       <Box textAlign='center'>
         <SpeakerThumb key={id} image={image} name={title} />
         <styled.a
@@ -64,7 +64,7 @@ const SpeakerInfo: React.FC<Speaker> = ({
           Rede social
         </styled.a>
       </Box>
-      <Box ml={['0', '-30px']} textAlign={['center', 'left']}>
+      <Box ml='0' textAlign={['center', 'left']}>
         <styled.h4
           mt={['2', '12']}
           fontSize='sm'
