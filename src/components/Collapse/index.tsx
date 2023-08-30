@@ -34,7 +34,7 @@ const Collapse: React.FC<Props> = ({ title, description }) => {
         id={`collapse-${title}`}
         aria-hidden={!isOpen}
         background='primary.50'
-        maxH={isOpen ? '300px' : '0'}
+        maxH={isOpen ? '100vh' : '0'}
         opacity={isOpen ? '1' : '0'}
         overflow='hidden'
         transition='all .6s ease-in-out'
