@@ -39,7 +39,7 @@ const Collapse: React.FC<Props> = ({ title, description }) => {
         overflow='hidden'
         transition='all .6s ease-in-out'
       >
-        <Box p='4'>{description}</Box>
+        <Box p='4' dangerouslySetInnerHTML={{ __html: description }} />
       </styled.div>
     </Box>
   );
