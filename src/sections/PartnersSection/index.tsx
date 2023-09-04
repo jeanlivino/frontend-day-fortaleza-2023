@@ -18,7 +18,7 @@ const PartnersSection: React.FC<Props> = ({ partners }) => {
         fontWeight='bold'
         fontSize='2xl'
         textAlign='center'
-        pt='10'
+        pt='5'
         textTransform='uppercase'
       >
         Apoiadores
@@ -33,7 +33,7 @@ const PartnersSection: React.FC<Props> = ({ partners }) => {
                 height={200}
                 alt={partner.name}
                 style={{
-                  width: '150px',
+                  width: '110px',
                   objectFit: 'contain',
                   aspectRatio: ' 4/3',
                 }}

@@ -23,7 +23,7 @@ const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
       >
         Patrocinadores
       </styled.h3>
-      <Flex gap={4} my='10' justifyContent='center'>
+      <Flex gap={4} justifyContent='center'>
         {sponsors.map((sponsor) => (
           <styled.a href={sponsor.link} key={sponsor.name}>
             <HoverEffect>
@@ -33,7 +33,7 @@ const SponsorsSection: React.FC<Props> = ({ sponsors }) => {
                 height={200}
                 alt={sponsor.name}
                 style={{
-                  width: '150px',
+                  width: '200px',
                   objectFit: 'contain',
                   aspectRatio: ' 4/3',
                 }}

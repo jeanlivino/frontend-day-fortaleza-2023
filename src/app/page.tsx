@@ -29,11 +29,11 @@ export default async function Home() {
       <Box bgColor='primary' position='relative' pt='24' zIndex={1}>
         <SpeakersSection speakers={data.speakers} />
       </Box>
-      {data.partners?.length > 0 && (
-        <PartnersSection partners={data.partners} />
-      )}
       {data.sponsors?.length > 0 && (
         <SponsorsSection sponsors={data.sponsors} />
+      )}
+      {data.partners?.length > 0 && (
+        <PartnersSection partners={data.partners} />
       )}
       <TicketSection />
       <CommunitiesSection communities={data.communities} />
