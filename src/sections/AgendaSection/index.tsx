@@ -4,6 +4,8 @@ import { Box, Flex, Grid, styled } from '@/styled-system/jsx';
 import { Talk, Talks } from '@/types';
 import React from 'react';
 
+import NextImage from 'next/image';
+
 const buttons = [
   {
     label: 'Geral',
@@ -77,7 +79,7 @@ const featuredTalks = [
 const Hour: React.FC<{ hour: string }> = ({ hour }) => {
   return (
     <styled.p
-      alignSelf='center'
+      alignSelf='start'
       color='secondary'
       fontSize='md'
       fontWeight='bold'
@@ -234,10 +236,23 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                 return (
                   <Grid
                     key={talk.id}
-                    gridTemplateColumns={['50px auto', '60px auto']}
+                    gridTemplateColumns={['50px 50px auto', '60px 60px auto']}
                     mt='5'
                   >
                     <Hour hour={talk.hour} />
+                    <NextImage
+                      src={talk.speaker.image}
+                      width={200}
+                      height={200}
+                      alt={talk.speaker.title}
+                      style={{
+                        borderRadius: '50%',
+                        aspectRatio: '1/1',
+                        objectFit: 'cover',
+                        width: '100%',
+                      }}
+                    />
+
                     <TalkDetail
                       {...talk}
                       tag={
