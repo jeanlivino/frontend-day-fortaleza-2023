@@ -11,19 +11,19 @@ const links = [
     href: 'https://drive.google.com/file/d/1pJQyoUdeZ3DbVgsuMc5_7ec5tcR4X6bh/view?usp=sharing',
     target: '_blank',
   },
-  {
-    label: 'Call 4 Papers',
-    href: 'https://forms.gle/MKvpXUKVkCMdSzhh6',
-    target: '_blank',
-  },
+  // {
+  //   label: 'Call 4 Papers',
+  //   href: 'https://forms.gle/MKvpXUKVkCMdSzhh6',
+  //   target: '_blank',
+  // },
   {
     label: 'Palestrantes',
     href: '/palestrantes',
   },
-  // {
-  //   label: 'Comunidades',
-  //   href: '#',
-  // },
+  {
+    label: 'Agenda',
+    href: '/agenda',
+  },
 ];
 
 const Header: React.FC = () => {
