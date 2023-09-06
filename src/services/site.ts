@@ -4,7 +4,6 @@ import { cache } from 'react';
 
 export const getSiteData = cache(() =>
   dataApi.get('site/v1/data').then((res) => {
-    console.log(res.data);
     return res.data as SiteData;
   })
 );

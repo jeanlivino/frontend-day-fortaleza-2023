@@ -154,7 +154,6 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   const [filteredTalks, setFilteredTalks] = React.useState(talks.frontend);
 
   function handleSelected(value: SelectOptions) {
-    console.log(talks);
     setSelected(value);
     if (value === 'principal') {
       setFilteredTalks([
