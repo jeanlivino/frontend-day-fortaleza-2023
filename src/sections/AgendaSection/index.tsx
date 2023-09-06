@@ -7,7 +7,7 @@ import React from 'react';
 const buttons = [
   {
     label: 'Geral',
-    value: 'general',
+    value: 'principal',
   },
   {
     label: 'Front-end',
@@ -31,10 +31,46 @@ const featuredTalks = [
     featured: true,
   },
   {
+    id: 'aber',
+    hour: '09:00',
+    title: 'Abertura',
+    featured: true,
+  },
+  {
+    id: 'net',
+    hour: '10:00',
+    title: 'Networking',
+    featured: true,
+  },
+  {
     id: 'intervalo-almoco',
     hour: '12:00',
     featured: true,
     title: 'Intervalo Almoço',
+  },
+  {
+    id: 'coffee',
+    hour: '15:50',
+    title: 'Coffee Break + Networking',
+    featured: true,
+  },
+  {
+    id: 'sorteio',
+    hour: '16:45',
+    title: 'Sorteios de brindes e participantes do Codando no Breu',
+    featured: true,
+  },
+  {
+    id: 'fim',
+    hour: '18:00',
+    title: 'Encerramento das palestras',
+    featured: true,
+  },
+  {
+    id: 'code',
+    hour: '18:30',
+    title: 'Codando no Breu | Code in The Dark',
+    featured: true,
   },
 ] as const;
 
@@ -79,30 +115,34 @@ const findAndGetParentKey = (talks: Talks, id: number) => {
 
 const TalkDetail: React.FC<
   Talk & {
-    tag?: string;
+    tag?: keyof Talks;
   }
 > = ({ speaker, title, tag }) => {
+  const button = buttons.find((button) => button.value === tag);
+
+  const roomName = button?.value === 'principal' ? 'Auditório' : button?.label;
+
   return (
     <Box borderBottom='1px solid' borderColor='secondary' pb='5'>
       <styled.h4 color='secondary' fontWeight='bold' textTransform='uppercase'>
         {speaker.title}{' '}
+        {tag && (
+          <styled.span textTransform='none' fontWeight='400' color='white'>
+            | Trilha: {roomName}
+          </styled.span>
+        )}
       </styled.h4>
       <styled.p fontSize='sm' color='white'>
         {speaker.role} {speaker.company}
       </styled.p>
       <styled.p mt='1' color='secondary' fontWeight='bold'>
         {title}{' '}
-        {tag && (
-          <styled.span fontWeight='400' color='white'>
-            | Trilha: {buttons.find((button) => button.value === tag)?.label}
-          </styled.span>
-        )}
       </styled.p>
     </Box>
   );
 };
 
-type SelectOptions = keyof Talks | 'general';
+type SelectOptions = keyof Talks;
 
 const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   talks,
@@ -112,17 +152,17 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   const [filteredTalks, setFilteredTalks] = React.useState(talks.frontend);
 
   function handleSelected(value: SelectOptions) {
+    console.log(talks);
     setSelected(value);
-    if (value === 'general') {
+    if (value === 'principal') {
       setFilteredTalks([
-        ...(talks.principais || []),
         ...(talks.frontend || []),
         ...(talks.communities || []),
         ...(talks.invite || []),
       ]);
       return;
     }
-    setFilteredTalks([...(talks.principais || []), ...(talks[value] || [])]);
+    setFilteredTalks(talks[value] || []);
   }
 
   return (
@@ -175,7 +215,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
               ))}
             </Flex>
 
-            {[...filteredTalks, ...featuredTalks]
+            {[...filteredTalks, ...featuredTalks, ...talks.principal]
               .sort((a, b) => a.hour.localeCompare(b.hour))
               .map((talk) => {
                 if (talk.featured) {
@@ -201,9 +241,9 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                     <TalkDetail
                       {...talk}
                       tag={
-                        selected === 'general'
+                        selected === 'principal' || talk.room === 'principal'
                           ? findAndGetParentKey(talks, talk.id)
-                          : ''
+                          : undefined
                       }
                     />
                   </Grid>

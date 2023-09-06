@@ -18,7 +18,7 @@ export interface Talks {
   communities: Talk[];
   frontend: Talk[];
   invite: Talk[];
-  principais: Talk[];
+  principal: Talk[];
 }
 
 export interface Talk {
