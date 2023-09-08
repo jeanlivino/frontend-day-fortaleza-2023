@@ -40,7 +40,8 @@ const SpeakerInfo: React.FC<Speaker> = ({
   id,
   social_link,
 }) => {
-  const [firstName, lastName] = title.split(' ');
+  const [firstName, ...names] = title.split(' ');
+  const lastName = names.join(' ');
 
   return (
     <Grid key={id} gridTemplateColumns={['1fr', '1fr', '1.5fr 2fr']}>
