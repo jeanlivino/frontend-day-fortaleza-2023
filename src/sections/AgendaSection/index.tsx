@@ -5,6 +5,8 @@ import { Talk, Talks } from '@/types';
 import React from 'react';
 
 import NextImage from 'next/image';
+import HoverEffect from '@/components/HoverEffect';
+import { useSpeakerModal } from '@/atoms/speaker-modal';
 
 const buttons = [
   {
@@ -118,22 +120,30 @@ const findAndGetParentKey = (talks: Talks, id: number) => {
 const TalkDetail: React.FC<
   Talk & {
     tag?: keyof Talks;
+    onSpeakerClick: () => void;
   }
-> = ({ speaker, title, tag }) => {
+> = ({ speaker, title, tag, onSpeakerClick }) => {
   const button = buttons.find((button) => button.value === tag);
 
   const roomName = button?.value === 'principal' ? 'Auditório' : button?.label;
 
   return (
     <Box borderBottom='1px solid' borderColor='secondary' pb='5'>
-      <styled.h4 color='secondary' fontWeight='bold' textTransform='uppercase'>
-        {speaker.title}{' '}
-        {tag && (
-          <styled.span textTransform='none' fontWeight='400' color='white'>
-            | Trilha: {roomName}
-          </styled.span>
-        )}
-      </styled.h4>
+      <styled.button cursor='pointer' onClick={onSpeakerClick}>
+        <styled.h4
+          color='secondary'
+          fontWeight='bold'
+          textTransform='uppercase'
+          textAlign='left'
+        >
+          {speaker.title}{' '}
+          {tag && (
+            <styled.span textTransform='none' fontWeight='400' color='white'>
+              | Trilha: {roomName}
+            </styled.span>
+          )}
+        </styled.h4>
+      </styled.button>
       <styled.p fontSize='sm' color='white'>
         {speaker.role} {speaker.company}
       </styled.p>
@@ -150,6 +160,8 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   talks,
   isActive,
 }) => {
+  const { openModal } = useSpeakerModal();
+
   const [selected, setSelected] = React.useState<SelectOptions>('frontend');
   const [filteredTalks, setFilteredTalks] = React.useState(talks.frontend);
 
@@ -239,21 +251,31 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                     mt='5'
                   >
                     <Hour hour={talk.hour} />
-                    <NextImage
-                      src={talk.speaker.image}
-                      width={200}
-                      height={200}
-                      alt={talk.speaker.title}
-                      style={{
-                        borderRadius: '50%',
-                        aspectRatio: '1/1',
-                        objectFit: 'cover',
-                        width: '100%',
-                      }}
-                    />
+                    <styled.button
+                      cursor='pointer'
+                      display='flex'
+                      alignItems='flex-start'
+                      onClick={() => openModal(talk.speaker)}
+                    >
+                      <HoverEffect>
+                        <NextImage
+                          src={talk.speaker.image}
+                          width={200}
+                          height={200}
+                          alt={talk.speaker.title}
+                          style={{
+                            borderRadius: '50%',
+                            aspectRatio: '1/1',
+                            objectFit: 'cover',
+                            width: '100%',
+                          }}
+                        />
+                      </HoverEffect>
+                    </styled.button>
 
                     <TalkDetail
                       {...talk}
+                      onSpeakerClick={() => openModal(talk.speaker)}
                       tag={
                         selected === 'principal' || talk.room === 'principal'
                           ? findAndGetParentKey(talks, talk.id)

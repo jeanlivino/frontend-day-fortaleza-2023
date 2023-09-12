@@ -4,12 +4,17 @@ import NextImage from 'next/image';
 import SpeakerThumb from '../SpeakerThumb';
 import { Speaker } from '@/types';
 
-const SpeakerCard: React.FC<Speaker> = ({
+type Props = Speaker & {
+  showBioOnMobile?: boolean;
+};
+
+const SpeakerCard: React.FC<Props> = ({
   image,
   title,
   role,
   bio,
   company,
+  showBioOnMobile = false,
 }) => {
   const [firstName, lastName] = title.split(' ');
 
@@ -38,7 +43,7 @@ const SpeakerCard: React.FC<Speaker> = ({
         mt='2'
         maxWidth='200px'
         mx='auto'
-        display={['none', 'block']}
+        display={showBioOnMobile ? 'block' : ['none', 'block']}
       >
         {bio}
       </styled.p>
