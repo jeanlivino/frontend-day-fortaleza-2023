@@ -9,12 +9,11 @@ interface Props {
 
 const Collapse: React.FC<Props> = ({ title, description }) => {
   const [isOpen, setIsOpen] = React.useState(false);
+
   return (
-    <Box>
-      <styled.button
+    <details>
+      <styled.summary
         onClick={() => setIsOpen(!isOpen)}
-        aria-expanded={isOpen}
-        aria-controls={`collapse-${title}`}
         display='flex'
         justifyContent='space-between'
         alignItems='center'
@@ -28,20 +27,15 @@ const Collapse: React.FC<Props> = ({ title, description }) => {
       >
         <styled.h4>{title}</styled.h4>
         <styled.span aria-hidden='true'>{isOpen ? '−' : '+'}</styled.span>
-      </styled.button>
+      </styled.summary>
 
-      <styled.div
-        id={`collapse-${title}`}
-        aria-hidden={!isOpen}
+      <Box
         background='primary.50'
-        maxH={isOpen ? '100vh' : '0'}
-        opacity={isOpen ? '1' : '0'}
-        overflow='hidden'
-        transition='all .6s ease-in-out'
-      >
-        <Box p='4' dangerouslySetInnerHTML={{ __html: description }} />
-      </styled.div>
-    </Box>
+        p='4'
+        tabIndex={0}
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+    </details>
   );
 };
 

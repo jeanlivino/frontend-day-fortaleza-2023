@@ -31,10 +31,16 @@ const SpeakerCard: React.FC<Props> = ({
         display='inline-block'
         position='relative'
         top='-.5rem'
+        tabIndex={0}
       >
         {firstName} <styled.span fontWeight='400'>{lastName}</styled.span>
       </styled.h4>
-      <styled.p fontSize='sm' color='secondary' textTransform='uppercase'>
+      <styled.p
+        tabIndex={0}
+        fontSize='sm'
+        color='secondary'
+        textTransform='uppercase'
+      >
         {role} <styled.span fontWeight='bold'>{company}</styled.span>
       </styled.p>
       <styled.p
@@ -44,6 +50,7 @@ const SpeakerCard: React.FC<Props> = ({
         maxWidth='200px'
         mx='auto'
         display={showBioOnMobile ? 'block' : ['none', 'block']}
+        tabIndex={0}
       >
         {bio}
       </styled.p>

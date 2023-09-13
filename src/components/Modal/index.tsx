@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-
+import * as focusTrap from 'focus-trap';
 import * as Styled from './styles';
 
 type Props = {
@@ -9,7 +9,14 @@ type Props = {
 };
 
 const Modal: React.FC<Props> = ({ children, onClose }) => {
+  const ref = React.useRef<HTMLDialogElement>(null);
+
   useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    const trap = focusTrap.createFocusTrap(ref.current as HTMLDialogElement);
+    trap.activate();
+
     const handleEscapeKeyPress = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
@@ -20,14 +27,18 @@ const Modal: React.FC<Props> = ({ children, onClose }) => {
 
     return () => {
       window.removeEventListener('keydown', handleEscapeKeyPress);
+      document.body.style.overflow = 'auto';
+      trap.deactivate();
     };
   }, [onClose]);
 
   return (
-    <Styled.ModalWrapper>
+    <Styled.ModalWrapper open ref={ref}>
       <Styled.ModalContent>
         {children}
-        <Styled.CloseButton onClick={onClose}>X</Styled.CloseButton>
+        <Styled.CloseButton onClick={onClose} aria-label='Fechar modal'>
+          X
+        </Styled.CloseButton>
       </Styled.ModalContent>
       <Styled.ModalOverlay onClick={onClose} />
     </Styled.ModalWrapper>

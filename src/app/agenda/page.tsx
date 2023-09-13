@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import SpeakerModal from '@/components/SpeakerModal';
 import AgendaSection from '@/sections/AgendaSection';
 import { getSiteData } from '@/services/site';
 import { Box } from '@/styled-system/jsx';
@@ -18,6 +19,7 @@ export default async function Programacao() {
           process.env.NODE_ENV === 'development'
         }
       />
+      <SpeakerModal />
     </main>
   );
 }
