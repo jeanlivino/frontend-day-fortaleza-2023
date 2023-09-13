@@ -1,6 +1,6 @@
 import { styled } from '@/styled-system/jsx';
 
-export const ModalWrapper = styled('div', {
+export const ModalWrapper = styled('dialog', {
   base: {
     position: 'fixed',
     top: '0',
@@ -8,7 +8,7 @@ export const ModalWrapper = styled('div', {
     width: '100%',
     height: '100%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: '1',
+    zIndex: '4',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -22,7 +22,7 @@ export const ModalOverlay = styled('div', {
     left: '0',
     width: '100%',
     height: '100%',
-    zIndex: '2',
+    zIndex: '5',
   },
 });
 
@@ -34,7 +34,7 @@ export const ModalContent = styled('div', {
     borderRadius: '5px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
     position: 'relative',
-    zIndex: '3',
+    zIndex: '6',
   },
 });
 

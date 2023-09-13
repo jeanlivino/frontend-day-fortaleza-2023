@@ -3,7 +3,7 @@ import HeroSection from '@/sections/HeroSection';
 import SpeakersSection from '@/sections/SpeakersSection';
 import CommunitiesSection from '@/sections/CommunitiesSection';
 import VenueSection from '@/sections/VenueSection';
-import { Box, styled } from '@/styled-system/jsx';
+import { Box } from '@/styled-system/jsx';
 import SponsorsSection from '@/sections/SponsorsSection';
 
 import TicketSection from '@/sections/TicketSection';
