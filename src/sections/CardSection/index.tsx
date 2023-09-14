@@ -1,5 +1,5 @@
 'use client';
-import SpeakerThumb from '@/components/SpeakerThumb';
+import './style.css';
 import { Box, Flex, styled } from '@/styled-system/jsx';
 import React, { useMemo, useRef } from 'react';
 import { css } from '@/styled-system/css';
@@ -96,7 +96,6 @@ const CardSection: React.FC<Props> = ({ user }) => {
         justifyContent='center'
         alignItems='center'
         p='6'
-        bg='primary'
         maxWidth='800px'
         width='100vw'
         height='auto'
@@ -104,6 +103,7 @@ const CardSection: React.FC<Props> = ({ user }) => {
         mx='auto'
         ref={printRef}
         overflow='hidden'
+        bgImage='url(/images/bg-page-card.png)'
       >
         <Box
           w='100%'
