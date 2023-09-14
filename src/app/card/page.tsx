@@ -7,6 +7,7 @@ import NextImage from 'next/image';
 import { css } from '@/styled-system/css';
 import Header from '@/components/Header';
 import Loading from '@/components/Loading';
+
 const articleByGender = {
   male: 'o',
   female: 'a',
@@ -97,10 +98,11 @@ const CardFormPage: React.FC = () => {
       justifyContent='center'
       alignItems='center'
       minH='90vh'
+      flexDir={['column', 'column', 'row']}
     >
       <Header />
       <Box
-        mt='96px'
+        mt={['0', '96px']}
         maxW='800px'
         border='1px solid white'
         p='4'
@@ -128,7 +130,9 @@ const CardFormPage: React.FC = () => {
         </styled.h1>
         <form onSubmit={handleSubmit}>
           <Grid
-            gap='3'
+            gap='4'
+            display={['flex', 'flex', 'grid']}
+            flexDir='column'
             style={{
               gridTemplateColumns: isOtherGender ? '1fr 1fr 1fr' : '1fr 1fr',
             }}
