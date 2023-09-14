@@ -128,11 +128,11 @@ const CardSection: React.FC<Props> = ({ user }) => {
           />
           <Flex h='100%' flexDir='column' justifyContent='space-between'>
             <Flex justifyContent='center' alignItems='center' flexDir='column'>
-              <NextImage
+              <styled.img
                 src='/logo-white.svg'
                 alt='logo'
                 width={150}
-                height={100}
+                height='auto'
                 className={css({
                   mt: '4',
                   transition: 'all .3s ease-in-out',
