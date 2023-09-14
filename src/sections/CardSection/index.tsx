@@ -44,7 +44,8 @@ const CardSection: React.FC<Props> = ({ user }) => {
       if (!element) return;
 
       const canvas = await html2canvas(element, {
-        // scale: 2,
+        useCORS: true,
+        scale: Math.round(800 / printRef.current.clientWidth) * 2,
       });
 
       console.log(Math.round(800 / printRef.current.clientWidth));
@@ -141,7 +142,39 @@ const CardSection: React.FC<Props> = ({ user }) => {
                   },
                 })}
               />
-              <SpeakerThumb image={user.avatar_url} name='Sonata Dusk' />
+              <Box>
+                <Box
+                  pos='relative'
+                  p='10'
+                  maxWidth='200px'
+                  mx='auto'
+                  aspectRatio='1/1'
+                  transition='all .3s ease-in-out'
+                  _hover={{
+                    transform: 'scale(1.03)',
+                    opacity: '.8',
+                  }}
+                >
+                  <styled.img
+                    src={user.avatar_url}
+                    alt={user.name}
+                    borderRadius='50%'
+                  />
+
+                  <Box
+                    pos='absolute'
+                    w='100%'
+                    h='100%'
+                    left='0'
+                    top='0'
+                    animation='pulse 2s ease-in-out 0s infinite normal forwards'
+                    bgImage="url('/images/image-effect.png')"
+                    bgPosition='0 6px'
+                    bgRepeat='no-repeat'
+                    bgSize='100% 100%'
+                  />
+                </Box>
+              </Box>
               <styled.h1
                 color='tertiary'
                 textTransform='uppercase'
