@@ -84,7 +84,7 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
     });
   }, [userId]);
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <Loading isPage />;
   if (!userId || !user) return;
 
   return (
@@ -121,6 +121,7 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
         ref={printRef}
         overflow='hidden'
         bgImage='url(/images/bg-page-card.png)'
+        bgSize='cover'
       >
         <Box
           w='100%'

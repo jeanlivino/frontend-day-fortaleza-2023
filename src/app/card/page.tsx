@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import NextImage from 'next/image';
 import { css } from '@/styled-system/css';
 import Header from '@/components/Header';
+import Loading from '@/components/Loading';
 const articleByGender = {
   male: 'o',
   female: 'a',
@@ -56,6 +57,8 @@ const CardFormPage: React.FC = () => {
   const [githubUser, setGithubUser] = useState('');
   const [gender, setGender] = useState('');
   const [pronoun, setPronoun] = useState('');
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
   const router = useRouter();
 
   const isOtherGender = gender === 'other';
@@ -75,6 +78,7 @@ const CardFormPage: React.FC = () => {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setIsRedirecting(true);
 
     const article = isOtherGender
       ? pronoun
@@ -167,23 +171,27 @@ const CardFormPage: React.FC = () => {
               </div>
             )}
           </Grid>
-          <Center>
-            <styled.button
-              mt='4'
-              bg='primary'
-              color='secondary'
-              borderRadius='100px'
-              fontWeight='700'
-              zIndex='5'
-              px='4'
-              py='2'
-              opacity={isButtonDisabled ? '.5' : '1'}
-              cursor={isButtonDisabled ? 'not-allowed' : 'pointer'}
-              disabled={isButtonDisabled}
-              type='submit'
-            >
-              Gerar imagem
-            </styled.button>
+          <Center mt='4'>
+            {!isRedirecting && (
+              <styled.button
+                mt='4'
+                bg='primary'
+                color='secondary'
+                borderRadius='100px'
+                fontWeight='700'
+                zIndex='5'
+                px='4'
+                py='2'
+                opacity={isButtonDisabled ? '.5' : '1'}
+                cursor={isButtonDisabled ? 'not-allowed' : 'pointer'}
+                disabled={isButtonDisabled}
+                type='submit'
+              >
+                Gerar imagem
+              </styled.button>
+            )}
+
+            {isRedirecting && <Loading dark />}
           </Center>
         </form>
       </Box>
