@@ -12,6 +12,10 @@ import HoverEffect from '@/components/HoverEffect';
 
 const orbitron = Orbitron({ subsets: ['latin'], weight: ['800'] });
 
+const slugify = (text: string) => {
+  return text.replace(/\s+/g, '-').toLowerCase();
+};
+
 const GitHubIcon = () => (
   <styled.svg
     fill='secondary'
@@ -56,7 +60,7 @@ const CardSection: React.FC<Props> = ({ user }) => {
 
       if (typeof link.download === 'string') {
         link.href = data;
-        link.download = 'image.png';
+        link.download = `${slugify(user.name)}-frontendday.png`;
 
         document.body.appendChild(link);
         link.click();
@@ -220,7 +224,7 @@ const CardSection: React.FC<Props> = ({ user }) => {
                   </styled.span>
                 </div>
               </Flex>
-              <styled.p mt='1.5'>
+              <styled.p mt={isPrinting ? '0' : '1.5'}>
                 <styled.span fontWeight='700'>14 OUT</styled.span> | Fortaleza
               </styled.p>
             </Flex>
