@@ -8,6 +8,7 @@ import html2canvas from 'html2canvas';
 import NextImage from 'next/image';
 import { Orbitron } from 'next/font/google';
 import { GitubUser } from '@/services/gh-user';
+import HoverEffect from '@/components/HoverEffect';
 
 const orbitron = Orbitron({ subsets: ['latin'], weight: ['800'] });
 
@@ -80,11 +81,19 @@ const CardSection: React.FC<Props> = ({ user }) => {
       <styled.button
         position='fixed'
         bottom='10px'
-        right='10px'
+        right='calc(50% - 77px)'
         onClick={handleDownloadImage}
         bg='secondary'
         color='primary'
-        borderRadius='10px'
+        borderRadius='100px'
+        fontWeight='700'
+        zIndex='5'
+        px='4'
+        py='2'
+        cursor='pointer'
+        _hover={{
+          opacity: '.8',
+        }}
       >
         baixar imagem
       </styled.button>
@@ -215,25 +224,27 @@ const CardSection: React.FC<Props> = ({ user }) => {
                 <styled.span fontWeight='700'>14 OUT</styled.span> | Fortaleza
               </styled.p>
             </Flex>
-            <styled.a
-              display='block'
-              mx='auto'
-              color={'primary'}
-              bg={'tertiary'}
-              pt='7px'
-              pb={isPrinting ? '15px' : '5px'}
-              w='100%'
-              maxWidth='250px'
-              borderRadius='20px'
-              href='https://frontendday.com.br'
-              letterSpacing='1px'
-              target='_blank'
-              fontSize='sm'
-            >
-              <styled.span display='block' mt={isPrinting ? '-10px' : '0'}>
-                frontendday.com.br
-              </styled.span>
-            </styled.a>
+            <HoverEffect>
+              <styled.a
+                display='block'
+                mx='auto'
+                color={'primary'}
+                bg={'tertiary'}
+                pt='7px'
+                pb={isPrinting ? '15px' : '5px'}
+                w='100%'
+                maxWidth='250px'
+                borderRadius='20px'
+                href='https://frontendday.com.br'
+                letterSpacing='1px'
+                target='_blank'
+                fontSize='sm'
+              >
+                <styled.span display='block' mt={isPrinting ? '-10px' : '0'}>
+                  frontendday.com.br
+                </styled.span>
+              </styled.a>
+            </HoverEffect>
           </Flex>
         </Box>
       </Flex>
