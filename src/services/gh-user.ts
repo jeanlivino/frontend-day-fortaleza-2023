@@ -8,7 +8,7 @@ export type GitubUser = {
 };
 
 export const getGithubUserData = cache((id: string) => {
-  if (process.env.IS_DEV === 'true') {
+  if (process.env.NEXT_PUBLIC_IS_DEV === 'true') {
     return Promise.resolve({
       html_url: '/',
       avatar_url: 'https://avatars.githubusercontent.com/u/21012724?v=4',

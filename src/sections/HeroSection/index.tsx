@@ -9,7 +9,7 @@ import styles from './hero.module.css';
 const HeroSection: React.FC = () => {
   return (
     <Box bgColor='primary' px='10' pt={['5', '5', '24']} pb='28'>
-      <Header />
+      <Header isHome />
       <Flex alignItems='center' justifyContent='center'>
         <Grid
           gap={['10', '14']}

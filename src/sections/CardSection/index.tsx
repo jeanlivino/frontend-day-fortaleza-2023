@@ -1,13 +1,15 @@
 'use client';
 import './style.css';
 import { Box, Flex, styled } from '@/styled-system/jsx';
-import React, { useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { css } from '@/styled-system/css';
 import html2canvas from 'html2canvas';
 import NextImage from 'next/image';
 import { Orbitron } from 'next/font/google';
-import { GitubUser } from '@/services/gh-user';
+import { GitubUser, getGithubUserData } from '@/services/gh-user';
 import HoverEffect from '@/components/HoverEffect';
+import Loading from '@/components/Loading';
+import Header from '@/components/Header';
 
 const orbitron = Orbitron({ subsets: ['latin'], weight: ['800'] });
 
@@ -28,14 +30,20 @@ const GitHubIcon = () => (
 );
 
 type Props = {
-  user: GitubUser;
+  userId: string;
+  article: string;
 };
 
-const CardSection: React.FC<Props> = ({ user }) => {
-  const printRef = useRef<HTMLDivElement>(null);
+const CardSection: React.FC<Props> = ({ userId, article }) => {
   const [isPrinting, setIsPrinting] = React.useState(false);
+  const [user, setUser] = React.useState<GitubUser>();
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  const printRef = useRef<HTMLDivElement>(null);
 
   const cardScale = useMemo(() => {
+    if (typeof window === 'undefined') return 1;
+
     const width = window.innerWidth >= 800 ? 800 : window.innerWidth;
 
     return width / 800;
@@ -45,14 +53,12 @@ const CardSection: React.FC<Props> = ({ user }) => {
     setIsPrinting(true);
     setTimeout(async () => {
       const element = printRef.current;
-      if (!element) return;
+      if (!element || !user) return;
 
       const canvas = await html2canvas(element, {
         useCORS: true,
         scale: Math.round(800 / printRef.current.clientWidth) * 2,
       });
-
-      console.log(Math.round(800 / printRef.current.clientWidth));
 
       const data = canvas.toDataURL('image/png');
       const link = document.createElement('a');
@@ -71,8 +77,19 @@ const CardSection: React.FC<Props> = ({ user }) => {
     }, 0);
   };
 
+  useEffect(() => {
+    getGithubUserData(userId).then((user) => {
+      setUser(user);
+      setIsLoading(false);
+    });
+  }, [userId]);
+
+  if (isLoading) return <Loading />;
+  if (!userId || !user) return;
+
   return (
     <>
+      <Header />
       <styled.button
         position='fixed'
         bottom='10px'
@@ -210,7 +227,7 @@ const CardSection: React.FC<Props> = ({ user }) => {
                     Participante
                     <br />
                     <styled.span lineHeight='1' fontSize='4xl'>
-                      Confirmado
+                      Confirmad{article}
                     </styled.span>
                   </styled.span>
                 </div>

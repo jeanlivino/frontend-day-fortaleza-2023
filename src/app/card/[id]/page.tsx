@@ -5,12 +5,11 @@ import CardSection from '@/sections/CardSection';
 
 type Props = {
   params: { id: string };
+  searchParams: { [key: string]: string };
 };
 
-const CardPage: React.FC<Props> = async ({ params: { id } }) => {
-  const user = await getGithubUserData(id);
-
-  return <CardSection user={user} />;
+const CardPage: React.FC<Props> = async ({ params: { id }, searchParams }) => {
+  return <CardSection userId={id} article={searchParams.article} />;
 };
 
 export default CardPage;

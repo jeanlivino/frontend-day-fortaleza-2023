@@ -26,7 +26,11 @@ const links = [
   },
 ];
 
-const Header: React.FC = () => {
+type Props = {
+  isHome?: boolean;
+};
+
+const Header: React.FC<Props> = ({ isHome }) => {
   return (
     <styled.header
       pos={['relative', 'relative', 'absolute']}
@@ -61,6 +65,19 @@ const Header: React.FC = () => {
             width='100%'
             flexWrap='wrap'
           >
+            {!isHome && (
+              <styled.a
+                href='/'
+                alignSelf='center'
+                color='white'
+                textTransform='uppercase'
+                _hover={{
+                  color: 'secondary',
+                }}
+              >
+                Home
+              </styled.a>
+            )}
             {links.map((link) => (
               <styled.a
                 href={link.href}
