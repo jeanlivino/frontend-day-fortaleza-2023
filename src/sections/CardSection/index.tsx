@@ -4,7 +4,6 @@ import { Box, Flex, styled } from '@/styled-system/jsx';
 import React, { useMemo, useRef } from 'react';
 import { css } from '@/styled-system/css';
 import html2canvas from 'html2canvas';
-
 import NextImage from 'next/image';
 import { Orbitron } from 'next/font/google';
 import { GitubUser } from '@/services/gh-user';
@@ -70,14 +69,6 @@ const CardSection: React.FC<Props> = ({ user }) => {
       }
       setIsPrinting(false);
     }, 0);
-    // domtoimage
-    //   .toJpeg(element, { quality: 0.95 })
-    //   .then(function (dataUrl: string) {
-    //     var link = document.createElement('a');
-    //     link.download = 'my-image-name.jpeg';
-    //     link.href = dataUrl;
-    //     link.click();
-    //   });
   };
 
   return (
@@ -158,8 +149,8 @@ const CardSection: React.FC<Props> = ({ user }) => {
               <Box>
                 <Box
                   pos='relative'
-                  p='10'
-                  maxWidth='200px'
+                  p={['7', '10']}
+                  maxWidth={['150px', '200px']}
                   mx='auto'
                   aspectRatio='1/1'
                   transition='all .3s ease-in-out'
@@ -182,7 +173,7 @@ const CardSection: React.FC<Props> = ({ user }) => {
                     top='0'
                     animation='pulse 2s ease-in-out 0s infinite normal forwards'
                     bgImage="url('/images/image-effect.png')"
-                    bgPosition='0 6px'
+                    bgPosition={['0 5px', '0 6px']}
                     bgRepeat='no-repeat'
                     bgSize='100% 100%'
                   />
