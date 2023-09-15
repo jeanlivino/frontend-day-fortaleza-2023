@@ -37,3 +37,6 @@ next-env.d.ts
 # pandacss
 styled-system
 styled-system-static
+
+# Sentry Auth Token
+.sentryclirc
