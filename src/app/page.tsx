@@ -14,6 +14,7 @@ import AgendaSection from '@/sections/AgendaSection';
 import PartnersSection from '@/sections/PartnersSection';
 import FAQSection from '@/sections/FAQSection';
 import SpeakerModal from '@/components/SpeakerModal';
+import Footer from '@/components/Footer';
 
 export const revalidate = 60;
 
@@ -47,6 +48,7 @@ export default async function Home() {
       />
       <FAQSection faq={data.faq} />
       <SpeakerModal />
+      <Footer />
     </main>
   );
 }

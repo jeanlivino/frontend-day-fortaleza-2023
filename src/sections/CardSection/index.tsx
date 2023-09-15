@@ -10,6 +10,7 @@ import { GitubUser, getGithubUserData } from '@/services/gh-user';
 import HoverEffect from '@/components/HoverEffect';
 import Loading from '@/components/Loading';
 import Header from '@/components/Header';
+import { captureException } from '@sentry/nextjs';
 
 const orbitron = Orbitron({ subsets: ['latin'], weight: ['800'] });
 
@@ -45,6 +46,22 @@ type Props = {
   article: string;
 };
 
+function downloadImage(canvas: HTMLCanvasElement, fileName: string) {
+  const data = canvas.toDataURL('image/png');
+  const link = document.createElement('a');
+
+  if (typeof link.download === 'string') {
+    link.href = data;
+    link.download = fileName;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } else {
+    window.open(data);
+  }
+}
+
 const CardSection: React.FC<Props> = ({ userId, article }) => {
   const [isPrinting, setIsPrinting] = React.useState(false);
   const [user, setUser] = React.useState<GitubUser>();
@@ -74,36 +91,35 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
       const fileName = `${slugify(user.name)}-frontendday.png`;
 
       if (navigator.share) {
-        const blob = await new Promise((resolve) => {
-          canvas.toBlob((b) => {
-            resolve(b);
-          }, 'image/png');
-        });
+        try {
+          const blob = await new Promise((resolve) => {
+            canvas.toBlob((b) => {
+              resolve(b);
+            }, 'image/png');
+          });
 
-        setIsPrinting(false);
+          setIsPrinting(false);
 
-        navigator.share({
-          files: [
-            new File([blob as BlobPart], fileName, { type: 'image/png' }),
-          ],
-        });
-        return;
+          navigator.share({
+            files: [
+              new File([blob as BlobPart], fileName, { type: 'image/png' }),
+            ],
+          });
+          return;
+        } catch (error) {
+          captureException(error, {
+            extra: {
+              message: 'Error on share image',
+            },
+          });
+          downloadImage(canvas, fileName);
+          setIsPrinting(false);
+          return;
+        }
       }
 
-      const data = canvas.toDataURL('image/png');
-      const link = document.createElement('a');
-
-      if (typeof link.download === 'string') {
-        link.href = data;
-        link.download = fileName;
-
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        setIsPrinting(false);
-      } else {
-        window.open(data);
-      }
+      downloadImage(canvas, fileName);
+      setIsPrinting(false);
     }, 0);
   };
 
@@ -128,7 +144,7 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
   return (
     <>
       <Header />
-      <Center position='fixed' bottom='10px' left='0' width='100%' zIndex='5'>
+      <Center position='fixed' bottom='30px' left='0' width='100%' zIndex='5'>
         <styled.button
           onClick={handleDownloadImage}
           bg='secondary'

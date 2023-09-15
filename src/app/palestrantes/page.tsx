@@ -1,4 +1,5 @@
 import Container from '@/components/Container';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import SpeakerInfo from '@/components/SpeakerInfo';
 
@@ -28,6 +29,7 @@ export default async function Palestrantes() {
           </Grid>
         </Container>
       </Box>
+      <Footer />
     </main>
   );
 }

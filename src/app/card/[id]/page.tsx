@@ -1,6 +1,6 @@
+'use client';
 import React from 'react';
 
-import { getGithubUserData } from '@/services/gh-user';
 import CardSection from '@/sections/CardSection';
 
 type Props = {

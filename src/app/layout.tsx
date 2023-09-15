@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-// import 'normalize.css';
 import './global.css';
-import Footer from '@/components/Footer';
 import Script from 'next/script';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
@@ -64,7 +62,6 @@ fbq('track', 'PageView');
           }}
         />
         {children}
-        <Footer />
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import SpeakerModal from '@/components/SpeakerModal';
 import AgendaSection from '@/sections/AgendaSection';
@@ -20,6 +21,7 @@ export default async function Programacao() {
         }
       />
       <SpeakerModal />
+      <Footer />
     </main>
   );
 }
