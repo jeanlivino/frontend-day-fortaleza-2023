@@ -1,6 +1,6 @@
+import 'core-js/es/string/replace-all';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-// import 'normalize.css';
 import './global.css';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
@@ -29,11 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='pt-br'>
+    <html lang="pt-br">
       <body className={poppins.className}>
         <Script
-          id='fb-pixel'
-          strategy='afterInteractive'
+          id="fb-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
 !function(f,b,e,v,n,t,s)
