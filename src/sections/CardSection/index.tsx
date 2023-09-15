@@ -79,8 +79,16 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
       setIsPrinting(false);
 
       if (navigator.share) {
+        const blob = await new Promise((resolve) => {
+          canvas.toBlob((b) => {
+            resolve(b);
+          }, 'image/png');
+        });
+
         navigator.share({
-          files: [new File([data], fileName, { type: 'image/png' })],
+          files: [
+            new File([blob as BlobPart], fileName, { type: 'image/png' }),
+          ],
         });
         return;
       }
