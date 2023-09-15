@@ -75,6 +75,17 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
       const data = canvas.toDataURL('image/png');
       const link = document.createElement('a');
 
+      setIsPrinting(false);
+
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: `${slugify(user.name)}-frontendday.png`,
+          url: data,
+        });
+        return;
+      }
+
       if (typeof link.download === 'string') {
         link.href = data;
         link.download = `${slugify(user.name)}-frontendday.png`;
@@ -85,7 +96,6 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
       } else {
         window.open(data);
       }
-      setIsPrinting(false);
     }, 0);
   };
 
