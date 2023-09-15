@@ -73,14 +73,14 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
       });
       const fileName = `${slugify(user.name)}-frontendday.png`;
 
-      setIsPrinting(false);
-
       if (navigator.share) {
         const blob = await new Promise((resolve) => {
           canvas.toBlob((b) => {
             resolve(b);
           }, 'image/png');
         });
+
+        setIsPrinting(false);
 
         navigator.share({
           files: [
@@ -100,6 +100,7 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        setIsPrinting(false);
       } else {
         window.open(data);
       }
@@ -127,25 +128,23 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
   return (
     <>
       <Header />
-      <styled.button
-        position='fixed'
-        bottom='10px'
-        right='calc(50% - 77px)'
-        onClick={handleDownloadImage}
-        bg='secondary'
-        color='primary'
-        borderRadius='100px'
-        fontWeight='700'
-        zIndex='5'
-        px='4'
-        py='2'
-        cursor='pointer'
-        _hover={{
-          opacity: '.8',
-        }}
-      >
-        baixar imagem
-      </styled.button>
+      <Center position='fixed' bottom='10px' left='0' width='100%' zIndex='5'>
+        <styled.button
+          onClick={handleDownloadImage}
+          bg='secondary'
+          color='primary'
+          borderRadius='100px'
+          fontWeight='700'
+          px='4'
+          py='2'
+          cursor='pointer'
+          _hover={{
+            opacity: '.8',
+          }}
+        >
+          {isPrinting ? 'Gerando...' : 'Baixar imagem'}
+        </styled.button>
+      </Center>
       <Flex
         justifyContent='center'
         alignItems='center'
