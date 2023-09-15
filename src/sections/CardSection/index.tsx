@@ -80,8 +80,6 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
 
       if (navigator.share) {
         navigator.share({
-          title: 'Compartilhar Imagem',
-          text: 'Compartilhe sua credencial do Frontend Day',
           files: [new File([data], fileName, { type: 'image/png' })],
         });
         return;
