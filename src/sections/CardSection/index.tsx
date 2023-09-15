@@ -71,13 +71,31 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
         useCORS: true,
         scale: Math.round(800 / printRef.current.clientWidth) * 2,
       });
+      const fileName = `${slugify(user.name)}-frontendday.png`;
+
+      setIsPrinting(false);
+
+      if (navigator.share) {
+        const blob = await new Promise((resolve) => {
+          canvas.toBlob((b) => {
+            resolve(b);
+          }, 'image/png');
+        });
+
+        navigator.share({
+          files: [
+            new File([blob as BlobPart], fileName, { type: 'image/png' }),
+          ],
+        });
+        return;
+      }
 
       const data = canvas.toDataURL('image/png');
       const link = document.createElement('a');
 
       if (typeof link.download === 'string') {
         link.href = data;
-        link.download = `${slugify(user.name)}-frontendday.png`;
+        link.download = fileName;
 
         document.body.appendChild(link);
         link.click();
@@ -85,7 +103,6 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
       } else {
         window.open(data);
       }
-      setIsPrinting(false);
     }, 0);
   };
 
