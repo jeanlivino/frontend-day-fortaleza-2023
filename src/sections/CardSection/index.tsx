@@ -75,20 +75,20 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
 
       setIsPrinting(false);
 
-      if (navigator.share) {
-        const blob = await new Promise((resolve) => {
-          canvas.toBlob((b) => {
-            resolve(b);
-          }, 'image/png');
-        });
+      // if (navigator.share) {
+      //   const blob = await new Promise((resolve) => {
+      //     canvas.toBlob((b) => {
+      //       resolve(b);
+      //     }, 'image/png');
+      //   });
 
-        navigator.share({
-          files: [
-            new File([blob as BlobPart], fileName, { type: 'image/png' }),
-          ],
-        });
-        return;
-      }
+      //   navigator.share({
+      //     files: [
+      //       new File([blob as BlobPart], fileName, { type: 'image/png' }),
+      //     ],
+      //   });
+      //   return;
+      // }
 
       const data = canvas.toDataURL('image/png');
       const link = document.createElement('a');
@@ -187,20 +187,7 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
           />
           <Flex h='100%' flexDir='column' justifyContent='space-between'>
             <Flex justifyContent='center' alignItems='center' flexDir='column'>
-              <styled.img
-                src='/logo-white.svg'
-                alt='logo'
-                width={150}
-                height='auto'
-                className={css({
-                  mt: '4',
-                  transition: 'all .3s ease-in-out',
-                  _hover: {
-                    transform: 'scale(1.03)',
-                    opacity: '.8',
-                  },
-                })}
-              />
+              <styled.img w='150px' mt='4' src='/logo-white.png' alt='logo' />
               <Box>
                 <Box
                   pos='relative'
