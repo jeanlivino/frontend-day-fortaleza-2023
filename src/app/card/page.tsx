@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://frontendday.com.br',
+    title: 'Gerador de post de confirmação do FrontEnd Day - Fortaleza 2023',
+    description:
+      'Crie seu post personalizado com sua foto e publique nas suas redes sociais',
     images: [
       {
         url: 'https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/banner-eventbrite-frontendday-1.png',
