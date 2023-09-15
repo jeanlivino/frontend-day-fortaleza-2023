@@ -8,7 +8,7 @@ type Props = {
   searchParams: { [key: string]: string };
 };
 
-const CardPage: React.FC<Props> = async ({ params: { id }, searchParams }) => {
+const CardPage: React.FC<Props> = ({ params: { id }, searchParams }) => {
   return <CardSection userId={id} article={searchParams.article} />;
 };
 
