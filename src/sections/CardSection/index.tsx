@@ -74,21 +74,22 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
 
       const data = canvas.toDataURL('image/png');
       const link = document.createElement('a');
+      const fileName = `${slugify(user.name)}-frontendday.png`;
 
       setIsPrinting(false);
 
       if (navigator.share) {
         navigator.share({
-          title: document.title,
-          text: `${slugify(user.name)}-frontendday.png`,
-          url: data,
+          title: 'Compartilhar Imagem',
+          text: 'Compartilhe sua credencial do Frontend Day',
+          files: [new File([data], fileName, { type: 'image/png' })],
         });
         return;
       }
 
       if (typeof link.download === 'string') {
         link.href = data;
-        link.download = `${slugify(user.name)}-frontendday.png`;
+        link.download = fileName;
 
         document.body.appendChild(link);
         link.click();
