@@ -71,9 +71,6 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
         useCORS: true,
         scale: Math.round(800 / printRef.current.clientWidth) * 2,
       });
-
-      const data = canvas.toDataURL('image/png');
-      const link = document.createElement('a');
       const fileName = `${slugify(user.name)}-frontendday.png`;
 
       setIsPrinting(false);
@@ -92,6 +89,9 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
         });
         return;
       }
+
+      const data = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
 
       if (typeof link.download === 'string') {
         link.href = data;
