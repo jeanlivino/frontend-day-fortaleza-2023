@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang='pt-br'>
       <body className={poppins.className}>
         <Script
-          id='fb-pixel'
+          id='clarity-js'
           strategy='afterInteractive'
           type='text/javascript'
           dangerouslySetInnerHTML={{
