@@ -3,17 +3,19 @@ import React from 'react';
 import { Metadata } from 'next';
 import CardForm from '@/components/CardForm';
 
+const title = 'Gerador de post de confirmação do FrontEnd Day - Fortaleza 2023';
+const description =
+  'Crie seu post personalizado com sua foto e publique nas suas redes sociais';
+
 export const metadata: Metadata = {
-  title: 'Gerador de post de confirmação do FrontEnd Day - Fortaleza 2023',
-  description:
-    'Crie seu post personalizado com sua foto e publique nas suas redes sociais',
+  title,
+  description,
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://frontendday.com.br/card',
-    title: 'Gerador de post de confirmação do FrontEnd Day - Fortaleza 2023',
-    description:
-      'Crie seu post personalizado com sua foto e publique nas suas redes sociais',
+    title,
+    description,
     images: [
       {
         url: 'https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/banner-eventbrite-frontendday-1.png',
