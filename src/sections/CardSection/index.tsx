@@ -2,9 +2,7 @@
 import './style.css';
 import { Box, Center, Flex, styled } from '@/styled-system/jsx';
 import React, { useEffect, useMemo, useRef } from 'react';
-import { css } from '@/styled-system/css';
 import html2canvas from 'html2canvas';
-import NextImage from 'next/image';
 import { Orbitron } from 'next/font/google';
 import { GitubUser, getGithubUserData } from '@/services/gh-user';
 import HoverEffect from '@/components/HoverEffect';
@@ -160,6 +158,17 @@ const CardSection: React.FC<Props> = ({ userId, article }) => {
         >
           {isPrinting ? 'Gerando...' : 'Baixar imagem'}
         </styled.button>
+      </Center>
+
+      <Center mt={['5', '100px']} mb='5' p='4'>
+        <styled.h1
+          color='white'
+          fontSize='2xl'
+          fontWeight='700'
+          textAlign='center'
+        >
+          Imagem gerada! Agora é só baixar e compartilhar nas redes sociais
+        </styled.h1>
       </Center>
       <Flex
         justifyContent='center'
