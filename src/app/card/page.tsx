@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://frontendday.com.br',
+    url: 'https://frontendday.com.br/card',
     title: 'Gerador de post de confirmação do FrontEnd Day - Fortaleza 2023',
     description:
       'Crie seu post personalizado com sua foto e publique nas suas redes sociais',
