@@ -30,7 +30,7 @@ export const ModalContent = styled('div', {
   base: {
     backgroundColor: 'primary',
     padding: '20px',
-    maxWidth: '300px',
+    maxWidth: '600px',
     borderRadius: '5px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
     position: 'relative',
