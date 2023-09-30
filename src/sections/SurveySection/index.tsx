@@ -1,7 +1,10 @@
 'use client';
 
-import { Box, Flex, styled } from '@/styled-system/jsx';
+import { dataApi } from '@/config/api';
+import { useEvaluatedTalks } from '@/hooks/useEvaluedTalks';
+import { Box, Center, Flex, styled } from '@/styled-system/jsx';
 import { Talks } from '@/types';
+import { captureException } from '@sentry/nextjs';
 import React, { useState } from 'react';
 
 type Props = {
@@ -67,20 +70,59 @@ const RatingInput: React.FC<RatingInputProps> = ({
 );
 
 const SurveySection: React.FC<Props> = ({ talks }) => {
+  const { addEvaluetedTalk, isEvaluatedTalk } = useEvaluatedTalks();
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [selectedRoom, setSelectedRoom] = useState<keyof Talks>();
   const [selectedTalk, setSelectedTalk] = useState<number>();
-  const [contentQualityRating, setContentQualityRating] = useState<
-    number | null
-  >(null);
-  const [teachingQualityRating, setTeachingQualityRating] = useState<
-    number | null
-  >(null);
+  const [contentQualityRating, setContentQualityRating] = useState<number>();
+  const [teachingQualityRating, setTeachingQualityRating] = useState<number>();
   const [comment, setComment] = useState<string>('');
 
   const filteredTalks = React.useMemo(() => {
     if (!selectedRoom) return [];
     return talks[selectedRoom].sort((a, b) => a.hour.localeCompare(b.hour));
   }, [selectedRoom, talks]);
+
+  const resetForm = React.useCallback(() => {
+    setSelectedRoom(undefined);
+    setSelectedTalk(undefined);
+    setContentQualityRating(undefined);
+    setTeachingQualityRating(undefined);
+    setComment('');
+  }, []);
+
+  async function handleSave() {
+    if (!selectedTalk) return;
+
+    if (isEvaluatedTalk(selectedTalk)) {
+      alert('Você já avaliou essa palestra');
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      await dataApi.post('/survey/v1/save', {
+        talk: selectedTalk,
+        contentQualityRating,
+        teachingQualityRating,
+        comment,
+      });
+
+      addEvaluetedTalk(selectedTalk);
+      resetForm();
+
+      alert('Avaliação enviada com sucesso!');
+    } catch (error) {
+      captureException(error);
+      alert(
+        'Ocorreu um erro ao salvar sua avaliação. Tente novamente mais tarde.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <Box
@@ -99,6 +141,7 @@ const SurveySection: React.FC<Props> = ({ talks }) => {
               type="radio"
               name="room"
               value={room}
+              checked={selectedRoom === room}
               id={room}
               onChange={() => setSelectedRoom(room)}
             />
@@ -129,6 +172,11 @@ const SurveySection: React.FC<Props> = ({ talks }) => {
               </option>
             ))}
           </styled.select>
+          {selectedTalk && isEvaluatedTalk(selectedTalk) && (
+            <styled.span fontSize="sm" mt="2" display="block" color="red">
+              Você já avaliou essa palestra
+            </styled.span>
+          )}
         </Box>
       )}
 
@@ -163,28 +211,23 @@ const SurveySection: React.FC<Props> = ({ talks }) => {
             />
           </Box>
 
-          <Box mt="4">
+          <Center mt="4" w="100%">
             <styled.button
-              bg="primary"
-              color="white"
-              p="2"
-              borderRadius="10px"
+              bg={isSubmitting ? 'primary.300' : 'primary'}
+              color={isSubmitting ? 'primary' : 'white'}
+              py="2"
+              px="6"
+              fontWeight="bold"
+              display="inline-block"
+              borderRadius="100px"
               disabled={
                 !selectedTalk || !contentQualityRating || !teachingQualityRating
               }
-              onClick={() => {
-                const data = {
-                  talk: selectedTalk,
-                  contentQualityRating,
-                  teachingQualityRating,
-                  comment,
-                };
-                console.log(data);
-              }}
+              onClick={handleSave}
             >
-              Enviar
+              {isSubmitting ? 'Enviando...' : 'Enviar'}
             </styled.button>
-          </Box>
+          </Center>
         </>
       )}
     </Box>
