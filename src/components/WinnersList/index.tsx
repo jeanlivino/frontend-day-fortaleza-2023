@@ -26,7 +26,7 @@ const ButtonWrapper = ({ children, onClick, disabled }: ButtonWrapperProps) => (
     textAlign="center"
     onClick={onClick}
     opacity={disabled ? '.1' : '1'}
-    cursor="pointer"
+    cursor={disabled ? 'not-allowed' : 'pointer'}
   >
     <styled.h2
       fontSize="4xl"
