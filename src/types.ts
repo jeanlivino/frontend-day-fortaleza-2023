@@ -53,3 +53,8 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
+
+export interface DrawItem {
+  item: string;
+  winner: string;
+}
