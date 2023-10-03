@@ -21,7 +21,7 @@ const ButtonWrapper = ({ children, onClick, disabled }: ButtonWrapperProps) => (
     borderRadius="4"
     boxShadow="0 0 4px 0 rgba(0, 0, 0, 0.1)"
     width="100%"
-    maxWidth="200px"
+    maxWidth="300px"
     position="relative"
     textAlign="center"
     onClick={onClick}
@@ -92,7 +92,7 @@ const WinnersList: React.FC<Props> = ({ winners }) => {
         borderRadius="4"
         boxShadow="0 0 4px 0 rgba(0, 0, 0, 0.1)"
         width="100%"
-        maxWidth="400px"
+        maxWidth="600px"
         position="relative"
         textAlign="center"
       >
@@ -117,7 +117,7 @@ const WinnersList: React.FC<Props> = ({ winners }) => {
           {winner.winner}
         </styled.h2>
       </Box>
-      <Flex justifyContent="space-between" width="100%" maxWidth="400px">
+      <Flex justifyContent="space-between" width="100%" maxWidth="600px">
         <ButtonWrapper disabled={index === 0} onClick={handlePrevious}>
           {'<'}
         </ButtonWrapper>
@@ -131,7 +131,7 @@ const WinnersList: React.FC<Props> = ({ winners }) => {
       <styled.button
         p="4"
         width="100%"
-        maxWidth="400px"
+        maxWidth="600px"
         color="white"
         cursor="pointer"
         onClick={downloadCSV}
