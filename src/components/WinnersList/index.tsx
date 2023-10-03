@@ -44,6 +44,18 @@ const ButtonWrapper = ({ children, onClick, disabled }: ButtonWrapperProps) => (
 const WinnersList: React.FC<Props> = ({ winners }) => {
   const [index, setIndex] = React.useState(0);
   const winner = winners[index];
+  const downloadCSV = () => {
+    const csv = winners.reduce((acc, { item, winner }) => {
+      return `${acc}${item},${winner}\n`;
+    }, 'Item,Ganhador\n');
+
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'resultado.csv';
+    a.click();
+  };
 
   const handleNext = () => {
     if (index + 1 < winners.length) {
@@ -116,6 +128,16 @@ const WinnersList: React.FC<Props> = ({ winners }) => {
           {'>'}
         </ButtonWrapper>
       </Flex>
+      <styled.button
+        p="4"
+        width="100%"
+        maxWidth="400px"
+        color="white"
+        cursor="pointer"
+        onClick={downloadCSV}
+      >
+        Baixar CSV
+      </styled.button>
     </Center>
   );
 };
