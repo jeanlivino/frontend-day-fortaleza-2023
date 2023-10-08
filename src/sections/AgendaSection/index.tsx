@@ -96,7 +96,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   isActive,
 }) => {
   const { openModal } = useSpeakerModal();
-  const { myAgenda, checkIsSaved, saveToMyAgenda } = useMyAgenda();
+  const { checkIsSaved, saveToMyAgenda } = useMyAgenda();
 
   const [selected, setSelected] = React.useState<SelectOptions>('frontend');
   const [filteredTalks, setFilteredTalks] = React.useState(talks.frontend);
@@ -183,10 +183,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                 return (
                   <Grid
                     key={talk.id}
-                    gridTemplateColumns={[
-                      '50px 50px auto 100px',
-                      '60px 60px auto 100px',
-                    ]}
+                    gridTemplateColumns={['50px 50px auto', '60px 60px auto']}
                     mt="5"
                   >
                     <TalkHour hour={talk.hour} />
@@ -222,11 +219,12 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                             )
                           : undefined
                       }
-                    />
-                    <SaveToAgendaButton
-                      isSaved={checkIsSaved(talk)}
-                      onClick={() => saveToMyAgenda(talk)}
-                    />
+                    >
+                      <SaveToAgendaButton
+                        isSaved={checkIsSaved(talk)}
+                        onClick={() => saveToMyAgenda(talk)}
+                      />
+                    </TalkDetail>
                   </Grid>
                 );
               })}

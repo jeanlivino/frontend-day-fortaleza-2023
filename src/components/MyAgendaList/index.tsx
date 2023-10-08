@@ -22,6 +22,17 @@ const findAndGetParentKey = (talks: Talks, id: number) => {
 const MyAgendaList: React.VFC<Props> = ({ talks }) => {
   const { myAgenda, removeFromMyAgenda } = useMyAgenda();
 
+  if (myAgenda.length < 1)
+    return (
+      <styled.p color="white" textAlign="center">
+        Você ainda não possui palestras salvas na sua agenda. Acesse a
+        programação{' '}
+        <styled.a href="/agenda" textDecoration="underline">
+          clicando aqui
+        </styled.a>
+      </styled.p>
+    );
+
   return (
     <div>
       {myAgenda

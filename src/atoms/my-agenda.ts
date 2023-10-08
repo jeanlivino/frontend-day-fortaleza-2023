@@ -8,6 +8,11 @@ type MyAgenda = Talk[];
 
 const MY_AGENDA_KEY = 'FEND_DAY_MY_AGENDA';
 
+const getPersistedMyAgenda = () =>
+  JSON.parse(getFromLocalStorage(MY_AGENDA_KEY) || '[]') as MyAgenda;
+
+const cleanPersistedMyAgenda = () => saveToLocalStorage(MY_AGENDA_KEY, '[]');
+
 const myAgendaAtom = atom<MyAgenda>([]);
 
 export const useMyAgenda = () => {
@@ -23,7 +28,13 @@ export const useMyAgenda = () => {
   };
 
   const removeFromMyAgenda = (talk: Talk) =>
-    setMyAgenda((state) => state.filter((item) => item.id !== talk.id));
+    setMyAgenda((state) => {
+      const updatedState = state.filter((item) => item.id !== talk.id);
+
+      if (updatedState.length === 0) cleanPersistedMyAgenda();
+
+      return updatedState;
+    });
 
   useEffect(() => {
     if (myAgenda.length > 0) {
@@ -32,9 +43,7 @@ export const useMyAgenda = () => {
   }, [myAgenda]);
 
   useEffect(() => {
-    const persistedMyAgenda = JSON.parse(
-      getFromLocalStorage(MY_AGENDA_KEY) || '[]'
-    ) as MyAgenda;
+    const persistedMyAgenda = getPersistedMyAgenda();
 
     if (persistedMyAgenda.length > 0) {
       setMyAgenda(persistedMyAgenda);

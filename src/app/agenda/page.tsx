@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import SpeakerModal from '@/components/SpeakerModal';
 import AgendaSection from '@/sections/AgendaSection';
 import { getSiteData } from '@/services/site';
-import { Box } from '@/styled-system/jsx';
+import { Box, Center, styled } from '@/styled-system/jsx';
 import { Metadata } from 'next';
 export const revalidate = 60;
 
@@ -33,7 +33,7 @@ export default async function Programacao() {
   const data = await getSiteData();
   return (
     <main>
-      <Box bg='primary' px='10' pt={['5', '5', '24']} pb='4'>
+      <Box bg="primary" px="10" pt={['5', '5', '24']} pb="4">
         <Header />
       </Box>
       <AgendaSection
@@ -45,6 +45,23 @@ export default async function Programacao() {
       />
       <SpeakerModal />
       <Footer />
+
+      <Center w="100%" p="4" pos="fixed" bottom="0" left="0" zIndex="3">
+        <styled.a
+          boxShadow="0px 18px 35px -8px rgba(0,0,0,0.9)"
+          color="primary"
+          bg="secondary"
+          rounded="100px"
+          textTransform="uppercase"
+          fontWeight="bold"
+          fontSize={['12px', 'sm']}
+          px="9"
+          py="2"
+          href="/minha-agenda"
+        >
+          ver minha agenda
+        </styled.a>
+      </Center>
     </main>
   );
 }
