@@ -1,7 +1,7 @@
 'use client';
 import { useMyAgenda } from '@/atoms/my-agenda';
-import { Grid, styled } from '@/styled-system/jsx';
-import { Talks } from '@/types';
+import { Box, Grid, styled } from '@/styled-system/jsx';
+import { Talk, Talks } from '@/types';
 import React from 'react';
 import TalkHour from '../TalkHour';
 import TalkDetail from '../TalkDetail';
@@ -19,8 +19,25 @@ const findAndGetParentKey = (talks: Talks, id: number) => {
   return key;
 };
 
+const getTalkFromApi = (talks: Talks, id: number) => {
+  const roomKey = findAndGetParentKey(talks, id) as keyof Talks | undefined;
+
+  if (!roomKey) return;
+
+  return talks[roomKey].find((talk) => talk.id === id);
+};
+
 const MyAgendaList: React.VFC<Props> = ({ talks }) => {
   const { myAgenda, removeFromMyAgenda } = useMyAgenda();
+
+  const hasChangedTalkData = (cachedTalk: Talk) => {
+    const roomKey = findAndGetParentKey(talks, cachedTalk.id) as keyof Talks;
+    const talkFromApi = talks[roomKey].find(
+      (talk) => talk.id === cachedTalk.id
+    );
+
+    return JSON.stringify(talkFromApi) !== JSON.stringify(cachedTalk);
+  };
 
   if (myAgenda.length < 1)
     return (
@@ -37,14 +54,15 @@ const MyAgendaList: React.VFC<Props> = ({ talks }) => {
     <div>
       {myAgenda
         .sort((a, b) => a.hour.localeCompare(b.hour))
-        .map((talk) => {
+        .map((cachedTalk) => {
+          const talk = getTalkFromApi(talks, cachedTalk.id);
+
+          if (!talk) return;
+
           return (
             <Grid
               key={talk.id}
-              gridTemplateColumns={[
-                '50px 50px auto 100px',
-                '60px 60px auto 100px',
-              ]}
+              gridTemplateColumns={['50px 50px auto ', '60px 60px auto ']}
               mt="5"
             >
               <TalkHour hour={talk.hour} />
@@ -61,20 +79,37 @@ const MyAgendaList: React.VFC<Props> = ({ talks }) => {
                   width: '100%',
                 }}
               />
-
-              <TalkDetail
-                {...talk}
-                roomName={getRoomName(
-                  findAndGetParentKey(talks, talk.id) || ''
+              <Box>
+                {hasChangedTalkData(cachedTalk) && (
+                  <styled.span
+                    fontSize="sm"
+                    fontStyle="italic"
+                    color="white"
+                    display="inline-block"
+                    px="4"
+                    mb="1"
+                    border="1px solid white"
+                    borderRadius="100px"
+                    cursor="pointer"
+                  >
+                    atualizada
+                  </styled.span>
                 )}
-              />
-              <styled.button
-                color="white"
-                cursor="pointer"
-                onClick={() => removeFromMyAgenda(talk)}
-              >
-                - remover
-              </styled.button>
+                <TalkDetail
+                  {...talk}
+                  roomName={getRoomName(
+                    findAndGetParentKey(talks, talk.id) || ''
+                  )}
+                >
+                  <styled.button
+                    color="white"
+                    cursor="pointer"
+                    onClick={() => removeFromMyAgenda(talk)}
+                  >
+                    - remover
+                  </styled.button>
+                </TalkDetail>
+              </Box>
             </Grid>
           );
         })}
