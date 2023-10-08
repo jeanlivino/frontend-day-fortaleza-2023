@@ -3,7 +3,7 @@ import { SiteData } from '@/types';
 import { cache } from 'react';
 import siteDataMock from './site-mock.json';
 
-export const getSiteData = () => siteDataMock;
+export const getSiteData = async () => siteDataMock as SiteData;
 
 // cache(() =>
 //   dataApi.get('site/v1/data').then((res) => {
