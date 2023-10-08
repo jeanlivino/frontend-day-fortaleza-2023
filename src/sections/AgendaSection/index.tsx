@@ -2,11 +2,13 @@
 import Container from '@/components/Container';
 import { Box, Flex, Grid, styled } from '@/styled-system/jsx';
 import { Talk, Talks } from '@/types';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import NextImage from 'next/image';
 import HoverEffect from '@/components/HoverEffect';
 import { useSpeakerModal } from '@/atoms/speaker-modal';
+import SaveToAgendaButton from '@/components/SaveToAgendaButton';
+import { useMyAgenda } from '@/atoms/my-agenda';
 
 const buttons = [
   {
@@ -81,11 +83,11 @@ const featuredTalks = [
 const Hour: React.FC<{ hour: string }> = ({ hour }) => {
   return (
     <styled.p
-      alignSelf='start'
-      color='secondary'
-      fontSize='md'
-      fontWeight='bold'
-      textAlign='left'
+      alignSelf="start"
+      color="secondary"
+      fontSize="md"
+      fontWeight="bold"
+      textAlign="left"
     >
       {hour}
     </styled.p>
@@ -95,15 +97,15 @@ const Hour: React.FC<{ hour: string }> = ({ hour }) => {
 const Featured: React.FC<{ text: string }> = ({ text }) => {
   return (
     <styled.p
-      color='primary'
-      bg='secondary'
-      w='100%'
-      rounded='100px'
-      fontSize='sm'
-      fontWeight='bold'
-      px='4'
-      py='3'
-      textTransform='uppercase'
+      color="primary"
+      bg="secondary"
+      w="100%"
+      rounded="100px"
+      fontSize="sm"
+      fontWeight="bold"
+      px="4"
+      py="3"
+      textTransform="uppercase"
     >
       {text}
     </styled.p>
@@ -128,26 +130,26 @@ const TalkDetail: React.FC<
   const roomName = button?.value === 'principal' ? 'Auditório' : button?.label;
 
   return (
-    <Box borderBottom='1px solid' borderColor='secondary' pb='5'>
-      <styled.button cursor='pointer' onClick={onSpeakerClick}>
+    <Box borderBottom="1px solid" borderColor="secondary" pb="5">
+      <styled.button cursor="pointer" onClick={onSpeakerClick}>
         <styled.h4
-          color='secondary'
-          fontWeight='bold'
-          textTransform='uppercase'
-          textAlign='left'
+          color="secondary"
+          fontWeight="bold"
+          textTransform="uppercase"
+          textAlign="left"
         >
           {speaker.title}{' '}
           {tag && (
-            <styled.span textTransform='none' fontWeight='400' color='white'>
+            <styled.span textTransform="none" fontWeight="400" color="white">
               | Trilha: {roomName}
             </styled.span>
           )}
         </styled.h4>
       </styled.button>
-      <styled.p fontSize='sm' color='white'>
+      <styled.p fontSize="sm" color="white">
         {speaker.role} {speaker.company}
       </styled.p>
-      <styled.p mt='1' color='secondary' fontWeight='bold'>
+      <styled.p mt="1" color="secondary" fontWeight="bold">
         {title}{' '}
       </styled.p>
     </Box>
@@ -161,6 +163,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   isActive,
 }) => {
   const { openModal } = useSpeakerModal();
+  const { myAgenda, checkIsSaved, saveToMyAgenda } = useMyAgenda();
 
   const [selected, setSelected] = React.useState<SelectOptions>('frontend');
   const [filteredTalks, setFilteredTalks] = React.useState(talks.frontend);
@@ -179,40 +182,40 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
   }
 
   return (
-    <Box bgColor='primary' position='relative' pt='10' pb='10' zIndex={1}>
+    <Box bgColor="primary" position="relative" pt="10" pb="10" zIndex={1}>
       <Container>
         <styled.h3
-          textAlign='center'
-          color='white'
-          fontSize='2xl'
-          fontWeight='bold'
-          textTransform='uppercase'
-          mb='7'
+          textAlign="center"
+          color="white"
+          fontSize="2xl"
+          fontWeight="bold"
+          textTransform="uppercase"
+          mb="7"
         >
           Programação
         </styled.h3>
 
         {!isActive && (
-          <styled.p textAlign='center' color='white' fontSize='md' mb='7'>
+          <styled.p textAlign="center" color="white" fontSize="md" mb="7">
             A programação será divulgada em breve
           </styled.p>
         )}
 
         {isActive && (
           <>
-            <Flex justifyContent='center' flexWrap='wrap' gap='3' mb='8'>
+            <Flex justifyContent="center" flexWrap="wrap" gap="3" mb="8">
               {buttons.map((button) => (
                 <styled.button
                   key={button.value}
-                  color='primary'
-                  fontSize='sm'
-                  fontWeight='bold'
-                  textTransform='uppercase'
-                  bg='white'
-                  rounded='100px'
-                  px='5'
-                  py='1.5'
-                  cursor='pointer'
+                  color="primary"
+                  fontSize="sm"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  bg="white"
+                  rounded="100px"
+                  px="5"
+                  py="1.5"
+                  cursor="pointer"
                   onClick={() => handleSelected(button.value)}
                   {...(selected === button.value && {
                     bg: 'secondary',
@@ -236,7 +239,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                     <Grid
                       gridTemplateColumns={['50px auto', '60px auto']}
                       key={talk.id}
-                      mt='5'
+                      mt="5"
                     >
                       <Hour hour={talk.hour} />
                       <Featured text={talk.title} />
@@ -247,14 +250,17 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                 return (
                   <Grid
                     key={talk.id}
-                    gridTemplateColumns={['50px 50px auto', '60px 60px auto']}
-                    mt='5'
+                    gridTemplateColumns={[
+                      '50px 50px auto 100px',
+                      '60px 60px auto 100px',
+                    ]}
+                    mt="5"
                   >
                     <Hour hour={talk.hour} />
                     <styled.button
-                      cursor='pointer'
-                      display='flex'
-                      alignItems='flex-start'
+                      cursor="pointer"
+                      display="flex"
+                      alignItems="flex-start"
                       onClick={() => openModal(talk.speaker)}
                     >
                       <HoverEffect>
@@ -281,6 +287,10 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                           ? findAndGetParentKey(talks, talk.id)
                           : undefined
                       }
+                    />
+                    <SaveToAgendaButton
+                      isSaved={checkIsSaved(talk)}
+                      onClick={() => saveToMyAgenda(talk)}
                     />
                   </Grid>
                 );
