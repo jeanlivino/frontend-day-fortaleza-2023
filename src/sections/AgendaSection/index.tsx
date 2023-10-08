@@ -2,7 +2,7 @@
 import Container from '@/components/Container';
 import { Box, Flex, Grid, styled } from '@/styled-system/jsx';
 import { Talks } from '@/types';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import NextImage from 'next/image';
 import HoverEffect from '@/components/HoverEffect';
@@ -91,28 +91,41 @@ const findAndGetParentKey = (talks: Talks, id: number) => {
 
 type SelectOptions = keyof Talks;
 
-const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
-  talks,
-  isActive,
-}) => {
+const AgendaSection: React.FC<{
+  talks: Talks;
+  isActive: boolean;
+  defaultRoom?: SelectOptions;
+}> = ({ talks, isActive, defaultRoom = 'frontend' }) => {
   const { openModal } = useSpeakerModal();
   const { checkIsSaved, saveToMyAgenda } = useMyAgenda();
 
-  const [selected, setSelected] = React.useState<SelectOptions>('frontend');
-  const [filteredTalks, setFilteredTalks] = React.useState(talks.frontend);
+  const [selected, setSelected] = React.useState<SelectOptions>(defaultRoom);
+  const [filteredTalks, setFilteredTalks] = React.useState(
+    defaultRoom === 'principal' ? [] : talks[defaultRoom]
+  );
+
+  const onSelectPrincipal = () => {
+    setFilteredTalks([
+      ...(talks.frontend || []),
+      ...(talks.communities || []),
+      ...(talks.invite || []),
+    ]);
+  };
 
   function handleSelected(value: SelectOptions) {
     setSelected(value);
     if (value === 'principal') {
-      setFilteredTalks([
-        ...(talks.frontend || []),
-        ...(talks.communities || []),
-        ...(talks.invite || []),
-      ]);
+      onSelectPrincipal();
       return;
     }
     setFilteredTalks(talks[value] || []);
   }
+
+  useEffect(() => {
+    if (defaultRoom === 'principal') {
+      onSelectPrincipal();
+    }
+  }, []);
 
   return (
     <Box bgColor="primary" position="relative" pt="10" pb="10" zIndex={1}>

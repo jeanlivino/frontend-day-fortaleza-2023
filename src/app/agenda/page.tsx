@@ -38,6 +38,7 @@ export default async function Programacao() {
       </Box>
       <AgendaSection
         talks={data.talks}
+        defaultRoom="principal"
         isActive={
           Boolean(data.activate_agenda) ||
           process.env.NODE_ENV === 'development'
