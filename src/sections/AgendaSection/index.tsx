@@ -67,15 +67,15 @@ const featuredTalks = [
 const Featured: React.FC<{ text: string }> = ({ text }) => {
   return (
     <styled.p
-      color="primary"
-      bg="secondary"
-      w="100%"
-      rounded="100px"
-      fontSize="sm"
-      fontWeight="bold"
-      px="4"
-      py="3"
-      textTransform="uppercase"
+      color='primary'
+      bg='secondary'
+      w='100%'
+      rounded='100px'
+      fontSize='sm'
+      fontWeight='bold'
+      px='4'
+      py='3'
+      textTransform='uppercase'
     >
       {text}
     </styled.p>
@@ -128,40 +128,40 @@ const AgendaSection: React.FC<{
   }, []);
 
   return (
-    <Box bgColor="primary" position="relative" pt="10" pb="10" zIndex={1}>
+    <Box bgColor='primary' position='relative' pt='10' pb='10' zIndex={1}>
       <Container>
         <styled.h3
-          textAlign="center"
-          color="white"
-          fontSize="2xl"
-          fontWeight="bold"
-          textTransform="uppercase"
-          mb="7"
+          textAlign='center'
+          color='white'
+          fontSize='2xl'
+          fontWeight='bold'
+          textTransform='uppercase'
+          mb='7'
         >
           Programação
         </styled.h3>
 
         {!isActive && (
-          <styled.p textAlign="center" color="white" fontSize="md" mb="7">
+          <styled.p textAlign='center' color='white' fontSize='md' mb='7'>
             A programação será divulgada em breve
           </styled.p>
         )}
 
         {isActive && (
           <>
-            <Flex justifyContent="center" flexWrap="wrap" gap="3" mb="8">
+            <Flex justifyContent='center' flexWrap='wrap' gap='3' mb='8'>
               {roomsButtons.map((button) => (
                 <styled.button
                   key={button.value}
-                  color="primary"
-                  fontSize="sm"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                  bg="white"
-                  rounded="100px"
-                  px="5"
-                  py="1.5"
-                  cursor="pointer"
+                  color='primary'
+                  fontSize='sm'
+                  fontWeight='bold'
+                  textTransform='uppercase'
+                  bg='white'
+                  rounded='100px'
+                  px='5'
+                  py='1.5'
+                  cursor='pointer'
                   onClick={() => handleSelected(button.value)}
                   {...(selected === button.value && {
                     bg: 'secondary',
@@ -185,7 +185,7 @@ const AgendaSection: React.FC<{
                     <Grid
                       gridTemplateColumns={['50px auto', '60px auto']}
                       key={talk.id}
-                      mt="5"
+                      mt='5'
                     >
                       <TalkHour hour={talk.hour} />
                       <Featured text={talk.title} />
@@ -197,13 +197,13 @@ const AgendaSection: React.FC<{
                   <Grid
                     key={talk.id}
                     gridTemplateColumns={['50px 50px auto', '60px 60px auto']}
-                    mt="5"
+                    mt='5'
                   >
                     <TalkHour hour={talk.hour} />
                     <styled.button
-                      cursor="pointer"
-                      display="flex"
-                      alignItems="flex-start"
+                      cursor='pointer'
+                      display='flex'
+                      alignItems='flex-start'
                       onClick={() => openModal(talk.speaker)}
                     >
                       <HoverEffect>

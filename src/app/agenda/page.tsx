@@ -33,12 +33,12 @@ export default async function Programacao() {
   const data = await getSiteData();
   return (
     <main>
-      <Box bg="primary" px="10" pt={['5', '5', '24']} pb="4">
+      <Box bg='primary' px='10' pt={['5', '5', '24']} pb='4'>
         <Header />
       </Box>
       <AgendaSection
         talks={data.talks}
-        defaultRoom="principal"
+        defaultRoom='principal'
         isActive={
           Boolean(data.activate_agenda) ||
           process.env.NODE_ENV === 'development'
@@ -47,18 +47,18 @@ export default async function Programacao() {
       <SpeakerModal />
       <Footer />
 
-      <Center w="100%" p="4" pos="fixed" bottom="0" left="0" zIndex="3">
+      <Center w='100%' p='4' pos='fixed' bottom='0' left='0' zIndex='3'>
         <styled.a
-          boxShadow="0px 18px 35px -8px rgba(0,0,0,0.9)"
-          color="primary"
-          bg="tertiary"
-          rounded="100px"
-          textTransform="uppercase"
-          fontWeight="bold"
+          boxShadow='0px 18px 35px -8px rgba(0,0,0,0.9)'
+          color='primary'
+          bg='tertiary'
+          rounded='100px'
+          textTransform='uppercase'
+          fontWeight='bold'
           fontSize={['12px', 'sm']}
-          px="9"
-          py="2"
-          href="/minha-agenda"
+          px='9'
+          py='2'
+          href='/minha-agenda'
         >
           ver minha agenda
         </styled.a>

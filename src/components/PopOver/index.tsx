@@ -23,23 +23,23 @@ const Popover: React.FC<Props> = ({ text, children }) => {
 
   return (
     <styled.div
-      position="relative"
-      display="inline-block"
+      position='relative'
+      display='inline-block'
       onMouseEnter={showPopover}
       onMouseLeave={hidePopover}
     >
       <div onClick={togglePopover}>{children}</div>
       {popoverVisible && (
         <styled.div
-          position="absolute"
-          bottom="100%"
-          left="0"
+          position='absolute'
+          bottom='100%'
+          left='0'
           w={['100%', '400px']}
-          maxW="100vw"
-          background="#fff"
-          border="1px solid #ccc"
-          padding="10px"
-          boxShadow="0 2px 4px rgba(0, 0, 0, 0.2)"
+          maxW='100vw'
+          background='#fff'
+          border='1px solid #ccc'
+          padding='10px'
+          boxShadow='0 2px 4px rgba(0, 0, 0, 0.2)'
         >
           <styled.p fontSize={['x-small', 'sm']}>{text}</styled.p>
         </styled.div>

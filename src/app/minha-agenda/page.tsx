@@ -34,19 +34,19 @@ export default async function MinhaAgenda() {
 
   return (
     <main>
-      <Box bg="primary" px="10" pt={['5', '5', '24']} pb="4">
+      <Box bg='primary' px='10' pt={['5', '5', '24']} pb='4'>
         <Header />
       </Box>
 
-      <Box bgColor="primary" position="relative" pt="10" pb="10" zIndex={1}>
+      <Box bgColor='primary' position='relative' pt='10' pb='10' zIndex={1}>
         <Container>
           <styled.h3
-            textAlign="center"
-            color="white"
-            fontSize="2xl"
-            fontWeight="bold"
-            textTransform="uppercase"
-            mb="7"
+            textAlign='center'
+            color='white'
+            fontSize='2xl'
+            fontWeight='bold'
+            textTransform='uppercase'
+            mb='7'
           >
             Minha agenda
           </styled.h3>

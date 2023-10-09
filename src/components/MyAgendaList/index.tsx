@@ -42,10 +42,10 @@ const MyAgendaList: React.VFC<Props> = ({ talks }) => {
 
   if (myAgenda.length < 1)
     return (
-      <styled.p color="white" textAlign="center">
+      <styled.p color='white' textAlign='center'>
         Você ainda não possui palestras salvas na sua agenda. Acesse a
         programação{' '}
-        <styled.a href="/agenda" textDecoration="underline">
+        <styled.a href='/agenda' textDecoration='underline'>
           clicando aqui
         </styled.a>
       </styled.p>
@@ -64,7 +64,7 @@ const MyAgendaList: React.VFC<Props> = ({ talks }) => {
             <Grid
               key={talk.id}
               gridTemplateColumns={['50px 50px auto ', '60px 60px auto ']}
-              mt="5"
+              mt='5'
             >
               <TalkHour hour={talk.hour} />
 
@@ -82,17 +82,17 @@ const MyAgendaList: React.VFC<Props> = ({ talks }) => {
               />
               <Box>
                 {hasChangedTalkData(cachedTalk) && (
-                  <Popover text="Esta palestra atualizou desde que você a adicionou à sua agenda.">
+                  <Popover text='Esta palestra atualizou desde que você a adicionou à sua agenda.'>
                     <styled.span
-                      fontSize="sm"
-                      fontStyle="italic"
-                      color="white"
-                      display="inline-block"
-                      px="4"
-                      mb="1"
-                      border="1px solid white"
-                      borderRadius="100px"
-                      cursor="pointer"
+                      fontSize='sm'
+                      fontStyle='italic'
+                      color='white'
+                      display='inline-block'
+                      px='4'
+                      mb='1'
+                      border='1px solid white'
+                      borderRadius='100px'
+                      cursor='pointer'
                     >
                       atualizada
                     </styled.span>
@@ -105,8 +105,8 @@ const MyAgendaList: React.VFC<Props> = ({ talks }) => {
                   )}
                 >
                   <styled.button
-                    color="white"
-                    cursor="pointer"
+                    color='white'
+                    cursor='pointer'
                     onClick={() => removeFromMyAgenda(talk)}
                   >
                     - remover

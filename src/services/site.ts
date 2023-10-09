@@ -1,13 +1,10 @@
 import { dataApi } from '@/config/api';
 import { SiteData } from '@/types';
 import { cache } from 'react';
-import siteDataMock from './site-mock.json';
 
-export const getSiteData = async () => siteDataMock as SiteData;
-
-// cache(() =>
-//   dataApi.get('site/v1/data').then((res) => {
-//     console.log(JSON.stringify(res.data));
-//     return res.data as SiteData;
-//   })
-// );
+export const getSiteData = cache(() =>
+  dataApi.get('site/v1/data').then((res) => {
+    console.log(JSON.stringify(res.data));
+    return res.data as SiteData;
+  })
+);
