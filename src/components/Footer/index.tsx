@@ -54,20 +54,6 @@ const Footer: React.FC = () => {
               />
             </styled.a>
           </Flex>
-          <styled.a
-            color='primary'
-            bg='tertiary'
-            rounded='100px'
-            textTransform='uppercase'
-            fontWeight='bold'
-            fontSize={['12px', 'sm']}
-            px='9'
-            py='2'
-            target='_blank'
-            href='https://www.eventbrite.com.br/e/699928714627?aff=site'
-          >
-            Ingressos
-          </styled.a>
         </Flex>
       </Container>
     </Box>

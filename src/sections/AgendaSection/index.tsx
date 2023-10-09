@@ -1,31 +1,17 @@
 'use client';
 import Container from '@/components/Container';
 import { Box, Flex, Grid, styled } from '@/styled-system/jsx';
-import { Talk, Talks } from '@/types';
-import React from 'react';
+import { Talks } from '@/types';
+import React, { useEffect } from 'react';
 
 import NextImage from 'next/image';
 import HoverEffect from '@/components/HoverEffect';
 import { useSpeakerModal } from '@/atoms/speaker-modal';
-
-const buttons = [
-  {
-    label: 'Geral',
-    value: 'principal',
-  },
-  {
-    label: 'Front-end',
-    value: 'frontend',
-  },
-  {
-    label: 'Comunidades',
-    value: 'communities',
-  },
-  {
-    label: 'Convida',
-    value: 'invite',
-  },
-] as const;
+import SaveToAgendaButton from '@/components/SaveToAgendaButton';
+import { useMyAgenda } from '@/atoms/my-agenda';
+import TalkHour from '@/components/TalkHour';
+import TalkDetail from '@/components/TalkDetail';
+import { getRoomName, roomsButtons } from '@/utils/rooms';
 
 const featuredTalks = [
   {
@@ -78,20 +64,6 @@ const featuredTalks = [
   },
 ] as const;
 
-const Hour: React.FC<{ hour: string }> = ({ hour }) => {
-  return (
-    <styled.p
-      alignSelf='start'
-      color='secondary'
-      fontSize='md'
-      fontWeight='bold'
-      textAlign='left'
-    >
-      {hour}
-    </styled.p>
-  );
-};
-
 const Featured: React.FC<{ text: string }> = ({ text }) => {
   return (
     <styled.p
@@ -117,66 +89,43 @@ const findAndGetParentKey = (talks: Talks, id: number) => {
   return key;
 };
 
-const TalkDetail: React.FC<
-  Talk & {
-    tag?: keyof Talks;
-    onSpeakerClick: () => void;
-  }
-> = ({ speaker, title, tag, onSpeakerClick }) => {
-  const button = buttons.find((button) => button.value === tag);
-
-  const roomName = button?.value === 'principal' ? 'Auditório' : button?.label;
-
-  return (
-    <Box borderBottom='1px solid' borderColor='secondary' pb='5'>
-      <styled.button cursor='pointer' onClick={onSpeakerClick}>
-        <styled.h4
-          color='secondary'
-          fontWeight='bold'
-          textTransform='uppercase'
-          textAlign='left'
-        >
-          {speaker.title}{' '}
-          {tag && (
-            <styled.span textTransform='none' fontWeight='400' color='white'>
-              | Trilha: {roomName}
-            </styled.span>
-          )}
-        </styled.h4>
-      </styled.button>
-      <styled.p fontSize='sm' color='white'>
-        {speaker.role} {speaker.company}
-      </styled.p>
-      <styled.p mt='1' color='secondary' fontWeight='bold'>
-        {title}{' '}
-      </styled.p>
-    </Box>
-  );
-};
-
 type SelectOptions = keyof Talks;
 
-const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
-  talks,
-  isActive,
-}) => {
+const AgendaSection: React.FC<{
+  talks: Talks;
+  isActive: boolean;
+  defaultRoom?: SelectOptions;
+}> = ({ talks, isActive, defaultRoom = 'frontend' }) => {
   const { openModal } = useSpeakerModal();
+  const { checkIsSaved, saveToMyAgenda } = useMyAgenda();
 
-  const [selected, setSelected] = React.useState<SelectOptions>('frontend');
-  const [filteredTalks, setFilteredTalks] = React.useState(talks.frontend);
+  const [selected, setSelected] = React.useState<SelectOptions>(defaultRoom);
+  const [filteredTalks, setFilteredTalks] = React.useState(
+    defaultRoom === 'principal' ? [] : talks[defaultRoom]
+  );
+
+  const onSelectPrincipal = () => {
+    setFilteredTalks([
+      ...(talks.frontend || []),
+      ...(talks.communities || []),
+      ...(talks.invite || []),
+    ]);
+  };
 
   function handleSelected(value: SelectOptions) {
     setSelected(value);
     if (value === 'principal') {
-      setFilteredTalks([
-        ...(talks.frontend || []),
-        ...(talks.communities || []),
-        ...(talks.invite || []),
-      ]);
+      onSelectPrincipal();
       return;
     }
     setFilteredTalks(talks[value] || []);
   }
+
+  useEffect(() => {
+    if (defaultRoom === 'principal') {
+      onSelectPrincipal();
+    }
+  }, []);
 
   return (
     <Box bgColor='primary' position='relative' pt='10' pb='10' zIndex={1}>
@@ -201,7 +150,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
         {isActive && (
           <>
             <Flex justifyContent='center' flexWrap='wrap' gap='3' mb='8'>
-              {buttons.map((button) => (
+              {roomsButtons.map((button) => (
                 <styled.button
                   key={button.value}
                   color='primary'
@@ -238,7 +187,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                       key={talk.id}
                       mt='5'
                     >
-                      <Hour hour={talk.hour} />
+                      <TalkHour hour={talk.hour} />
                       <Featured text={talk.title} />
                     </Grid>
                   );
@@ -250,7 +199,7 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                     gridTemplateColumns={['50px 50px auto', '60px 60px auto']}
                     mt='5'
                   >
-                    <Hour hour={talk.hour} />
+                    <TalkHour hour={talk.hour} />
                     <styled.button
                       cursor='pointer'
                       display='flex'
@@ -276,12 +225,19 @@ const AgendaSection: React.FC<{ talks: Talks; isActive: boolean }> = ({
                     <TalkDetail
                       {...talk}
                       onSpeakerClick={() => openModal(talk.speaker)}
-                      tag={
+                      roomName={
                         selected === 'principal' || talk.room === 'principal'
-                          ? findAndGetParentKey(talks, talk.id)
+                          ? getRoomName(
+                              findAndGetParentKey(talks, talk.id) || ''
+                            )
                           : undefined
                       }
-                    />
+                    >
+                      <SaveToAgendaButton
+                        isSaved={checkIsSaved(talk)}
+                        onClick={() => saveToMyAgenda(talk)}
+                      />
+                    </TalkDetail>
                   </Grid>
                 );
               })}

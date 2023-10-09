@@ -21,8 +21,12 @@ const links = [
     href: '/palestrantes',
   },
   {
-    label: 'Agenda',
+    label: 'Programação',
     href: '/agenda',
+  },
+  {
+    label: 'Minha agenda',
+    href: '/minha-agenda',
   },
 ];
 
@@ -42,7 +46,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
     >
       <Container px='0'>
         <Grid
-          gridTemplateColumns={['1fr', '1fr', '150px auto 200px']}
+          gridTemplateColumns={['1fr', '1fr', '150px auto']}
           gap={['4', '10']}
         >
           <Link href='/'>
@@ -94,23 +98,6 @@ const Header: React.FC<Props> = ({ isHome }) => {
               </styled.a>
             ))}
           </Flex>
-          <styled.a
-            color='primary'
-            bg='tertiary'
-            rounded='100px'
-            textTransform='uppercase'
-            textAlign='center'
-            fontWeight='bold'
-            maxWidth='200px'
-            width='100%'
-            mx='auto'
-            px='9'
-            py='2'
-            target='_blank'
-            href='https://www.eventbrite.com.br/e/699928714627?aff=site'
-          >
-            Ingressos
-          </styled.a>
         </Grid>
       </Container>
     </styled.header>
