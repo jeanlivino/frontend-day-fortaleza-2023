@@ -7,6 +7,7 @@ import TalkHour from '../TalkHour';
 import TalkDetail from '../TalkDetail';
 import { getRoomName } from '@/utils/rooms';
 import NextImage from 'next/image';
+import Popover from '../PopOver';
 
 type Props = {
   talks: Talks;
@@ -81,19 +82,21 @@ const MyAgendaList: React.VFC<Props> = ({ talks }) => {
               />
               <Box>
                 {hasChangedTalkData(cachedTalk) && (
-                  <styled.span
-                    fontSize="sm"
-                    fontStyle="italic"
-                    color="white"
-                    display="inline-block"
-                    px="4"
-                    mb="1"
-                    border="1px solid white"
-                    borderRadius="100px"
-                    cursor="pointer"
-                  >
-                    atualizada
-                  </styled.span>
+                  <Popover text="Esta palestra atualizou desde que você a adicionou à sua agenda.">
+                    <styled.span
+                      fontSize="sm"
+                      fontStyle="italic"
+                      color="white"
+                      display="inline-block"
+                      px="4"
+                      mb="1"
+                      border="1px solid white"
+                      borderRadius="100px"
+                      cursor="pointer"
+                    >
+                      atualizada
+                    </styled.span>
+                  </Popover>
                 )}
                 <TalkDetail
                   {...talk}
