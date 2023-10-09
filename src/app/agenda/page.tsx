@@ -51,7 +51,7 @@ export default async function Programacao() {
         <styled.a
           boxShadow="0px 18px 35px -8px rgba(0,0,0,0.9)"
           color="primary"
-          bg="secondary"
+          bg="tertiary"
           rounded="100px"
           textTransform="uppercase"
           fontWeight="bold"

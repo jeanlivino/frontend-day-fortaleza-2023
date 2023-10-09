@@ -21,8 +21,12 @@ const links = [
     href: '/palestrantes',
   },
   {
-    label: 'Agenda',
+    label: 'Programação',
     href: '/agenda',
+  },
+  {
+    label: 'Minha agenda',
+    href: '/minha-agenda',
   },
 ];
 
@@ -37,18 +41,18 @@ const Header: React.FC<Props> = ({ isHome }) => {
       top={['0', '0']}
       left={['0', '0']}
       p={['0', '7']}
-      w='100%'
+      w="100%"
       mb={['7', '0']}
     >
-      <Container px='0'>
+      <Container px="0">
         <Grid
-          gridTemplateColumns={['1fr', '1fr', '150px auto 200px']}
+          gridTemplateColumns={['1fr', '1fr', '150px auto']}
           gap={['4', '10']}
         >
-          <Link href='/'>
+          <Link href="/">
             <NextImage
-              src='/images/logo-fendce.png'
-              alt='Logo'
+              src="/images/logo-fendce.png"
+              alt="Logo"
               width={200}
               height={50}
               style={{ margin: 'auto' }}
@@ -62,15 +66,15 @@ const Header: React.FC<Props> = ({ isHome }) => {
           <Flex
             gap={['3', '6']}
             justifyContent={'center'}
-            width='100%'
-            flexWrap='wrap'
+            width="100%"
+            flexWrap="wrap"
           >
             {!isHome && (
               <styled.a
-                href='/'
-                alignSelf='center'
-                color='white'
-                textTransform='uppercase'
+                href="/"
+                alignSelf="center"
+                color="white"
+                textTransform="uppercase"
                 _hover={{
                   color: 'secondary',
                 }}
@@ -83,9 +87,9 @@ const Header: React.FC<Props> = ({ isHome }) => {
                 href={link.href}
                 key={link.label}
                 target={link.target}
-                alignSelf='center'
-                color='white'
-                textTransform='uppercase'
+                alignSelf="center"
+                color="white"
+                textTransform="uppercase"
                 _hover={{
                   color: 'secondary',
                 }}
@@ -94,23 +98,6 @@ const Header: React.FC<Props> = ({ isHome }) => {
               </styled.a>
             ))}
           </Flex>
-          <styled.a
-            color='primary'
-            bg='tertiary'
-            rounded='100px'
-            textTransform='uppercase'
-            textAlign='center'
-            fontWeight='bold'
-            maxWidth='200px'
-            width='100%'
-            mx='auto'
-            px='9'
-            py='2'
-            target='_blank'
-            href='https://www.eventbrite.com.br/e/699928714627?aff=site'
-          >
-            Ingressos
-          </styled.a>
         </Grid>
       </Container>
     </styled.header>
