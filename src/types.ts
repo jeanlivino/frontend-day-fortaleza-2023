@@ -58,3 +58,8 @@ export interface DrawItem {
   item: string;
   winner: string;
 }
+
+export interface Knockout {
+  knockout: string;
+  participants: string[];
+}

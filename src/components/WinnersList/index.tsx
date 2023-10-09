@@ -6,6 +6,9 @@ import { css } from '@/styled-system/css';
 
 type Props = {
   winners: DrawItem[];
+  itemTitle?: string;
+  winnerTitle?: string;
+  maxWidth?: string;
 };
 
 type ButtonWrapperProps = {
@@ -16,24 +19,24 @@ type ButtonWrapperProps = {
 
 const ButtonWrapper = ({ children, onClick, disabled }: ButtonWrapperProps) => (
   <styled.button
-    bg="white"
-    p="4"
-    borderRadius="4"
-    boxShadow="0 0 4px 0 rgba(0, 0, 0, 0.1)"
-    width="100%"
-    maxWidth="300px"
-    position="relative"
-    textAlign="center"
+    bg='white'
+    p='4'
+    borderRadius='4'
+    boxShadow='0 0 4px 0 rgba(0, 0, 0, 0.1)'
+    width='100%'
+    maxWidth='300px'
+    position='relative'
+    textAlign='center'
     onClick={onClick}
     opacity={disabled ? '.1' : '1'}
     cursor={disabled ? 'not-allowed' : 'pointer'}
   >
     <styled.h2
-      fontSize="4xl"
-      fontWeight="bold"
-      lineHeight="1"
-      mb="4"
-      textTransform="uppercase"
+      fontSize='4xl'
+      fontWeight='bold'
+      lineHeight='1'
+      mb='4'
+      textTransform='uppercase'
       color={disabled ? 'gray.400' : 'secondary'}
     >
       {children}
@@ -41,7 +44,12 @@ const ButtonWrapper = ({ children, onClick, disabled }: ButtonWrapperProps) => (
   </styled.button>
 );
 
-const WinnersList: React.FC<Props> = ({ winners }) => {
+const WinnersList: React.FC<Props> = ({
+  winners,
+  itemTitle = 'Item',
+  winnerTitle = 'Ganhador',
+  maxWidth = '600px',
+}) => {
   const [index, setIndex] = React.useState(0);
   const winner = winners[index];
   const downloadCSV = () => {
@@ -70,10 +78,10 @@ const WinnersList: React.FC<Props> = ({ winners }) => {
   };
 
   return (
-    <Center bg="primary" flexDir="column" minH="100vh">
+    <Center bg='primary' flexDir='column' minH='100vh'>
       <NextImage
-        src="/logo-vertical-white.svg"
-        alt="logo"
+        src='/logo-vertical-white.svg'
+        alt='logo'
         width={100}
         height={50}
         className={css({
@@ -87,37 +95,36 @@ const WinnersList: React.FC<Props> = ({ winners }) => {
         })}
       />
       <Box
-        bg="white"
-        p="4"
-        borderRadius="4"
-        boxShadow="0 0 4px 0 rgba(0, 0, 0, 0.1)"
-        width="100%"
-        maxWidth="600px"
-        position="relative"
-        textAlign="center"
+        bg='white'
+        p='4'
+        borderRadius='4'
+        boxShadow='0 0 4px 0 rgba(0, 0, 0, 0.1)'
+        width='100%'
+        maxWidth={maxWidth}
+        position='relative'
+        textAlign='center'
       >
-        <styled.p fontSize="lg">Item:</styled.p>
+        <styled.p fontSize='lg'>{itemTitle}:</styled.p>
         <styled.h2
-          fontSize="4xl"
-          fontWeight="bold"
-          mb="4"
-          textTransform="uppercase"
-          color="primary"
+          fontSize='4xl'
+          fontWeight='bold'
+          mb='4'
+          textTransform='uppercase'
+          color='primary'
         >
           {winner.item}
         </styled.h2>
-        <styled.p fontSize="lg">Ganhador:</styled.p>
+        <styled.p fontSize='lg'>{winnerTitle}:</styled.p>
         <styled.h2
-          fontSize="4xl"
-          fontWeight="bold"
-          mb="4"
-          textTransform="uppercase"
-          color="primary"
-        >
-          {winner.winner}
-        </styled.h2>
+          fontSize='4xl'
+          fontWeight='bold'
+          mb='4'
+          textTransform='uppercase'
+          color='primary'
+          dangerouslySetInnerHTML={{ __html: winner.winner }}
+        />
       </Box>
-      <Flex justifyContent="space-between" width="100%" maxWidth="600px">
+      <Flex justifyContent='space-between' width='100%' maxWidth='600px'>
         <ButtonWrapper disabled={index === 0} onClick={handlePrevious}>
           {'<'}
         </ButtonWrapper>
@@ -129,11 +136,11 @@ const WinnersList: React.FC<Props> = ({ winners }) => {
         </ButtonWrapper>
       </Flex>
       <styled.button
-        p="4"
-        width="100%"
-        maxWidth="600px"
-        color="white"
-        cursor="pointer"
+        p='4'
+        width='100%'
+        maxWidth='600px'
+        color='white'
+        cursor='pointer'
         onClick={downloadCSV}
       >
         Baixar CSV
