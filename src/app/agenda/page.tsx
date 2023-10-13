@@ -58,7 +58,8 @@ export default async function Programacao() {
           fontSize={['12px', 'sm']}
           px='9'
           py='2'
-          href='/minha-agenda'
+          target='_blank'
+          href='https://jv-farias.github.io/frontend-day-app/'
         >
           ver minha agenda
         </styled.a>

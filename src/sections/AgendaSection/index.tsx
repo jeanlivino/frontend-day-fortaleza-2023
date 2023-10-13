@@ -233,10 +233,10 @@ const AgendaSection: React.FC<{
                           : undefined
                       }
                     >
-                      <SaveToAgendaButton
+                      {/* <SaveToAgendaButton
                         isSaved={checkIsSaved(talk)}
                         onClick={() => saveToMyAgenda(talk)}
-                      />
+                      /> */}
                     </TalkDetail>
                   </Grid>
                 );

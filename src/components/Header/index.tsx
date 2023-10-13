@@ -26,7 +26,8 @@ const links = [
   },
   {
     label: 'Minha agenda',
-    href: '/minha-agenda',
+    href: 'https://jv-farias.github.io/frontend-day-app/',
+    target: '_blank',
   },
 ];
 
