@@ -40,13 +40,13 @@ const featuredTalks = [
   },
   {
     id: 'coffee',
-    hour: '15:50',
+    hour: '16:20',
     title: 'Coffee Break + Networking',
     featured: true,
   },
   {
     id: 'sorteio',
-    hour: '16:45',
+    hour: '17:00',
     title: 'Sorteios de brindes e participantes do Codando no Breu',
     featured: true,
   },
