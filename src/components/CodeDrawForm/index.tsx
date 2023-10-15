@@ -13,25 +13,43 @@ const textToItems = (text: string) => {
 
 const knockouts = ['Bateria 1', 'Bateria 2', 'Bateria 3', 'Bateria 4'];
 
+function generateUniqueRandomNumbers(size: number, count: number): number[] {
+  if (count > size) {
+    throw new Error("O número de valores únicos a serem gerados não pode ser maior que o tamanho do intervalo.");
+  }
+
+  const uniqueNumbers: Set<number> = new Set();
+  const result: number[] = [];
+
+  while (uniqueNumbers.size < count) {
+    const randomNumber = Math.floor(Math.random() * size);
+    if (!uniqueNumbers.has(randomNumber)) {
+      uniqueNumbers.add(randomNumber);
+      result.push(randomNumber);
+    }
+  }
+
+  return result;
+}
+
 const draw = (contestants: string[]) => {
   let contestantsList = [...contestants];
   const itemsLength = knockouts.length;
   const result: Knockout[] = [];
+  const randomNumbers = generateUniqueRandomNumbers(contestants.length, itemsLength * 4);
+  let randomNumbersIndex = 0;
 
   for (let i = 0; i < itemsLength; i++) {
-    const contestantsLength = contestantsList.length;
     const knockout = knockouts[i];
 
-    // get 4 participants randomly
     const knockoutsParticipants = [];
 
     for (let j = 0; j < 4; j++) {
-      const participantIndex = Math.floor(Math.random() * contestantsLength);
-      contestantsList = contestantsList.filter(
-        (_, index) => index !== participantIndex
-      );
+      const participantIndex = randomNumbers[randomNumbersIndex];
+      const item = contestantsList[participantIndex];
 
-      knockoutsParticipants.push(contestantsList[participantIndex]);
+      knockoutsParticipants.push(item);
+      randomNumbersIndex++;
     }
 
     result.push({ knockout, participants: knockoutsParticipants });
