@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Grid, styled } from '@/styled-system/jsx';
+import { Center, Flex, Grid, styled } from '@/styled-system/jsx';
 import Container from '../Container';
 import NextImage from 'next/image';
 import { css } from '@/styled-system/css';
@@ -43,63 +43,43 @@ const Header: React.FC<Props> = ({ isHome }) => {
       left={['0', '0']}
       p={['0', '7']}
       w='100%'
-      mb={['7', '0']}
     >
-      <Container px='0'>
-        <Grid
-          gridTemplateColumns={['1fr', '1fr', '150px auto']}
-          gap={['4', '10']}
+      <Container>
+        <Flex
+          gap={['4', '14']}
+          p='4'
+          justifyContent='center'
+          alignItems='center'
+          flexDirection={['column', 'row']}
         >
-          <Link href='/'>
-            <NextImage
-              src='/images/logo-fendce.png'
-              alt='Logo'
-              width={200}
-              height={50}
-              style={{ margin: 'auto' }}
-              className={css({
-                '@media (max-width: 768px)': {
-                  width: '150px',
-                },
-              })}
-            />
-          </Link>
-          <Flex
-            gap={['3', '6']}
-            justifyContent={'center'}
-            width='100%'
-            flexWrap='wrap'
+          <NextImage
+            src='/images/logo-fendce.png'
+            alt='Logo'
+            width={200}
+            height={50}
+            className={css({
+              '@media (max-width: 768px)': {
+                width: '150px',
+              },
+            })}
+          />
+          <styled.a
+            href='/midia-kit.pdf'
+            target='_blank'
+            rel='noreferrer'
+            textDecoration='none'
+            bg='#8C5BF1'
+            color='white'
+            py='3'
+            px='5'
+            rounded='10px'
+            fontSize='lg'
+            fontWeight='700'
+            _hover={{ bg: '#9252e6' }}
           >
-            {!isHome && (
-              <styled.a
-                href='/'
-                alignSelf='center'
-                color='white'
-                textTransform='uppercase'
-                _hover={{
-                  color: 'secondary',
-                }}
-              >
-                Home
-              </styled.a>
-            )}
-            {links.map((link) => (
-              <styled.a
-                href={link.href}
-                key={link.label}
-                target={link.target}
-                alignSelf='center'
-                color='white'
-                textTransform='uppercase'
-                _hover={{
-                  color: 'secondary',
-                }}
-              >
-                {link.label}
-              </styled.a>
-            ))}
-          </Flex>
-        </Grid>
+            Baixar mídia kit
+          </styled.a>
+        </Flex>
       </Container>
     </styled.header>
   );

@@ -40,3 +40,4 @@ styled-system-static
 
 # Sentry Auth Token
 .sentryclirc
+dist

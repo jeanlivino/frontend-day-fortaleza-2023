@@ -11,50 +11,43 @@ const CountdownSection: React.FC = () => {
   );
 
   return (
-    <Box
-      maxW='800px'
-      p='8'
-      bg='secondary'
-      mx={['5', 'auto']}
-      rounded='20px'
-      top='-70px'
-      position='relative'
-      zIndex='1'
-      boxShadow='0px 18px 35px -8px rgba(0,0,0,0.5)'
-    >
+    <Box>
       <styled.h3
-        fontWeight='700'
+        className='font-kdam'
         lineHeight='1.2'
         fontSize='3xl'
         textAlign='center'
         mb='7'
+        textTransform='uppercase'
+        color='white'
       >
-        O{' '}
-        <styled.span color='white' textDecoration='underline'>
-          maior
-        </styled.span>{' '}
-        encontro da
-        <br />
-        comunidade Front-End CE
+        Fortaleza
       </styled.h3>
-      <Grid
-        maxW='500px'
-        mx='auto'
-        gridTemplateColumns={['repeat(2, 1fr)', 'repeat(4, 1fr)']}
-        gap='4'
-        mt='4'
+      <Box
+        maxW='800px'
+        p='2'
+        bg='#8C5BF1'
+        mx={['5', 'auto']}
+        rounded='20px'
+        boxShadow='0px 18px 35px -8px rgba(0,0,0,0.5)'
       >
-        <TimeCard number={days} text={days === 1 ? 'Dia' : 'Dias'} />
-        <TimeCard number={hours} text={hours === 1 ? 'Hora' : 'Horas'} />
-        <TimeCard
-          number={minutes}
-          text={minutes === 1 ? 'Minuto' : 'Minutos'}
-        />
-        <TimeCard
-          number={seconds}
-          text={seconds === 1 ? 'Segundo' : 'Segundos'}
-        />
-      </Grid>
+        <Grid
+          mx='auto'
+          gridTemplateColumns={['repeat(2, 1fr)', 'repeat(4, 1fr)']}
+          gap='4'
+        >
+          <TimeCard number={days} text={days === 1 ? 'Dia' : 'Dias'} />
+          <TimeCard number={hours} text={hours === 1 ? 'Hora' : 'Horas'} />
+          <TimeCard
+            number={minutes}
+            text={minutes === 1 ? 'Minuto' : 'Minutos'}
+          />
+          <TimeCard
+            number={seconds}
+            text={seconds === 1 ? 'Segundo' : 'Segundos'}
+          />
+        </Grid>
+      </Box>
     </Box>
   );
 };

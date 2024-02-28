@@ -23,31 +23,6 @@ export default async function Home() {
   return (
     <main>
       <HeroSection />
-      <Box bg='secondary' position='relative' zIndex={2}>
-        <CountdownSection />
-        <AboutSection />
-        <VenueSection />
-      </Box>
-      <Box bgColor='primary' position='relative' pt='24' zIndex={1}>
-        <SpeakersSection speakers={data.speakers} />
-      </Box>
-      {data.sponsors?.length > 0 && (
-        <SponsorsSection sponsors={data.sponsors} />
-      )}
-      {data.partners?.length > 0 && (
-        <PartnersSection partners={data.partners} />
-      )}
-      <TicketSection />
-      <CommunitiesSection communities={data.communities} />
-      <AgendaSection
-        talks={data.talks}
-        isActive={
-          Boolean(data.activate_agenda) ||
-          process.env.NODE_ENV === 'development'
-        }
-      />
-      <FAQSection faq={data.faq} />
-      <SpeakerModal />
       <Footer />
     </main>
   );

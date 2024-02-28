@@ -1,0 +1,1030 @@
+{
+  "communities": [
+    {
+      "link": "https://t.me/elug_ce",
+      "id": 65,
+      "title": "Elug",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/elug-9.png"
+    },
+    {
+      "link": "https://www.meetup.com/pt-BR/gdgfortaleza/",
+      "id": 51,
+      "title": "GDG",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/gdg-fortaleza.png"
+    },
+    {
+      "link": "https://phpcomrapadura.org/",
+      "id": 53,
+      "title": "PHP com rapadura",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/PHPcomRapadura.png"
+    },
+    {
+      "link": "https://www.instagram.com/pyladiesfortaleza/",
+      "id": 47,
+      "title": "PyLadies",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/pyladies.png"
+    },
+    {
+      "link": "https://reactjs-ceara.org/",
+      "id": 46,
+      "title": "React Ce",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/react-ce.png"
+    },
+    {
+      "link": "http://bit.ly/uxfor-on-whatsapp",
+      "id": 27,
+      "title": "UXFor",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/uxfor.jpeg"
+    },
+    {
+      "link": "https://www.meetup.com/pt-BR/gdgfortaleza/",
+      "id": 52,
+      "title": "Women Techmakers",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/WTM_Logo@1x.png"
+    }
+  ],
+  "speakers": [
+    {
+      "role": "Criadora de Conte\u00fado",
+      "company": "WebSaty",
+      "bio": "Formada em Engenharia El\u00e9trica pela UFPR, Adriana Saty achou que programa\u00e7\u00e3o n\u00e3o era para ela. Ap\u00f3s v\u00e1rias frustra\u00e7\u00f5es, decidiu dar uma outra chance e se encontrou no desenvolvimento de software. J\u00e1 trabalhou em grandes empresas de tecnologia como o Ita\u00fa, Santander e Accenture como desenvolvedora de Software. ",
+      "social_link": "https://www.instagram.com/adriana.saty/",
+      "id": 86,
+      "title": "Adriana Saty",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/adriana-saty.jpeg"
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "Grupo Botic\u00e1rio",
+      "bio": "Atuo h\u00e1 mais de 6 anos defendendo a causa de que n\u00e3o fazemos s\u00f3 tela bonitinha. Graduada em Computa\u00e7\u00e3o e Mestre em tomar caf\u00e9 com bolinho",
+      "social_link": "https://www.linkedin.com/in/aesmeraldo/",
+      "id": 247,
+      "title": "Amanda Esmeraldo",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/10/amanda.jpeg"
+    },
+    {
+      "role": "Criador do ",
+      "bio": "Tem um hist\u00f3rico impressionante de contribui\u00e7\u00f5es para mundo open source, Patoilo trouxe \u00e0 vida diversos projetos. Com a manuten\u00e7\u00e3o ativa de mais de 70 pacotes de c\u00f3digo aberto, que s\u00e3o baixados milh\u00f5es de vezes por m\u00eas.",
+      "social_link": "https://www.linkedin.com/in/cjpatoilo/",
+      "company": "Milligram.io e Airform.io",
+      "id": 40,
+      "title": "CJ Patoilo",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/pato.png"
+    },
+    {
+      "role": "Desenvolvedora Front-End",
+      "company": "Uol",
+      "bio": "Dev frontend na UOL, fiz transi\u00e7\u00e3o de carreira h\u00e1 quase 2 anos atr\u00e1s depois de um bootcamp e hoje fa\u00e7o faculdade de ADS na Fanor. ",
+      "social_link": "https://www.linkedin.com/in/noemi-cunha/",
+      "id": 82,
+      "title": "Noemi Cunha",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/noemi.jpeg"
+    },
+    {
+      "role": "Co-Founder e Idealizador de solu\u00e7\u00f5es",
+      "company": "bh2",
+      "bio": "Cearense, nascido e criado em Fortaleza... Desde crian\u00e7a sempre gostei de observar e mexer no computador, ficava fascinado ao ver a possibilidade simples de escrever em um treco, e numa tela, esse treco ser projetado, ou ainda, mexer outro treco e na mesma tela uma seta seguindo o mesmo percurso que minha m\u00e3o. ",
+      "social_link": "https://www.linkedin.com/in/callmeloureiro/",
+      "id": 94,
+      "title": "Matheus Loureiro",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/loureiro-e1693312884878.jpeg"
+    },
+    {
+      "role": "Especialista em carreira",
+      "company": "Rocketseat",
+      "bio": "Psic\u00f3loga, Tech recruiter, p\u00f3s graduanda em gest\u00e3o de pessoas. Mentora de carreira e consultora em gest\u00e3o de pessoas. Nordestina, apaixonada  pelo universo dos neg\u00f3cios, pessoas e carreiras",
+      "social_link": "https://www.linkedin.com/in/am%C3%A1liabeatrizmoura/",
+      "id": 118,
+      "title": "Am\u00e1lia Moura",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/WhatsApp_Image_2023-06-23_at_15.45.06_1-e1693355713727.jpeg"
+    },
+    {
+      "role": "Tech Lead e Scrum Master",
+      "company": "Governo do Estado do Cear\u00e1",
+      "bio": "Founder do @bora.agilizar, Mentora do Cyber girls, Organizer do GDG Fortaleza, Embaixadora do WTM Google Fortaleza e Host do quadro \u2018Agile Gov\u2019 no podcast Agilizem.",
+      "social_link": "https://www.linkedin.com/in/silvia-muniz-8b2390a3/",
+      "id": 125,
+      "title": "S\u00edlvia Muniz",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/silvia.jpeg"
+    },
+    {
+      "role": "Senior Software Engineer",
+      "company": "Automattic",
+      "bio": "Com mais de 10 anos de experi\u00eancia em desenvolvimento de software, Ian \u00e9 Senior Software Engineer na Automattic, empresa por tr\u00e1s do WordPress.com, Tumblr, etc. Apaixonado por linguagens de programa\u00e7\u00e3o, ele tamb\u00e9m \u00e9 m\u00fasico e, recentemente, mergulhou no mundo da canoa polin\u00e9sia",
+      "social_link": "https://www.linkedin.com/in/ianramosc/",
+      "id": 122,
+      "title": "Ian Ramos",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/ian-ramos.png"
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Shape",
+      "bio": "Colaboradora do PyLadies Fortaleza, Engenheira de Computa\u00e7\u00e3o, dan\u00e7arina e core\u00f3grafa iniciante. Entusiasta da interdisciplinaridade e do ensino da programa\u00e7\u00e3o al\u00e9m do \u00f3bvio.",
+      "social_link": "https://www.linkedin.com/in/alynnefs/",
+      "id": 129,
+      "title": "Alynne Ferreira",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/alyne.jpeg"
+    },
+    {
+      "role": "Software Developer",
+      "company": "IBM",
+      "bio": "Desenvolvedor Web com foco no FrontEnd, traindo o Javascripto com o Javinha.",
+      "social_link": "https://www.linkedin.com/in/mbarbosasan/",
+      "id": 251,
+      "title": "Moises Santos",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/10/moises.jpeg"
+    },
+    {
+      "role": "Senior Software Engineer",
+      "company": "Automattic",
+      "bio": "Desenvolvedor de Software desde os 16 anos, entusiasta de Open Source. Diversas experi\u00eancias como freelancer, outsourcing e startups, trabalhando remotamente desde 2017 com empresas de fora do pa\u00eds.",
+      "social_link": "https://twitter.com/heydemoura",
+      "id": 218,
+      "title": "Heyde Moura",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/heyde.jpeg"
+    },
+    {
+      "role": "Gerente de Tecnologia",
+      "company": "Agenda Edu",
+      "bio": "Desenvolvedor de Software, com 12 anos de experi\u00eancia construindo sistemas e mais atualmente gerenciando times de tecnologia. Com vasta experi\u00eancia especialmente em desenvolvimento backend, com foco em aplica\u00e7\u00f5es Ruby on Rails e seu ecossistema.",
+      "social_link": "https://www.linkedin.com/in/gurgelrenan/",
+      "id": 221,
+      "title": "Renan Gurgel",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-20-at-21.57.41-e1695325694723.jpeg"
+    },
+    {
+      "role": "QA",
+      "company": "Profectum",
+      "bio": "Graduanda em Sistemas de Informa\u00e7\u00e3o, atua como QA na Profectum, outsourced no Hapvida NotreDame Interm\u00e9dica. Colaboradora do PyLadies Fortaleza desde 2017, participando ativamente na revitaliza\u00e7\u00e3o da comunidade.",
+      "social_link": "https://www.linkedin.com/in/mariarosinelefelix/",
+      "id": 127,
+      "title": "Rose F\u00e9lix",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/rose.jpeg"
+    },
+    {
+      "role": "Frontend Engineer",
+      "company": "Loadsmart",
+      "bio": "Fazedor de HTML sem\u00e2ntico, JavaScript perform\u00e1tico e aplica\u00e7\u00f5es acess\u00edveis. Membro colaborador e ex-organizador da comunidade Front-End CE.",
+      "social_link": "https://www.linkedin.com/in/rivajunior/",
+      "id": 228,
+      "title": "Riva Junior",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/riva.jpeg"
+    },
+    {
+      "role": "Product Designer",
+      "company": "Agenda Edu",
+      "bio": "Product Designer e pesquisadora na \u00e1rea de Intera\u00e7\u00e3o Humano-Computador. Comecei uma gradua\u00e7\u00e3o em Pedagogia, mas me encontrei na tecnologia voltada para a educa\u00e7\u00e3o.\r\n",
+      "social_link": "https://www.linkedin.com/in/kellrcarvalho/",
+      "id": 71,
+      "title": "Rachel Carvalho",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/1669399234986.jpeg"
+    },
+    {
+      "role": "Developer Relations",
+      "company": "FusionAuth",
+      "bio": "Desenvolvedor h\u00e1 15 anos, apaixonado por tecnologia e principalmente Web. J\u00e1 atuei em projetos em diversas \u00e1reas, como email marketing, automa\u00e7\u00e3o de redes, e-commerce, ciberseguran\u00e7a e e-learning, onde inclusive fundei uma startup. ",
+      "social_link": "https://www.linkedin.com/in/viniciuscampitelli/",
+      "id": 97,
+      "title": "Vin\u00edcius Campitelli",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/vinicius.jpeg"
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Beakyn",
+      "bio": "Com mais 15 anos de experi\u00eancia em desenvolvimento de software. Abra\u00e3o Alves, foi early adopter de varias tecnologias sendo Typescript uma de suas paix\u00f5es mais antigas. Comunidade onde come\u00e7ou suas contribui\u00e7\u00f5es ainda no come\u00e7o de 2013, sendo autor de v\u00e1rios definition types. J\u00e1 fundou startup, comunidades, fam\u00edlia e at\u00e9 turma de alunos (n\u00e3o necessariamente nessa ordem) ",
+      "social_link": "https://linkedin.com/in/abraaoalves",
+      "id": 114,
+      "title": "Abra\u00e3o Alves",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/abraao.jpeg"
+    },
+    {
+      "role": "Senior Software Engineering",
+      "company": "iFood",
+      "bio": "Atualmente sou s\u00eanior front-end no iFood com mais de 6 anos de experi\u00eancia, formado em sistemas de informa\u00e7\u00e3o e cursando p\u00f3s em gest\u00e3o de pessoas.",
+      "social_link": "https://www.linkedin.com/in/joao-willamy/",
+      "id": 84,
+      "title": "Jo\u00e3o Willamy",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/joao.png"
+    },
+    {
+      "role": "S\u00f3cias",
+      "company": "Evo Cont\u00e1bil",
+      "bio": "S\u00f3cias na Evo Cont\u00e1bil, empresa de contabilidade digital especializada em microempreendedor individual e com servi\u00e7os que abrangem o pequeno e m\u00e9dio empres\u00e1rio. Nosso objetivo com a palestra \u201cContabilidade b\u00e1sica para o empreendedor, PJ e CLT\u201d, \u00e9 simplificar as informa\u00e7\u00f5es necess\u00e1rias para ter uma contabilidade funcional.",
+      "social_link": "https://www.instagram.com/evocontabil/",
+      "id": 200,
+      "title": "Renata e Kel",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/evo.jpg"
+    },
+    {
+      "role": "UX/UI Designer",
+      "company": "VMetrix",
+      "bio": "Cofundador da UX FOR. Apaixonado por design e as experi\u00eancias que isso carrega, me fascino com as formas, cores, movimentos e como s\u00e3o produzidas todas essas intera\u00e7\u00f5es.",
+      "social_link": "https://www.linkedin.com/in/ewerton-nepomuceno/",
+      "id": 74,
+      "title": "Ewerton Nepomuceno",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/1668435428209.jpeg"
+    },
+    {
+      "role": "Especialista Android",
+      "company": "Trybe",
+      "bio": "Mestre em Ci\u00eancias da Computa\u00e7\u00e3o pela Universidade Estadual do Cear\u00e1 (UECE), Bacharel em Sistemas de Informa\u00e7\u00e3o pela Faculdade de Juazeiro do Norte (FJN). Atualmente atua como pessoa especialista na Escola de Programa\u00e7\u00e3o Trybe, possui experi\u00eancia no ensino superior lecionando disciplinas de computa\u00e7\u00e3o em em v\u00e1rias institui\u00e7\u00f5es (Unifor, UECE, FJN, Le\u00e3o Sampaio e FAMETRO), pesquisador do Intelligent Networks and Systems Group (INETSYS), streamer na Twitch, membro fundador da Kotlinautas e membro organizador da comunidade GitTogether Fortaleza.",
+      "social_link": "https://www.linkedin.com/in/profbrunolopes/",
+      "id": 225,
+      "title": "Bruno Lopes",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-24-at-14.23.56.jpeg"
+    },
+    {
+      "role": "Desenvolvedor Front End",
+      "company": "MERX",
+      "bio": "Um apaixonado pelo mundo da tecnologia, um desenvolvedor Front-end experiente e um entusiasta das comunidade de desenvolvimento de software, come\u00e7ou sua carreira como desenvolvedor Front-end h\u00e1 4 anos.\r\n",
+      "social_link": "https://www.linkedin.com/in/adrianmaycon/",
+      "id": 164,
+      "title": "Adrian Maycon",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/adrian.jpeg"
+    },
+    {
+      "role": "Engenheiro de software",
+      "company": "Normalabs",
+      "bio": "Palestrante, desenvolvedor, designer gr\u00e1fico, atualmente aluno do 3\u00b0 ano do curso de Redes de Computadores (2021-2023). Engenheiro de software da Normalabs, atuando no frontend e no backend de aplica\u00e7\u00f5es.",
+      "social_link": "https://www.linkedin.com/in/francisco-cauan-victor/",
+      "id": 112,
+      "title": "Cauan Victor",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/cauan.jpeg"
+    },
+    {
+      "role": "Desenvolvedor Front-End",
+      "bio": "Atua no time de cat\u00e1logo do iFood e tem participado de frentes que utilizam AI dentro de aplica\u00e7\u00f5es para os restaurantes da plataforma. ",
+      "social_link": "https://www.linkedin.com/in/jeanlivino/",
+      "company": "iFood",
+      "id": 42,
+      "title": "Jean Livino",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/IMG_8258-scaled-e1693350413390.jpg"
+    },
+    {
+      "role": "Desenvolvedora Front-End",
+      "company": "IREDE",
+      "bio": "Desenvolvedora Front-End, com foco em sistemas acess\u00edveis para pessoa com defici\u00eancia. Graduanda em Sistemas e M\u00eddias.",
+      "social_link": "https://www.linkedin.com/in/eloise-ferreira-301b69181/",
+      "id": 142,
+      "title": "Eloise Ferreira",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-05-at-19.09.40.jpeg"
+    },
+    {
+      "role": "CTO",
+      "company": "Sunne Energias",
+      "bio": "Empreendedor e desenvolvedor h\u00e1 mais de 10 anos, atualmente CTO na Sunne Energias Renov\u00e1veis.",
+      "social_link": "https://www.linkedin.com/in/victor-hugo-79042b24/",
+      "id": 160,
+      "title": "Victor Alencar",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/victor.jpeg"
+    },
+    {
+      "role": "Product Manager",
+      "company": "PicPay",
+      "bio": "Product Manager que atua na \u00e1rea de Open Finance no PicPay. Trabalha na \u00e1rea de produto desde 2017 e j\u00e1 passou por empresas como SAS Educa\u00e7\u00e3o, Instituto Atl\u00e2ntico e Mobills. Al\u00e9m disso, \u00e9 co-criadora da comunidade Product Owner CE.",
+      "social_link": "https://www.linkedin.com/in/romenia-sousa/",
+      "id": 156,
+      "title": "Rom\u00eania Sousa",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/romenia-scaled.jpg"
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Elo7",
+      "bio": "Atuo na \u00e1rea h\u00e1 2,5 anos. Sou formado em  An\u00e1lise e Desenvolvimento de Sistemas, iniciando p\u00f3s em MBA de Engenharia de Software. Trabalho como Engenheiro de Software Frontend, no Elo7. Gosto de resolver problemas, independentemente da tecnologia que atuo.",
+      "social_link": "https://www.linkedin.com/in/kevinbtv",
+      "id": 154,
+      "title": "Kevin Tavares",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-05-at-19.34.10.jpeg"
+    },
+    {
+      "role": "UX Designer",
+      "company": "LSBD",
+      "bio": "Atuando como Designer de Produto, com mais de 4 anos de experi\u00eancia na \u00e1rea de comunica\u00e7\u00e3o visual - do Design Gr\u00e1fico e Digital ao UX (Experi\u00eancia do Usu\u00e1rio) e UI (Design de Interface). Ao longo dos \u00faltimos anos, imergi no processo centrado no humano, de forma a compreender as necessidades e h\u00e1bitos dos usu\u00e1rios. Para mim, ser designer n\u00e3o \u00e9 apenas desenhar interfaces f\u00e1ceis de usar e entender, mas tamb\u00e9m comunicar de forma simples, humana e acess\u00edvel.",
+      "social_link": "https://www.linkedin.com/in/taveiram",
+      "id": 144,
+      "title": "Milena Taveira",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/milena.jpeg"
+    },
+    {
+      "role": "L\u00edderes",
+      "company": "Times de Inova\u00e7\u00e3o, Hub de Sa\u00fade, Ecommerce e App",
+      "bio": "Kaique Felipe, Techlead e Especialista Full Stack, respons\u00e1vel pela lideran\u00e7a de grandes projetos no nosso Hub de Sa\u00fade; Felipe Farias, Consultor e L\u00edder da nossa squad Digital, especialista em VTEX e respons\u00e1vel pela lideran\u00e7a no desenvolvimento do nosso E-commerce e App; Alan Victor, Techlead e Especialista Full Stack, respons\u00e1vel pela lideran\u00e7a dos nossos produtos de inova\u00e7\u00e3o, dentre eles o App de Gest\u00e3o interna da empresa.",
+      "social_link": "https://www.pmenoslab.com.br/",
+      "id": 215,
+      "title": "Time Pmenos Lab",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/pmenos-e1694699114579.jpeg"
+    },
+    {
+      "role": "Senior Software Engineering",
+      "company": "Chilli Piper",
+      "bio": "Desenvolvedor frontend desde 2016, especializado em React desde 2017. Experi\u00eancia global, trabalho remoto para empresas estrangeiras desde 2018. Entusiasta de computa\u00e7\u00e3o qu\u00e2ntica e astronomia. Acredito na eleg\u00e2ncia da simplicidade. Novo palestrante em busca de compartilhar ideias.",
+      "social_link": "https://www.linkedin.com/in/tsirlucas/",
+      "id": 152,
+      "title": "Lucas Almeida",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/lucas-almeida.jpeg"
+    },
+    {
+      "role": "Senior Software Developer",
+      "company": "3blocks",
+      "bio": "Ajuda a desenvolver solu\u00e7\u00f5es para criar ou melhorar produtos digitais!\r\nFormado com MBA em Arquitetura de Solu\u00e7\u00f5es\r\nDesde 2014 na \u00e1rea de tecnologia, com \u00eanfase em Design System e Arquitetura de Solu\u00e7\u00f5es\r\nJ\u00e1 trabalhou para empresas nacionais e internacionais",
+      "social_link": "https://www.instagram.com/oismaelash/",
+      "id": 150,
+      "title": "Ismael Ash",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/ismael.jpeg"
+    },
+    {
+      "role": "UX Designer",
+      "company": "Sistema Verdes Mares",
+      "bio": "UX Designer no Sistema Verdes Mares. Atua\u00e7\u00e3o em Discovery de produtos e Pesquisa qualitativa e quantitativa com usu\u00e1rios.\r\n\r\nExperi\u00eancia de 15 anos em diversas \u00e1reas da Comunica\u00e7\u00e3o, como Jornalismo, Publicidade, Marketing, Marketing pol\u00edtico, entre outros. ",
+      "social_link": "https://www.linkedin.com/in/camilafgadelha/",
+      "id": 138,
+      "title": "Camila Gadelha",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/fotinha-svm.jpg"
+    },
+    {
+      "role": "Desenvolvedor Front-End",
+      "company": "Globo",
+      "bio": "Desenvolvedor Front-End com mais de 10 anos de experi\u00eancia. Atualmente trabalha como Software Engineer na Globo, atuando no desenvolvimento e manuten\u00e7\u00e3o do player de v\u00eddeos usado em diversos produtos como Globoplay, Globo.com, G1, Ge e Gshow.",
+      "social_link": "https://www.linkedin.com/in/felipecesr/",
+      "id": 148,
+      "title": "Felipe C\u00e9sar",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-05-at-19.35.37.jpeg"
+    },
+    {
+      "role": "Desenvolvedor",
+      "company": "Stefanini",
+      "bio": "Graduando em engenharia de software, amante da inova\u00e7\u00e3o e do design de c\u00f3digo limpo, atualmente, fa\u00e7o parte da equipe da Stefanini, tenho experi\u00eancia com Nodejs, Golang, Angular, Vuejs, AWS e Microsservi\u00e7os. ",
+      "social_link": "https://www.linkedin.com/in/wesley-jonatha-9329ba18a/",
+      "id": 140,
+      "title": "Wesley Jonatha",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/wesley.jpeg"
+    },
+    {
+      "role": "Full Stack Developer",
+      "company": "Unimed",
+      "bio": "Desenvolvedor Front-End e empreendedor, apaixonado por tecnologias e inova\u00e7\u00e3o, com uma s\u00f3lida trajet\u00f3ria desde 2018. Minha carreira \u00e9 marcada por desafios empolgantes e uma busca incessante pelo conhecimento. Tenho dom\u00ednio das tecnologias mais recentes, como Angular, React.js, Node.js, e de ferramentas essenciais no campo, como Prisma, TypeORM e NestJS. Minha experi\u00eancia como CEO da startup Jobi e como cofundador da Consujr Solu\u00e7\u00f5es Jur\u00eddicas me trouxe uma vis\u00e3o \u00fanica sobre empreendedorismo e inova\u00e7\u00e3o. ",
+      "social_link": "https://www.linkedin.com/in/brumsilva/",
+      "id": 146,
+      "title": "Bruno Silva",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/bruno.jpeg"
+    }
+  ],
+  "talks": {
+    "principal": [
+      {
+        "speaker": {
+          "role": "Desenvolvedor Front-End",
+          "bio": "Atua no time de cat\u00e1logo do iFood e tem participado de frentes que utilizam AI dentro de aplica\u00e7\u00f5es para os restaurantes da plataforma. ",
+          "social_link": "https://www.linkedin.com/in/jeanlivino/",
+          "company": "iFood",
+          "id": 42,
+          "title": "Jean Livino",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/IMG_8258-scaled-e1693350413390.jpg"
+        },
+        "room": "principal",
+        "hour": "09:15",
+        "id": 69,
+        "title": "A realidade de trabalhar em projetos que usam IA",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Criadora de Conte\u00fado",
+          "company": "WebSaty",
+          "bio": "Formada em Engenharia El\u00e9trica pela UFPR, Adriana Saty achou que programa\u00e7\u00e3o n\u00e3o era para ela. Ap\u00f3s v\u00e1rias frustra\u00e7\u00f5es, decidiu dar uma outra chance e se encontrou no desenvolvimento de software. J\u00e1 trabalhou em grandes empresas de tecnologia como o Ita\u00fa, Santander e Accenture como desenvolvedora de Software. ",
+          "social_link": "https://www.instagram.com/adriana.saty/",
+          "id": 86,
+          "title": "Adriana Saty",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/adriana-saty.jpeg"
+        },
+        "room": "principal",
+        "hour": "17:30",
+        "id": 199,
+        "title": "Data Driven na vida pessoal",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Criador do ",
+          "bio": "Tem um hist\u00f3rico impressionante de contribui\u00e7\u00f5es para mundo open source, Patoilo trouxe \u00e0 vida diversos projetos. Com a manuten\u00e7\u00e3o ativa de mais de 70 pacotes de c\u00f3digo aberto, que s\u00e3o baixados milh\u00f5es de vezes por m\u00eas.",
+          "social_link": "https://www.linkedin.com/in/cjpatoilo/",
+          "company": "Milligram.io e Airform.io",
+          "id": 40,
+          "title": "CJ Patoilo",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/pato.png"
+        },
+        "room": "principal",
+        "hour": "09:30",
+        "id": 166,
+        "title": "Frontend Patterns - Uma perspectiva moderna da arquitetura de software",
+        "image": false
+      }
+    ],
+    "invite": [
+      {
+        "speaker": {
+          "role": "Especialista em carreira",
+          "company": "Rocketseat",
+          "bio": "Psic\u00f3loga, Tech recruiter, p\u00f3s graduanda em gest\u00e3o de pessoas. Mentora de carreira e consultora em gest\u00e3o de pessoas. Nordestina, apaixonada  pelo universo dos neg\u00f3cios, pessoas e carreiras",
+          "social_link": "https://www.linkedin.com/in/am%C3%A1liabeatrizmoura/",
+          "id": 118,
+          "title": "Am\u00e1lia Moura",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/WhatsApp_Image_2023-06-23_at_15.45.06_1-e1693355713727.jpeg"
+        },
+        "room": "invite",
+        "hour": "15:10",
+        "id": 194,
+        "title": "Al\u00e9m dos C\u00f3digos:  Tudo que voc\u00ea precisa saber para conquistar sua vaga",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Software Developer",
+          "company": "IBM",
+          "bio": "Desenvolvedor Web com foco no FrontEnd, traindo o Javascripto com o Javinha.",
+          "social_link": "https://www.linkedin.com/in/mbarbosasan/",
+          "id": 251,
+          "title": "Moises Santos",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/10/moises.jpeg"
+        },
+        "room": "invite",
+        "hour": "10:40",
+        "id": 167,
+        "title": "Clean Code: Introdu\u00e7\u00e3o as boas pr\u00e1ticas de c\u00f3digo",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "S\u00f3cias",
+          "company": "Evo Cont\u00e1bil",
+          "bio": "S\u00f3cias na Evo Cont\u00e1bil, empresa de contabilidade digital especializada em microempreendedor individual e com servi\u00e7os que abrangem o pequeno e m\u00e9dio empres\u00e1rio. Nosso objetivo com a palestra \u201cContabilidade b\u00e1sica para o empreendedor, PJ e CLT\u201d, \u00e9 simplificar as informa\u00e7\u00f5es necess\u00e1rias para ter uma contabilidade funcional.",
+          "social_link": "https://www.instagram.com/evocontabil/",
+          "id": 200,
+          "title": "Renata e Kel",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/evo.jpg"
+        },
+        "room": "invite",
+        "hour": "14:30",
+        "id": 203,
+        "title": "Contabilidade b\u00e1sica para o empreendedor, PJ e CLT",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "CTO",
+          "company": "Sunne Energias",
+          "bio": "Empreendedor e desenvolvedor h\u00e1 mais de 10 anos, atualmente CTO na Sunne Energias Renov\u00e1veis.",
+          "social_link": "https://www.linkedin.com/in/victor-hugo-79042b24/",
+          "id": 160,
+          "title": "Victor Alencar",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/victor.jpeg"
+        },
+        "room": "invite",
+        "hour": "13:50",
+        "id": 184,
+        "title": "Do Console \u00e0 Sala de Reuni\u00e3o: profissionalismo na entrevista e na empresa",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "L\u00edderes",
+          "company": "Times de Inova\u00e7\u00e3o, Hub de Sa\u00fade, Ecommerce e App",
+          "bio": "Kaique Felipe, Techlead e Especialista Full Stack, respons\u00e1vel pela lideran\u00e7a de grandes projetos no nosso Hub de Sa\u00fade; Felipe Farias, Consultor e L\u00edder da nossa squad Digital, especialista em VTEX e respons\u00e1vel pela lideran\u00e7a no desenvolvimento do nosso E-commerce e App; Alan Victor, Techlead e Especialista Full Stack, respons\u00e1vel pela lideran\u00e7a dos nossos produtos de inova\u00e7\u00e3o, dentre eles o App de Gest\u00e3o interna da empresa.",
+          "social_link": "https://www.pmenoslab.com.br/",
+          "id": 215,
+          "title": "Time Pmenos Lab",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/pmenos-e1694699114579.jpeg"
+        },
+        "room": "invite",
+        "hour": "11:20",
+        "id": 217,
+        "title": "Ecossistema VTEX e Alavancando Resultados com um App Gerencial",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Desenvolvedor",
+          "company": "Stefanini",
+          "bio": "Graduando em engenharia de software, amante da inova\u00e7\u00e3o e do design de c\u00f3digo limpo, atualmente, fa\u00e7o parte da equipe da Stefanini, tenho experi\u00eancia com Nodejs, Golang, Angular, Vuejs, AWS e Microsservi\u00e7os. ",
+          "social_link": "https://www.linkedin.com/in/wesley-jonatha-9329ba18a/",
+          "id": 140,
+          "title": "Wesley Jonatha",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/wesley.jpeg"
+        },
+        "room": "invite",
+        "hour": "15:30",
+        "id": 173,
+        "title": "Introdu\u00e7\u00e3o ao Golang e Micro Servi\u00e7os: Efici\u00eancia e Escalabilidade",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Developer Relations",
+          "company": "FusionAuth",
+          "bio": "Desenvolvedor h\u00e1 15 anos, apaixonado por tecnologia e principalmente Web. J\u00e1 atuei em projetos em diversas \u00e1reas, como email marketing, automa\u00e7\u00e3o de redes, e-commerce, ciberseguran\u00e7a e e-learning, onde inclusive fundei uma startup. ",
+          "social_link": "https://www.linkedin.com/in/viniciuscampitelli/",
+          "id": 97,
+          "title": "Vin\u00edcius Campitelli",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/vinicius.jpeg"
+        },
+        "room": "invite",
+        "hour": "13:30",
+        "id": 181,
+        "title": "O que voc\u00ea precisa saber sobre autentica\u00e7\u00e3o com JWT",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "UX Designer",
+          "company": "Sistema Verdes Mares",
+          "bio": "UX Designer no Sistema Verdes Mares. Atua\u00e7\u00e3o em Discovery de produtos e Pesquisa qualitativa e quantitativa com usu\u00e1rios.\r\n\r\nExperi\u00eancia de 15 anos em diversas \u00e1reas da Comunica\u00e7\u00e3o, como Jornalismo, Publicidade, Marketing, Marketing pol\u00edtico, entre outros. ",
+          "social_link": "https://www.linkedin.com/in/camilafgadelha/",
+          "id": 138,
+          "title": "Camila Gadelha",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/fotinha-svm.jpg"
+        },
+        "room": "invite",
+        "hour": "11:40",
+        "id": 178,
+        "title": "Pesquisa com usu\u00e1rios - A import\u00e2ncia de ouvir quem usa o produto",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Co-Founder e Idealizador de solu\u00e7\u00f5es",
+          "company": "bh2",
+          "bio": "Cearense, nascido e criado em Fortaleza... Desde crian\u00e7a sempre gostei de observar e mexer no computador, ficava fascinado ao ver a possibilidade simples de escrever em um treco, e numa tela, esse treco ser projetado, ou ainda, mexer outro treco e na mesma tela uma seta seguindo o mesmo percurso que minha m\u00e3o. ",
+          "social_link": "https://www.linkedin.com/in/callmeloureiro/",
+          "id": 94,
+          "title": "Matheus Loureiro",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/loureiro-e1693312884878.jpeg"
+        },
+        "room": "invite",
+        "hour": "14:10",
+        "id": 187,
+        "title": "Tecnologia e Finan\u00e7as. O que temos de oportunidade?",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "UX Designer",
+          "company": "LSBD",
+          "bio": "Atuando como Designer de Produto, com mais de 4 anos de experi\u00eancia na \u00e1rea de comunica\u00e7\u00e3o visual - do Design Gr\u00e1fico e Digital ao UX (Experi\u00eancia do Usu\u00e1rio) e UI (Design de Interface). Ao longo dos \u00faltimos anos, imergi no processo centrado no humano, de forma a compreender as necessidades e h\u00e1bitos dos usu\u00e1rios. Para mim, ser designer n\u00e3o \u00e9 apenas desenhar interfaces f\u00e1ceis de usar e entender, mas tamb\u00e9m comunicar de forma simples, humana e acess\u00edvel.",
+          "social_link": "https://www.linkedin.com/in/taveiram",
+          "id": 144,
+          "title": "Milena Taveira",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/milena.jpeg"
+        },
+        "room": "invite",
+        "hour": "14:50",
+        "id": 191,
+        "title": "Transi\u00e7\u00e3o de carreira: migrando para UX",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Product Designer",
+          "company": "Agenda Edu",
+          "bio": "Product Designer e pesquisadora na \u00e1rea de Intera\u00e7\u00e3o Humano-Computador. Comecei uma gradua\u00e7\u00e3o em Pedagogia, mas me encontrei na tecnologia voltada para a educa\u00e7\u00e3o.\r\n",
+          "social_link": "https://www.linkedin.com/in/kellrcarvalho/",
+          "id": 71,
+          "title": "Rachel Carvalho",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/1669399234986.jpeg"
+        },
+        "room": "invite",
+        "hour": "11:00",
+        "id": 171,
+        "title": "UX e Handoff, a passagem do designer para o dev",
+        "image": false
+      }
+    ],
+    "frontend": [
+      {
+        "speaker": {
+          "role": "Full Stack Developer",
+          "company": "Unimed",
+          "bio": "Desenvolvedor Front-End e empreendedor, apaixonado por tecnologias e inova\u00e7\u00e3o, com uma s\u00f3lida trajet\u00f3ria desde 2018. Minha carreira \u00e9 marcada por desafios empolgantes e uma busca incessante pelo conhecimento. Tenho dom\u00ednio das tecnologias mais recentes, como Angular, React.js, Node.js, e de ferramentas essenciais no campo, como Prisma, TypeORM e NestJS. Minha experi\u00eancia como CEO da startup Jobi e como cofundador da Consujr Solu\u00e7\u00f5es Jur\u00eddicas me trouxe uma vis\u00e3o \u00fanica sobre empreendedorismo e inova\u00e7\u00e3o. ",
+          "social_link": "https://www.linkedin.com/in/brumsilva/",
+          "id": 146,
+          "title": "Bruno Silva",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/bruno.jpeg"
+        },
+        "room": "frontend",
+        "hour": "11:40",
+        "id": 176,
+        "title": "Angular e Intelig\u00eancia Artificial: Como Integrar IA em Aplica\u00e7\u00f5es Web",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Senior Software Engineer",
+          "company": "Automattic",
+          "bio": "Com mais de 10 anos de experi\u00eancia em desenvolvimento de software, Ian \u00e9 Senior Software Engineer na Automattic, empresa por tr\u00e1s do WordPress.com, Tumblr, etc. Apaixonado por linguagens de programa\u00e7\u00e3o, ele tamb\u00e9m \u00e9 m\u00fasico e, recentemente, mergulhou no mundo da canoa polin\u00e9sia",
+          "social_link": "https://www.linkedin.com/in/ianramosc/",
+          "id": 122,
+          "title": "Ian Ramos",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/ian-ramos.png"
+        },
+        "room": "frontend",
+        "hour": "14:30",
+        "id": 188,
+        "title": "Como ter um pet pode te ajudar a ser um programador melhor",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Frontend Developer",
+          "company": "Grupo Botic\u00e1rio",
+          "bio": "Atuo h\u00e1 mais de 6 anos defendendo a causa de que n\u00e3o fazemos s\u00f3 tela bonitinha. Graduada em Computa\u00e7\u00e3o e Mestre em tomar caf\u00e9 com bolinho",
+          "social_link": "https://www.linkedin.com/in/aesmeraldo/",
+          "id": 247,
+          "title": "Amanda Esmeraldo",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/10/amanda.jpeg"
+        },
+        "room": "frontend",
+        "hour": "10:40",
+        "id": 249,
+        "title": "Composition ou Opposition API: Por que tamanha resist\u00eancia?",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Senior Software Engineering",
+          "company": "iFood",
+          "bio": "Atualmente sou s\u00eanior front-end no iFood com mais de 6 anos de experi\u00eancia, formado em sistemas de informa\u00e7\u00e3o e cursando p\u00f3s em gest\u00e3o de pessoas.",
+          "social_link": "https://www.linkedin.com/in/joao-willamy/",
+          "id": 84,
+          "title": "Jo\u00e3o Willamy",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/joao.png"
+        },
+        "room": "frontend",
+        "hour": "11:20",
+        "id": 195,
+        "title": "E2E com Cypress",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Senior Software Engineering",
+          "company": "Chilli Piper",
+          "bio": "Desenvolvedor frontend desde 2016, especializado em React desde 2017. Experi\u00eancia global, trabalho remoto para empresas estrangeiras desde 2018. Entusiasta de computa\u00e7\u00e3o qu\u00e2ntica e astronomia. Acredito na eleg\u00e2ncia da simplicidade. Novo palestrante em busca de compartilhar ideias.",
+          "social_link": "https://www.linkedin.com/in/tsirlucas/",
+          "id": 152,
+          "title": "Lucas Almeida",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/lucas-almeida.jpeg"
+        },
+        "room": "frontend",
+        "hour": "11:00",
+        "id": 189,
+        "title": "Explorando React Server Components",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Desenvolvedora Front-End",
+          "company": "IREDE",
+          "bio": "Desenvolvedora Front-End, com foco em sistemas acess\u00edveis para pessoa com defici\u00eancia. Graduanda em Sistemas e M\u00eddias.",
+          "social_link": "https://www.linkedin.com/in/eloise-ferreira-301b69181/",
+          "id": 142,
+          "title": "Eloise Ferreira",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-05-at-19.09.40.jpeg"
+        },
+        "room": "frontend",
+        "hour": "14:50",
+        "id": 174,
+        "title": "Inclus\u00e3o Digital: WCAG e Acessibilidade na Web",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Software Engineer",
+          "company": "Elo7",
+          "bio": "Atuo na \u00e1rea h\u00e1 2,5 anos. Sou formado em  An\u00e1lise e Desenvolvimento de Sistemas, iniciando p\u00f3s em MBA de Engenharia de Software. Trabalho como Engenheiro de Software Frontend, no Elo7. Gosto de resolver problemas, independentemente da tecnologia que atuo.",
+          "social_link": "https://www.linkedin.com/in/kevinbtv",
+          "id": 154,
+          "title": "Kevin Tavares",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-05-at-19.34.10.jpeg"
+        },
+        "room": "frontend",
+        "hour": "15:10",
+        "id": 192,
+        "title": "Progressive Enhancement: O que \u00e9 e como us\u00e1-lo?",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Desenvolvedor Front-End",
+          "company": "Globo",
+          "bio": "Desenvolvedor Front-End com mais de 10 anos de experi\u00eancia. Atualmente trabalha como Software Engineer na Globo, atuando no desenvolvimento e manuten\u00e7\u00e3o do player de v\u00eddeos usado em diversos produtos como Globoplay, Globo.com, G1, Ge e Gshow.",
+          "social_link": "https://www.linkedin.com/in/felipecesr/",
+          "id": 148,
+          "title": "Felipe C\u00e9sar",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-05-at-19.35.37.jpeg"
+        },
+        "room": "frontend",
+        "hour": "13:50",
+        "id": 182,
+        "title": "React com TDD: Da Teoria \u00e0 Pr\u00e1tica",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Senior Software Engineer",
+          "company": "Automattic",
+          "bio": "Desenvolvedor de Software desde os 16 anos, entusiasta de Open Source. Diversas experi\u00eancias como freelancer, outsourcing e startups, trabalhando remotamente desde 2017 com empresas de fora do pa\u00eds.",
+          "social_link": "https://twitter.com/heydemoura",
+          "id": 218,
+          "title": "Heyde Moura",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/heyde.jpeg"
+        },
+        "room": "frontend",
+        "hour": "13:30",
+        "id": 179,
+        "title": "React para estender o Editor de Blocos do WordPress",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Senior Software Developer",
+          "company": "3blocks",
+          "bio": "Ajuda a desenvolver solu\u00e7\u00f5es para criar ou melhorar produtos digitais!\r\nFormado com MBA em Arquitetura de Solu\u00e7\u00f5es\r\nDesde 2014 na \u00e1rea de tecnologia, com \u00eanfase em Design System e Arquitetura de Solu\u00e7\u00f5es\r\nJ\u00e1 trabalhou para empresas nacionais e internacionais",
+          "social_link": "https://www.instagram.com/oismaelash/",
+          "id": 150,
+          "title": "Ismael Ash",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/ismael.jpeg"
+        },
+        "room": "frontend",
+        "hour": "14:10",
+        "id": 185,
+        "title": "React.js para entrevistas",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Software Engineer",
+          "company": "Beakyn",
+          "bio": "Com mais 15 anos de experi\u00eancia em desenvolvimento de software. Abra\u00e3o Alves, foi early adopter de varias tecnologias sendo Typescript uma de suas paix\u00f5es mais antigas. Comunidade onde come\u00e7ou suas contribui\u00e7\u00f5es ainda no come\u00e7o de 2013, sendo autor de v\u00e1rios definition types. J\u00e1 fundou startup, comunidades, fam\u00edlia e at\u00e9 turma de alunos (n\u00e3o necessariamente nessa ordem) ",
+          "social_link": "https://linkedin.com/in/abraaoalves",
+          "id": 114,
+          "title": "Abra\u00e3o Alves",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/abraao.jpeg"
+        },
+        "room": "frontend",
+        "hour": "15:30",
+        "id": 172,
+        "title": "Typescript Morreu! Vida longa ao Typescript!",
+        "image": false
+      }
+    ],
+    "communities": [
+      {
+        "speaker": {
+          "role": "Especialista Android",
+          "company": "Trybe",
+          "bio": "Mestre em Ci\u00eancias da Computa\u00e7\u00e3o pela Universidade Estadual do Cear\u00e1 (UECE), Bacharel em Sistemas de Informa\u00e7\u00e3o pela Faculdade de Juazeiro do Norte (FJN). Atualmente atua como pessoa especialista na Escola de Programa\u00e7\u00e3o Trybe, possui experi\u00eancia no ensino superior lecionando disciplinas de computa\u00e7\u00e3o em em v\u00e1rias institui\u00e7\u00f5es (Unifor, UECE, FJN, Le\u00e3o Sampaio e FAMETRO), pesquisador do Intelligent Networks and Systems Group (INETSYS), streamer na Twitch, membro fundador da Kotlinautas e membro organizador da comunidade GitTogether Fortaleza.",
+          "social_link": "https://www.linkedin.com/in/profbrunolopes/",
+          "id": 225,
+          "title": "Bruno Lopes",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-24-at-14.23.56.jpeg"
+        },
+        "room": "communities",
+        "hour": "11:00",
+        "id": 227,
+        "title": "Ataque for\u00e7a bruta a tokens JWT na pratica!",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Desenvolvedor Front-End",
+          "bio": "Atua no time de cat\u00e1logo do iFood e tem participado de frentes que utilizam AI dentro de aplica\u00e7\u00f5es para os restaurantes da plataforma. ",
+          "social_link": "https://www.linkedin.com/in/jeanlivino/",
+          "company": "iFood",
+          "id": 42,
+          "title": "Jean Livino",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/IMG_8258-scaled-e1693350413390.jpg"
+        },
+        "room": "communities",
+        "hour": "15:30",
+        "id": 193,
+        "title": "Bate Papo com as comunidades",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Tech Lead e Scrum Master",
+          "company": "Governo do Estado do Cear\u00e1",
+          "bio": "Founder do @bora.agilizar, Mentora do Cyber girls, Organizer do GDG Fortaleza, Embaixadora do WTM Google Fortaleza e Host do quadro \u2018Agile Gov\u2019 no podcast Agilizem.",
+          "social_link": "https://www.linkedin.com/in/silvia-muniz-8b2390a3/",
+          "id": 125,
+          "title": "S\u00edlvia Muniz",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/silvia.jpeg"
+        },
+        "room": "communities",
+        "hour": "14:50",
+        "id": 190,
+        "title": "Como impulsionar sua carreira atrav\u00e9s das comunidades de tecnologia",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Gerente de Tecnologia",
+          "company": "Agenda Edu",
+          "bio": "Desenvolvedor de Software, com 12 anos de experi\u00eancia construindo sistemas e mais atualmente gerenciando times de tecnologia. Com vasta experi\u00eancia especialmente em desenvolvimento backend, com foco em aplica\u00e7\u00f5es Ruby on Rails e seu ecossistema.",
+          "social_link": "https://www.linkedin.com/in/gurgelrenan/",
+          "id": 221,
+          "title": "Renan Gurgel",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-20-at-21.57.41-e1695325694723.jpeg"
+        },
+        "room": "communities",
+        "hour": "14:30",
+        "id": 224,
+        "title": "Contribuindo com Open Source atrav\u00e9s de Ruby Gems",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "UX/UI Designer",
+          "company": "VMetrix",
+          "bio": "Cofundador da UX FOR. Apaixonado por design e as experi\u00eancias que isso carrega, me fascino com as formas, cores, movimentos e como s\u00e3o produzidas todas essas intera\u00e7\u00f5es.",
+          "social_link": "https://www.linkedin.com/in/ewerton-nepomuceno/",
+          "id": 74,
+          "title": "Ewerton Nepomuceno",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/1668435428209.jpeg"
+        },
+        "room": "communities",
+        "hour": "11:40",
+        "id": 76,
+        "title": "Design System e Tokens",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Desenvolvedora Front-End",
+          "company": "Uol",
+          "bio": "Dev frontend na UOL, fiz transi\u00e7\u00e3o de carreira h\u00e1 quase 2 anos atr\u00e1s depois de um bootcamp e hoje fa\u00e7o faculdade de ADS na Fanor. ",
+          "social_link": "https://www.linkedin.com/in/noemi-cunha/",
+          "id": 82,
+          "title": "Noemi Cunha",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/noemi.jpeg"
+        },
+        "room": "communities",
+        "hour": "14:10",
+        "id": 186,
+        "title": "Dominando as Soft Skills para uma Jornada na Tecnologia",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Software Engineer",
+          "company": "Shape",
+          "bio": "Colaboradora do PyLadies Fortaleza, Engenheira de Computa\u00e7\u00e3o, dan\u00e7arina e core\u00f3grafa iniciante. Entusiasta da interdisciplinaridade e do ensino da programa\u00e7\u00e3o al\u00e9m do \u00f3bvio.",
+          "social_link": "https://www.linkedin.com/in/alynnefs/",
+          "id": 129,
+          "title": "Alynne Ferreira",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/alyne.jpeg"
+        },
+        "room": "communities",
+        "hour": "10:40",
+        "id": 170,
+        "title": "Grafos e Vogue Dance: usando estrutura de dados para criar coreografias",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Desenvolvedor Front End",
+          "company": "MERX",
+          "bio": "Um apaixonado pelo mundo da tecnologia, um desenvolvedor Front-end experiente e um entusiasta das comunidade de desenvolvimento de software, come\u00e7ou sua carreira como desenvolvedor Front-end h\u00e1 4 anos.\r\n",
+          "social_link": "https://www.linkedin.com/in/adrianmaycon/",
+          "id": 164,
+          "title": "Adrian Maycon",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/adrian.jpeg"
+        },
+        "room": "communities",
+        "hour": "11:20",
+        "id": 196,
+        "title": "Novos Caminhos e Networking: O Papel das Comunidades de Tech",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Frontend Engineer",
+          "company": "Loadsmart",
+          "bio": "Fazedor de HTML sem\u00e2ntico, JavaScript perform\u00e1tico e aplica\u00e7\u00f5es acess\u00edveis. Membro colaborador e ex-organizador da comunidade Front-End CE.",
+          "social_link": "https://www.linkedin.com/in/rivajunior/",
+          "id": 228,
+          "title": "Riva Junior",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/riva.jpeg"
+        },
+        "room": "communities",
+        "hour": "15:10",
+        "id": 231,
+        "title": "O que n\u00e3o te ensinaram sobre JavaScript",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "QA",
+          "company": "Profectum",
+          "bio": "Graduanda em Sistemas de Informa\u00e7\u00e3o, atua como QA na Profectum, outsourced no Hapvida NotreDame Interm\u00e9dica. Colaboradora do PyLadies Fortaleza desde 2017, participando ativamente na revitaliza\u00e7\u00e3o da comunidade.",
+          "social_link": "https://www.linkedin.com/in/mariarosinelefelix/",
+          "id": 127,
+          "title": "Rose F\u00e9lix",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/rose.jpeg"
+        },
+        "room": "communities",
+        "hour": "13:50",
+        "id": 183,
+        "title": "PyLadies Fortaleza: Hist\u00f3ria e funda\u00e7\u00e3o",
+        "image": false
+      },
+      {
+        "speaker": {
+          "role": "Engenheiro de software",
+          "company": "Normalabs",
+          "bio": "Palestrante, desenvolvedor, designer gr\u00e1fico, atualmente aluno do 3\u00b0 ano do curso de Redes de Computadores (2021-2023). Engenheiro de software da Normalabs, atuando no frontend e no backend de aplica\u00e7\u00f5es.",
+          "social_link": "https://www.linkedin.com/in/francisco-cauan-victor/",
+          "id": 112,
+          "title": "Cauan Victor",
+          "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/cauan.jpeg"
+        },
+        "room": "communities",
+        "hour": "13:30",
+        "id": 180,
+        "title": "React Native em 2024: Por onde come\u00e7ar?",
+        "image": false
+      }
+    ]
+  },
+  "sponsors": [
+    {
+      "name": "Rocketseat",
+      "link": "https://www.rocketseat.com.br/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/Rocketseat-Digital-House-Preto.png"
+    },
+    {
+      "name": "H2U",
+      "link": "https://h2uescritoriovirtual.com.br/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/LOGO-H2U-ATUALIZADA.png"
+    },
+    {
+      "name": "Sunrise Beach Club",
+      "link": "https://www.instagram.com/sunrise.beachclub/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/sunrise.png"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Instituto Poliglota",
+      "link": "https://www.institutopoliglota.com/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/poliglota.png"
+    },
+    {
+      "name": "Casa do C\u00f3digo",
+      "link": "https://www.casadocodigo.com.br/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/08/Logo-CasaDoCodigo.png"
+    },
+    {
+      "name": "Videorama",
+      "link": "https://www.videorama.com.br/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/Frame-1-4.png"
+    },
+    {
+      "name": "Stickers Devs",
+      "link": "https://www.stickersdevs.com.br/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/stickerslogo-1.png"
+    },
+    {
+      "name": "Mundo sem fio",
+      "link": "https://www.instagram.com/mundosemfio.com.br/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/logo_msf_SVG.png"
+    },
+    {
+      "name": "Urb Beach Sports",
+      "link": "https://www.instagram.com/urbbeachsports/",
+      "image": "https://frontendday.descompliqueapps.com.br/wp-content/uploads/2023/09/Original.png"
+    }
+  ],
+  "faq": [
+    {
+      "question": "O que est\u00e1 incluso no valor do ingresso?",
+      "answer": "<p>Acesso \u00e0s palestras, kit/bolsa do evento com itens da comunidade e parceiros, um kit mini lanche e um coffee break na parte da tarde.</p>\n"
+    },
+    {
+      "question": "Como acontecer\u00e1 as viradas de lotes?",
+      "answer": "<p>A virada de lote funciona de duas formas. A primeira ,com <strong>n\u00famero limite de inscri\u00e7\u00f5es</strong> por categoria e, a segunda, <strong>por data</strong>:</p>\n<p>&nbsp;</p>\n<p>1\u00ba LOTE: 21 de agosto a 8 de setembro</p>\n<p>2\u00ba\u00a0LOTE: 09 a 30 de setembro</p>\n<p>3\u00ba LOTE: 01 a 14 de outubro</p>\n<p>&nbsp;</p>\n<p>O que significa que se o total de vagas para aquela categoria for atingindo, ela passar\u00e1 para o pr\u00f3ximo lote, sem necessidade de aguardar pela data de virada.</p>\n"
+    },
+    {
+      "question": "Possui estacionamento no local?",
+      "answer": "<p>Em parceria com o Hotel Sonata ter\u00e1 estacionamento ao lado com valor promocional de R$15 a di\u00e1ria.</p>\n"
+    },
+    {
+      "question": "Quem tem direito a meia entrada?",
+      "answer": "<p>Idosos, PNE</p>\n<p>Jovens de baixa renda(Atrav\u00e9s do ID Jovem)</p>\n<p>Professores</p>\n<p>Doadores de sangue</p>\n<p>Estudantes: Os estudantes regularmente matriculados no ensino m\u00e9dio, ensino t\u00e9cnico, ensino superior, especializa\u00e7\u00e3o, mestrado e doutorado tem direito a meia entrada.</p>\n"
+    },
+    {
+      "question": "Como ser\u00e1 feito a comprova\u00e7\u00e3o da meia entrada?",
+      "answer": "<p>Estudantes: App ID Estudantil e Carteira de Identifica\u00e7\u00e3o Estudantil (CIE) pelas entidades. Jovens de</p>\n<p>Baixa Renda: Aplicativo ID Jovem</p>\n<p>Professores: Carteira funcional</p>\n<p>Doadores de Sangue: Aplicativo/carteirinha Redome</p>\n"
+    }
+  ],
+  "activate_agenda": true
+}

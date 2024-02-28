@@ -1,10 +1,6 @@
 import { dataApi } from '@/config/api';
 import { SiteData } from '@/types';
 import { cache } from 'react';
+import data from './data.json';
 
-export const getSiteData = cache(() =>
-  dataApi.get('site/v1/data').then((res) => {
-    console.log(JSON.stringify(res.data));
-    return res.data as SiteData;
-  })
-);
+export const getSiteData = () => data as SiteData;
