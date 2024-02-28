@@ -77,7 +77,7 @@ const Header: React.FC<Props> = ({ isHome }) => {
             fontWeight='700'
             _hover={{ bg: '#9252e6' }}
           >
-            Baixar mídia kit
+            Baixar mídia kit 2024
           </styled.a>
         </Flex>
       </Container>
