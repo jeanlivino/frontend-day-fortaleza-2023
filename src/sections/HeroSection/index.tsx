@@ -1,8 +1,9 @@
-import { Box, Flex, Grid, styled } from '@/styled-system/jsx';
+import { Box, Center, Flex, Grid, styled } from '@/styled-system/jsx';
 import React from 'react';
 import NextImage from 'next/image';
 import Header from '@/components/Header';
 import { css } from '@/styled-system/css';
+import { YouTubeEmbed } from '@next/third-parties/google';
 
 import styles from './hero.module.css';
 import Container from '@/components/Container';
@@ -79,16 +80,9 @@ const HeroSection: React.FC = () => {
         Veja como foi a edição de 2023
       </styled.h3>
       <Container>
-        <iframe
-          width='100%'
-          height='auto'
-          style={{
-            aspectRatio: '16/9',
-          }}
-          src='https://www.youtube.com/embed/p1Y2J6Bz97o'
-          title='Front-End Day 2023 - Fortaleza'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-        ></iframe>
+        <Center>
+          <YouTubeEmbed width={720} videoid='p1Y2J6Bz97o' />
+        </Center>
       </Container>
     </Box>
   );
