@@ -79,11 +79,9 @@ const HeroSection: React.FC = () => {
       >
         Veja como foi a edição de 2023
       </styled.h3>
-      <Container>
-        <Center>
-          <YouTubeEmbed width={720} videoid='p1Y2J6Bz97o' />
-        </Center>
-      </Container>
+      <Center>
+        <YouTubeEmbed width={720} videoid='p1Y2J6Bz97o' />
+      </Center>
     </Box>
   );
 };
